@@ -1,0 +1,24 @@
+.wall {
+  display: block;
+  background-image: linear-gradient(to bottom right, rgb(233, 160, 240), rgb(247, 247, 126));
+  height: 100vh;
+  padding-top: 60px;
+  
+}
+.loginform {
+  color: whitesmoke;
+  padding: 60px;
+  border: 5px solid rgb(57, 192, 169);
+  text-shadow: 4px 3px 4px yellowgreen;
+  box-shadow: 0 0 20px whitesmoke;
+  font-size: 20px;
+  width: 650px;
+  margin-left: 600px;
+  background-color:#011815;
+ 
+
+}
+.add {
+  border: 6px solid green;
+  color: blue;
+}

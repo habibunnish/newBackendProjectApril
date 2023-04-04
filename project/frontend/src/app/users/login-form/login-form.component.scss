@@ -1,0 +1,47 @@
+
+.class1{
+    background-image: linear-gradient(to bottom right, rgb(233, 160, 240), rgb(247, 247, 126));
+    height: 120vh;
+     margin-top: auto;
+     padding: 100px;
+     text-align: center;
+}
+.loginform{
+    color: white;
+    padding: 30px;
+    border: 5px solid rgb(57, 192, 169);
+    box-shadow: 0 0 20px;
+    font-size: 20px;
+    width: 800px;
+    height: 500px;
+    margin-left: 400px;
+   background-color:#02302a;
+
+    
+}
+
+h1{
+    text-align: center;
+    margin-top: 30px;
+    font-size: 60px;
+    font-style: italic;
+    letter-spacing: 6px;
+    text-shadow: 4px 3px 4px greenyellow;
+    margin-left: -40px;
+  
+  
+}
+.wall{
+    background-color:cornsilk;
+    width:100%;
+    height:100vh;
+    padding: 150px;
+}
+#buttononsubmit{
+
+    margin-left: 250px;
+}
+
+.focus{
+    background-color: chartreuse;
+}

@@ -1,0 +1,58 @@
+<div class="wall">
+  <div class="loginform">
+    <form  >
+      <label>CHOOSE LOCATION</label>
+      <div >
+        <select (click)="modo($event)" >
+          <option  *ngFor="let c of locations" [value]="c.name">{{c.name}}  </option>
+          
+        </select>
+      </div>
+
+      <pre></pre>
+      <label for="ProductTitle">Tittle</label><br />
+      <input
+      class="form-control"
+        type="text"
+        name="productTitle"
+        placeholder="ProductTittle"
+        [(ngModel)]="roomdetails.tittle" />
+      <pre></pre>
+
+      <label for="area">area</label><br />
+      <input
+      class="form-control"
+        type="text"
+        name="area"
+        placeholder="area"
+        [(ngModel)]="roomdetails.area" />
+      <pre></pre>
+
+      <label for="Price">Price</label><br />
+      <input
+       class="form-control"
+        type="text"
+        name="price"
+        placeholder="Price"
+        [(ngModel)]="roomdetails.price"/>
+      <PRE></PRE>
+
+      <input type="file" (change)="getFile($event)" /><br />
+      <pre></pre>
+
+      <button
+        class="btn btn-primary"
+        (click)="adding(roomdetails)"
+        type="button"
+        >
+        ADD-PRODUCT
+      </button>
+      <span style="display: inline-block; width: 40px"></span>
+      <button class="btn btn-primary" (click)="putting()">
+        Updating Product
+      </button>
+      <span style="display: inline-block; width: 40px"></span><br /><br />
+      <button class="btn btn-primary" (click)="checkpage()">checkpage</button>
+    </form>
+  </div>
+</div>

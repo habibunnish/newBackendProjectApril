@@ -1,0 +1,63 @@
+<!-- <button  id="booking" (click)="gotobooking()" class="btn btn-primary">BookingPage</button> -->
+<div class="wall">
+<h1>CONFIRM YOUR BOOKING </h1>
+
+<ng-container *ngIf="items.length != 0">
+  <div class="container">
+    <div class="card-table">
+      <div class="cart-product">
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">id</th>
+              
+              <th scope="col">TITTLE</th>
+              <th scope="col">LOCATION</th>
+              <th scope="col">PRICE</th>
+              <th scope="col">IMAGE</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of items; let i = index">
+              <td>{{ i + 1 }}</td>
+             
+              <TD>{{ item.tittle }}</TD>
+              <TD>{{ item.location }}</TD>
+              <TD>{{ item.price }}</TD>
+              <TD>
+                <img
+                  style="width: 200px"
+                  src="/assets/IMAGES/{{ item.image }}"
+                  alt="IMAGE"
+              /></TD>
+              <td>
+                <button class="btn btn-primary" (click)="book(item)">
+                  BuyNow
+                </button>
+                <span style="display: inline-block; width: 30px"></span>
+                <button class="btn btn-danger" (click)="delete(item)">
+                  delete
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</ng-container>
+
+<ng-container *ngIf="items.length == 0">
+  <div class="container">
+    <div class="card">
+      <h5 class="card-title">MY CART</h5>
+    </div>
+    <div class="center">
+      <img src="assets/IMAGES/cart.jpg" alt="cart" />
+      <h4>your cart is empty</h4>
+      <h6>add item to it now</h6>
+      <button class="btn btn-primary" id="goback" (click)="goback()">SHOP NOW</button>
+    </div>
+  </div>
+</ng-container>
+</div>

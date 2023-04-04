@@ -1,0 +1,2318 @@
+{
+  "userLogin": [
+    {
+      "email": "habi@123",
+      "password": "Habi@1234"
+    }
+  ],
+  "userRegister": [
+    {
+      "firstname": "habibunnisha",
+      "lastname": "A",
+      "street": "plot no 89/66 periyar nagar thiruvottriyur chennai-19",
+      "city": "chennai",
+      "state": "tamilnadu",
+      "zipcode": "600019",
+      "email": "habicute111@gmail.com",
+      "id": 9
+    },
+    {
+      "firstname": "shateesh",
+      "lastname": "A",
+      "street": "plot no 89/66 periyar nagar thiruvottriyur chennai-19",
+      "city": "chennai",
+      "state": "tamilnadu",
+      "zipcode": "600010",
+      "email": "habicute111@gmai.com",
+      "id": 10
+    },
+    {
+      "firstname": "Akash",
+      "lastname": "singh",
+      "street": "cross road street",
+      "city": "chennai",
+      "state": "Tamilnadu",
+      "zipcode": "600016",
+      "email": "akashsingh1306@gmail.com",
+      "id": 11
+    }
+  ],
+  "adminLogin": [
+    {
+      "password": "Admin@123",
+      "email": "Admin@123"
+    }
+  ],
+  "product": [
+    {
+      "id": 1,
+      "tittle": "HOTEL PERAL",
+      "area": "MUGHALPUR",
+      "price": "1400",
+      "image": "chennai7.jpg",
+      "email": "",
+      "location": "Chennai"
+    },
+    {
+      "id": 2,
+      "tittle": "HOTEL GARDEN SAFFRON",
+      "area": "CENTRAL ",
+      "price": "1900",
+      "image": "chennai6.jpg",
+      "email": "",
+      "location": "Chennai"
+    },
+    {
+      "id": 4,
+      "tittle": "HOTEL SILVER",
+      "area": "PALLAVAN SALALI",
+      "price": "2970",
+      "image": "chennai5.jpg",
+      "email": "",
+      "location": "Chennai"
+    },
+    {
+      "id": 5,
+      "tittle": "HOTELKILLICK ",
+      "area": "PANAGANJ",
+      "price": "2370",
+      "image": "goa8.jpg",
+      "email": "",
+      "location": "goa"
+    },
+    {
+      "id": 6,
+      "tittle": "HOTEL MANKANDALI",
+      "area": "KAUL NAGAR",
+      "price": "2370",
+      "image": "goa6.jpg",
+      "email": "",
+      "location": "goa"
+    },
+    {
+      "id": 7,
+      "tittle": "Hotel white saffron",
+      "area": "palampur",
+      "price": "2300",
+      "image": "goa7.jpg",
+      "email": "",
+      "location": "goa"
+    },
+    {
+      "id": 8,
+      "tittle": "Hotel napper",
+      "area": "MAMODIA",
+      "price": "2300",
+      "image": "goa2.5.jpg",
+      "email": "",
+      "location": "goa"
+    },
+    {
+      "id": 9,
+      "tittle": "Hotel VETRU",
+      "area": "BILLI NAGAR",
+      "price": "2300",
+      "image": "bang5.jpg",
+      "email": "",
+      "location": "Banguluru"
+    },
+    {
+      "id": 11,
+      "tittle": "HotelGOLD",
+      "area": "VIJAY NAGAR",
+      "price": "3900",
+      "image": "bang2.jpg",
+      "email": "",
+      "location": "Banguluru"
+    },
+    {
+      "id": 12,
+      "tittle": "Hotel DIAMOND",
+      "area": "MALNHIR",
+      "price": "1968",
+      "image": "bang4.jpg",
+      "email": "",
+      "location": "Banguluru"
+    },
+    {
+      "id": 13,
+      "tittle": "Hotel Prism",
+      "area": "NAGAIR",
+      "price": "3968",
+      "image": "bang3.jpg",
+      "email": "",
+      "location": "Banguluru"
+    },
+    {
+      "id": 14,
+      "tittle": "The byke deloite",
+      "area": "ANDHERI",
+      "price": "3964",
+      "image": "kash1.jpg",
+      "email": "",
+      "location": "Jammu"
+    },
+    {
+      "id": 16,
+      "tittle": "THE UBE RESIDENCY",
+      "area": "MUNNAI NAGAI",
+      "price": "2900",
+      "image": "kash3.jpg",
+      "email": "",
+      "location": "Jammu"
+    },
+    {
+      "id": 17,
+      "tittle": "TUNGA HOTEL",
+      "area": "MANALI STREET",
+      "price": "2909",
+      "image": "kash5.jpg",
+      "email": "",
+      "location": "Jammu"
+    },
+    {
+      "id": 18,
+      "tittle": "AKASH HOTEL NEW",
+      "area": "TOLGATE",
+      "price": "3500",
+      "image": "chennai3.jpg",
+      "email": "",
+      "location": "Chennai",
+      "locations": [
+        {
+          "name": ""
+        },
+        {
+          "name": "Chennai"
+        },
+        {
+          "name": "goa"
+        },
+        {
+          "name": "Banguluru"
+        },
+        {
+          "name": "Jammu"
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "tittle": "THE VILLA HOTEL",
+      "area": "MANALI ",
+      "price": "1500",
+      "image": "goa2.3.jpg",
+      "email": "",
+      "location": "goa",
+      "locations": [
+        {
+          "name": ""
+        },
+        {
+          "name": "Chennai"
+        },
+        {
+          "name": "goa"
+        },
+        {
+          "name": "Banguluru"
+        },
+        {
+          "name": "Jammu"
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "tittle": "THE WONDERLA",
+      "area": "BIHAR SALAI",
+      "price": "3000",
+      "image": "chennai3.jpg",
+      "email": "",
+      "location": "Chennai",
+      "locations": [
+        {
+          "name": ""
+        },
+        {
+          "name": "Chennai"
+        },
+        {
+          "name": "goa"
+        },
+        {
+          "name": "Banguluru"
+        },
+        {
+          "name": "Jammu"
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "tittle": "MARINA HOTEL",
+      "area": "SIRUSERI",
+      "price": "2800",
+      "image": "kash2.jpg",
+      "email": "",
+      "location": "Jammu",
+      "locations": [
+        {
+          "name": ""
+        },
+        {
+          "name": "Chennai"
+        },
+        {
+          "name": "goa"
+        },
+        {
+          "name": "Banguluru"
+        },
+        {
+          "name": "Jammu"
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "tittle": "THE SALAI HOTEL",
+      "area": "ANNA SALAI",
+      "price": "3800",
+      "image": "kash3.jpg",
+      "email": "",
+      "location": "Jammu",
+      "locations": [
+        {
+          "name": ""
+        },
+        {
+          "name": "Chennai"
+        },
+        {
+          "name": "goa"
+        },
+        {
+          "name": "Banguluru"
+        },
+        {
+          "name": "Jammu"
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "tittle": "THE MANWARA LODGE",
+      "area": "THE EROAD",
+      "price": "3800",
+      "image": "kash6.jpg",
+      "email": "",
+      "location": "Jammu",
+      "locations": [
+        {
+          "name": ""
+        },
+        {
+          "name": "Chennai"
+        },
+        {
+          "name": "goa"
+        },
+        {
+          "name": "Banguluru"
+        },
+        {
+          "name": "Jammu"
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "tittle": "THE MOZALLA HOTEL",
+      "area": "SABRINA ROAD",
+      "price": "3800",
+      "image": "jammu5.jpg",
+      "email": "",
+      "location": "Jammu",
+      "locations": [
+        {
+          "name": ""
+        },
+        {
+          "name": "Chennai"
+        },
+        {
+          "name": "goa"
+        },
+        {
+          "name": "Banguluru"
+        },
+        {
+          "name": "Jammu"
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "tittle": " HOTEL NEWWAR",
+      "area": "SABRINA ROAD",
+      "price": "4800",
+      "image": "banguluru4.jpg",
+      "email": "",
+      "location": "Banguluru",
+      "locations": [
+        {
+          "name": ""
+        },
+        {
+          "name": "Chennai"
+        },
+        {
+          "name": "goa"
+        },
+        {
+          "name": "Banguluru"
+        },
+        {
+          "name": "Jammu"
+        }
+      ]
+    },
+    {
+      "id": 26,
+      "tittle": "THE PULSE HOTEL",
+      "area": "NEW AREA",
+      "price": "4803",
+      "image": "bang8.jpg",
+      "email": "",
+      "location": "Banguluru",
+      "locations": [
+        {
+          "name": ""
+        },
+        {
+          "name": "Chennai"
+        },
+        {
+          "name": "goa"
+        },
+        {
+          "name": "Banguluru"
+        },
+        {
+          "name": "Jammu"
+        }
+      ]
+    },
+    {
+      "id": 27,
+      "tittle": "THE MANALAI",
+      "area": "kovalam",
+      "price": "2900",
+      "image": "chennai6.jpg",
+      "email": "",
+      "location": "Chennai",
+      "locations": [
+        {
+          "name": ""
+        },
+        {
+          "name": "Chennai"
+        },
+        {
+          "name": "goa"
+        },
+        {
+          "name": "Banguluru"
+        },
+        {
+          "name": "Jammu"
+        }
+      ]
+    },
+    {
+      "id": 28,
+      "tittle": "THE MANAVAQ HOTEL",
+      "area": "PERIYAR NAGAR",
+      "price": "2900",
+      "image": "goa7.jpg",
+      "email": "",
+      "location": "goa",
+      "locations": [
+        {
+          "name": ""
+        },
+        {
+          "name": "Chennai"
+        },
+        {
+          "name": "goa"
+        },
+        {
+          "name": "Banguluru"
+        },
+        {
+          "name": "Jammu"
+        }
+      ]
+    },
+    {
+      "id": 29,
+      "tittle": "SKY HOTEL",
+      "area": "PERIYAR SALAI",
+      "price": "4900",
+      "image": "goa9.jpg",
+      "email": "",
+      "location": "goa",
+      "locations": [
+        {
+          "name": ""
+        },
+        {
+          "name": "Chennai"
+        },
+        {
+          "name": "goa"
+        },
+        {
+          "name": "Banguluru"
+        },
+        {
+          "name": "Jammu"
+        }
+      ]
+    },
+    {
+      "id": 30,
+      "tittle": "THE PILOT HOTEL",
+      "area": "ANNA NAGAR",
+      "price": "1900",
+      "image": "goa3.jpg",
+      "email": "",
+      "location": "goa",
+      "locations": [
+        {
+          "name": ""
+        },
+        {
+          "name": "Chennai"
+        },
+        {
+          "name": "goa"
+        },
+        {
+          "name": "Banguluru"
+        },
+        {
+          "name": "Jammu"
+        }
+      ]
+    },
+    {
+      "id": 31,
+      "tittle": "THE APRIL HOTEL",
+      "area": "TAMBARAM",
+      "price": "2900",
+      "image": "banguluru1.jpg",
+      "email": "",
+      "location": "Banguluru",
+      "locations": [
+        {
+          "name": ""
+        },
+        {
+          "name": "Chennai"
+        },
+        {
+          "name": "goa"
+        },
+        {
+          "name": "Banguluru"
+        },
+        {
+          "name": "Jammu"
+        }
+      ]
+    },
+    {
+      "id": 32,
+      "tittle": "THE CONCO VILLA",
+      "area": "MANAWAR",
+      "price": "3000",
+      "image": "chennai2.jpg",
+      "email": "",
+      "location": "Chennai",
+      "locations": [
+        {
+          "name": ""
+        },
+        {
+          "name": "Chennai"
+        },
+        {
+          "name": "goa"
+        },
+        {
+          "name": "Banguluru"
+        },
+        {
+          "name": "Jammu"
+        }
+      ]
+    },
+    {
+      "id": 33,
+      "tittle": "Radha hometel sarovar hotel",
+      "area": "SIRI PALLAI AREA",
+      "price": "2800",
+      "image": "chennai2.1.jpg",
+      "email": "",
+      "location": "Chennai",
+      "locations": [
+        {
+          "name": ""
+        },
+        {
+          "name": "Chennai"
+        },
+        {
+          "name": "goa"
+        },
+        {
+          "name": "Banguluru"
+        },
+        {
+          "name": "Jammu"
+        }
+      ]
+    },
+    {
+      "id": 34,
+      "tittle": "THE PATHAN HOTEL",
+      "area": "KOILAMBAKKAL",
+      "price": "2830",
+      "image": "chennai2.1.jpg",
+      "email": "",
+      "location": "Chennai",
+      "locations": [
+        {
+          "name": ""
+        },
+        {
+          "name": "Chennai"
+        },
+        {
+          "name": "goa"
+        },
+        {
+          "name": "Banguluru"
+        },
+        {
+          "name": "Jammu"
+        }
+      ]
+    },
+    {
+      "id": 35,
+      "tittle": "THE RAESE HOTEL",
+      "area": "PATHAN ROAD",
+      "price": "2230",
+      "image": "banguluru2.1.jpg",
+      "email": "",
+      "location": "Banguluru",
+      "locations": [
+        {
+          "name": ""
+        },
+        {
+          "name": "Chennai"
+        },
+        {
+          "name": "goa"
+        },
+        {
+          "name": "Banguluru"
+        },
+        {
+          "name": "Jammu"
+        }
+      ]
+    },
+    {
+      "id": 36,
+      "tittle": "THE SUN HOTEL",
+      "area": "TOLAGE VILLA ROAD",
+      "price": "4800",
+      "image": "goa2.5.jpg",
+      "email": "",
+      "location": "goa",
+      "locations": [
+        {
+          "name": ""
+        },
+        {
+          "name": "Chennai"
+        },
+        {
+          "name": "goa"
+        },
+        {
+          "name": "Banguluru"
+        },
+        {
+          "name": "Jammu"
+        }
+      ]
+    },
+    {
+      "id": 37,
+      "tittle": "THE ARTHI VILLAS",
+      "area": "MANAWARM MAIN ROAD",
+      "price": "4820",
+      "image": "banguluru4.jpg",
+      "email": "",
+      "location": "Banguluru",
+      "locations": [
+        {
+          "name": ""
+        },
+        {
+          "name": "Chennai"
+        },
+        {
+          "name": "goa"
+        },
+        {
+          "name": "Banguluru"
+        },
+        {
+          "name": "Jammu"
+        }
+      ]
+    },
+    {
+      "id": 38,
+      "tittle": "MAHARAJA HOTEL",
+      "area": "KALADIPET",
+      "price": "1899",
+      "image": "jammu1.jpg",
+      "email": "",
+      "location": "Jammu",
+      "locations": [
+        {
+          "name": ""
+        },
+        {
+          "name": "Chennai"
+        },
+        {
+          "name": "goa"
+        },
+        {
+          "name": "Banguluru"
+        },
+        {
+          "name": "Jammu"
+        }
+      ]
+    },
+    {
+      "id": 39,
+      "tittle": "MAHLAKSHMI VILLA",
+      "area": "ROYAPETTA ROAD",
+      "price": "3299",
+      "image": "kash2.jpg",
+      "email": "",
+      "location": "Jammu",
+      "locations": [
+        {
+          "name": ""
+        },
+        {
+          "name": "Chennai"
+        },
+        {
+          "name": "goa"
+        },
+        {
+          "name": "Banguluru"
+        },
+        {
+          "name": "Jammu"
+        }
+      ]
+    },
+    {
+      "id": 40,
+      "tittle": "Radha hometel sarovar hotel",
+      "area": "gdhgf",
+      "price": "3000",
+      "image": "kash4.jpg",
+      "email": "",
+      "location": "Jammu",
+      "locations": [
+        {
+          "name": ""
+        },
+        {
+          "name": "Chennai"
+        },
+        {
+          "name": "goa"
+        },
+        {
+          "name": "Banguluru"
+        },
+        {
+          "name": "Jammu"
+        }
+      ]
+    }
+  ],
+  
+  "productdatachennai": [
+    {
+      "tittle": "J2 SERVICE",
+      "location": "SIRISUERI",
+      "price": "3000",
+      "image": "chennai2.jpg",
+      "id": 6
+    },
+    {
+      "tittle": "CHANDRAN HYLINE",
+      "location": "PERUMBAKKAM",
+      "price": "3600",
+      "image": "chennai3.jpg",
+      "id": 8
+    },
+    {
+      "tittle": "NEW GREEN GALAXY",
+      "location": "CHEPAUK",
+      "price": "2600",
+      "image": "chennai5.jpg",
+      "id": 9
+    },
+    {
+      "tittle": "ADMIRE SUITE",
+      "location": "TRIPLICANE",
+      "price": "3900",
+      "image": "chennai6.jpg",
+      "id": 10
+    },
+    {
+      "tittle": "TOWN SPACE APARTMENT HOTEL",
+      "location": "PORUR",
+      "price": "1900",
+      "image": "chennai7.jpg",
+      "id": 11
+    },
+    {
+      "tittle": "THE ARINA HALL",
+      "location": "KODAMBAKKAM CHENNAI",
+      "price": "3090",
+      "image": "kash3.jpg",
+      "id": 12
+    },
+    {
+      "tittle": "THE GREAT PALACE DIAMOND HOTEL",
+      "location": "ANNA SALAI CHENNAI",
+      "price": "4000",
+      "image": "goa9.jpg",
+      "id": 13
+    },
+    {
+      "tittle": "THE ARINA HALL",
+      "location": "KODAMBAKKAM CHENNAI",
+      "price": "3090",
+      "image": "goa9.jpg",
+      "email": "",
+      "id": 14
+    },
+    {
+      "tittle": "THE MAGIC HOTEL",
+      "location": "PALLAVANTHANGAL",
+      "price": "2500",
+      "image": "goa2.4.jpg",
+      "email": "",
+      "id": 15
+    },
+    {
+      "tittle": "HOTEL ADMIRE",
+      "location": "THALAMBUR CHENNAI",
+      "price": "3900",
+      "image": "bang3.jpg",
+      "email": "",
+      "id": 16
+    },
+    {
+      "id": 17,
+      "tittle": "siru ",
+      "location": "beach",
+      "price": "2000",
+      "image": "kash1.jpg",
+      "email": ""
+    },
+    {
+      "id": 18,
+      "tittle": "new",
+      "area": "siruser",
+      "price": "2800",
+      "image": "chennai7.jpg",
+      "email": "",
+      "location": "chennai"
+    },
+    {
+      "id": 19,
+      "tittle": "new",
+      "area": "kovalam",
+      "price": "2800",
+      "image": "goa7.jpg",
+      "email": "",
+      "location": "",
+      "are": "chennai"
+    },
+    {
+      "id": 20,
+      "tittle": "",
+      "area": "siruseri",
+      "price": "",
+      "image": "goa5.jpg",
+      "email": "",
+      "location": "chennai"
+    },
+    {
+      "id": 21,
+      "tittle": "new",
+      "area": "siruseri",
+      "price": "2800",
+      "image": "kash1.jpg",
+      "email": "",
+      "location": "chennai"
+    },
+    {
+      "id": 22,
+      "tittle": "",
+      "area": "chennai",
+      "price": "",
+      "image": "kash1.jpg",
+      "email": "",
+      "location": "chennai"
+    },
+    {
+      "id": 23,
+      "tittle": "new",
+      "area": "siruseri",
+      "price": "",
+      "image": "kash2.jpg",
+      "email": "",
+      "location": "chennai"
+    },
+    {
+      "id": 24,
+      "tittle": "Radha hometel sarovar hotel",
+      "area": "central anna salai",
+      "price": "3000",
+      "image": "chennai2.jpg",
+      "email": "",
+      "location": "chennai"
+    },
+    {
+      "id": 25,
+      "tittle": "zidan hotel",
+      "area": "royapuram",
+      "price": "3500",
+      "image": "chennai7.jpg",
+      "email": "",
+      "location": "chennai"
+    },
+    {
+      "id": 26,
+      "tittle": "new",
+      "area": "kavalam",
+      "price": "2800",
+      "image": "chennai3.jpg",
+      "email": "",
+      "location": "Chennai"
+    },
+    {
+      "id": 37,
+      "tittle": "Manohar Hotel",
+      "area": "kaswadi street",
+      "price": "3417",
+      "image": "chennai4.jpg",
+      "email": "",
+      "location": "Chennai"
+    },
+    {
+      "id": 38,
+      "tittle": "Radha hometel sarovar hotel",
+      "area": "tamabaram",
+      "price": "3900",
+      "image": "chennai2.jpg",
+      "email": "",
+      "location": "Chennai"
+    },
+    {
+      "id": 39,
+      "tittle": "zidan saorvar hotel",
+      "area": "central ",
+      "price": "3000",
+      "image": "chennai6.jpg",
+      "email": "",
+      "location": "Chennai"
+    },
+    {
+      "id": 40,
+      "tittle": "HOTEL PERAL",
+      "area": "MUGHALPUR",
+      "price": "1400",
+      "image": "chennai7.jpg",
+      "email": "",
+      "location": "Chennai"
+    },
+    {
+      "id": 41,
+      "tittle": "HOTEL GARDEN SAFFRON",
+      "area": "CENTRAL ",
+      "price": "1900",
+      "image": "chennai6.jpg",
+      "email": "",
+      "location": "Chennai"
+    },
+    {
+      "id": 42,
+      "tittle": "HOTEL GRAY INTERNATIONAL",
+      "area": "ANNA SALAI",
+      "price": "2900",
+      "image": "bang8.jpg",
+      "email": "",
+      "location": "Chennai"
+    },
+    {
+      "id": 43,
+      "tittle": "HOTEL SILVER",
+      "area": "PALLAVAN SALALI",
+      "price": "2970",
+      "image": "kash6.jpg",
+      "email": "",
+      "location": "Chennai"
+    },
+    {
+      "id": 3,
+      "tittle": "HOTEL GRAY INTERNATIONAL",
+      "area": "ANNA SALAI",
+      "price": "2900",
+      "image": "newpic.jpg",
+      "email": "",
+      "location": "Chennai"
+    },
+    {
+      "id": 44,
+      "tittle": "AKASH HOTEL",
+      "area": "TOLGATE  ROYAPURAM",
+      "price": "2800",
+      "image": "newpic.jpg",
+      "email": "",
+      "location": "Chennai"
+    },
+    {
+      "id": 45,
+      "tittle": "THE WONDERLA",
+      "area": "BIHAR SALAI",
+      "price": "3000",
+      "image": "chennai3.jpg",
+      "email": "",
+      "location": "Chennai"
+    },
+    {
+      "id": 46,
+      "tittle": "THE MANALAI",
+      "area": "kovalam",
+      "price": "2900",
+      "image": "banguluru3.jpg",
+      "email": "",
+      "location": "Chennai"
+    },
+    {
+      "id": 47,
+      "tittle": "THE CONCO VILLA",
+      "area": "MANAWAR",
+      "price": "3000",
+      "image": "chennai2.jpg",
+      "email": "",
+      "location": "Chennai"
+    },
+    {
+      "id": 48,
+      "tittle": "Radha hometel sarovar hotel",
+      "area": "SIRI PALLAI AREA",
+      "price": "2800",
+      "image": "goa4.jpg",
+      "email": "",
+      "location": "Chennai"
+    },
+    {
+      "id": 49,
+      "tittle": "THE PATHAN HOTEL",
+      "area": "KOILAMBAKKAL",
+      "price": "2830",
+      "image": "jammu2.jpg",
+      "email": "",
+      "location": "Chennai",
+      "locations": [
+        {
+          "name": ""
+        },
+        {
+          "name": "Chennai"
+        },
+        {
+          "name": "goa"
+        },
+        {
+          "name": "Banguluru"
+        },
+        {
+          "name": "Jammu"
+        }
+      ]
+    }
+  ],
+  "productdatabangaluru": [
+    {
+      "tittle": "EMERALD INN",
+      "location": "SAKINAKA ANDHERI",
+      "price": "4000",
+      "image": "bang1.jpg",
+      "id": 2
+    },
+    {
+      "tittle": "HOTEL ROYAL  GRAND",
+      "location": "JOGESHWARI",
+      "price": "3200",
+      "image": "bang2.jpg",
+      "id": 3
+    },
+    {
+      "tittle": "HOTEL GOLDEN PARK",
+      "location": "MORAL ",
+      "price": "2590",
+      "image": "bang3.jpg",
+      "id": 4
+    },
+    {
+      "tittle": "HOTEL HILL PARK",
+      "location": "KURLA WESI",
+      "price": "2574",
+      "image": "bang4.jpg",
+      "id": 5
+    },
+    {
+      "tittle": "HOTEL ROYCE EXECUTIVE",
+      "location": "MAHALAXMI ROAD NEAR",
+      "price": "2799",
+      "image": "bang7.jpg",
+      "id": 6
+    },
+    {
+      "tittle": "HOTEL ORIENTER ASTER",
+      "location": "CHAKALA GALI",
+      "price": "3999",
+      "image": "bang5.jpg",
+      "id": 7
+    },
+    {
+      "tittle": "CHANDRAN HYLINE",
+      "location": "tambaram",
+      "price": "1000",
+      "image": "goa9.jpg",
+      "id": 8
+    },
+    {
+      "tittle": "YADAV SAPNA HOTEL",
+      "location": "PURANI BAJAR BANGALORE",
+      "price": "3001",
+      "image": "bang8.jpg",
+      "id": 9
+    },
+    {
+      "id": 10,
+      "tittle": "the diamond glass hotel",
+      "location": "triplicane",
+      "price": "3222",
+      "image": "bang7.jpg",
+      "email": ""
+    },
+    {
+      "id": 11,
+      "tittle": "Hotel Prisms wondela",
+      "area": "kavalam",
+      "price": "2800",
+      "image": "bang7.jpg",
+      "email": "",
+      "location": "bangalore"
+    },
+    {
+      "id": 12,
+      "tittle": "clarks inn hotel",
+      "area": "sanda road ",
+      "price": "3000",
+      "image": "bang7.jpg",
+      "email": "",
+      "location": "Banguluru"
+    },
+    {
+      "id": 13,
+      "tittle": "manohar oyo hotel",
+      "area": "kaswadi street",
+      "price": "3807",
+      "image": "bang3.jpg",
+      "email": "",
+      "location": "Banguluru"
+    },
+    {
+      "id": 14,
+      "tittle": "Hotel VETRU",
+      "area": "BILLI NAGAR",
+      "price": "2300",
+      "image": "bang5.jpg",
+      "email": "",
+      "location": "Banguluru"
+    },
+    {
+      "id": 15,
+      "tittle": "Hotel TRAVERSAL",
+      "area": "BAMALRI",
+      "price": "2900",
+      "image": "bang8.jpg",
+      "email": "",
+      "location": "Banguluru"
+    },
+    {
+      "id": 16,
+      "tittle": "HotelGOLD",
+      "area": "VIJAY NAGAR",
+      "price": "3900",
+      "image": "bang2.jpg",
+      "email": "",
+      "location": "Banguluru"
+    },
+    {
+      "id": 17,
+      "tittle": "Hotel DIAMOND",
+      "area": "MALNHIR",
+      "price": "1968",
+      "image": "bang4.jpg",
+      "email": "",
+      "location": "Banguluru"
+    },
+    {
+      "id": 18,
+      "tittle": "Hotel Prism",
+      "area": "NAGAIR",
+      "price": "3968",
+      "image": "bang3.jpg",
+      "email": "",
+      "location": "Banguluru"
+    },
+    {
+      "id": 19,
+      "tittle": " HOTEL NEWWAR",
+      "area": "SABRINA ROAD",
+      "price": "4800",
+      "image": "kash5.jpg",
+      "email": "",
+      "location": "Banguluru",
+      "locations": [
+        {
+          "name": ""
+        },
+        {
+          "name": "Chennai"
+        },
+        {
+          "name": "goa"
+        },
+        {
+          "name": "Banguluru"
+        },
+        {
+          "name": "Jammu"
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "tittle": "THE PULSE HOTEL",
+      "area": "NEW AREA",
+      "price": "4803",
+      "image": "bang8.jpg",
+      "email": "",
+      "location": "Banguluru",
+      "locations": [
+        {
+          "name": ""
+        },
+        {
+          "name": "Chennai"
+        },
+        {
+          "name": "goa"
+        },
+        {
+          "name": "Banguluru"
+        },
+        {
+          "name": "Jammu"
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "tittle": "THE APRIL HOTEL",
+      "area": "TAMBARAM",
+      "price": "2900",
+      "image": "goa2.jpg",
+      "email": "",
+      "location": "Banguluru",
+      "locations": [
+        {
+          "name": ""
+        },
+        {
+          "name": "Chennai"
+        },
+        {
+          "name": "goa"
+        },
+        {
+          "name": "Banguluru"
+        },
+        {
+          "name": "Jammu"
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "tittle": "THE RAESE HOTEL",
+      "area": "PATHAN ROAD",
+      "price": "2230",
+      "image": "jammu5.jpg",
+      "email": "",
+      "location": "Banguluru",
+      "locations": [
+        {
+          "name": ""
+        },
+        {
+          "name": "Chennai"
+        },
+        {
+          "name": "goa"
+        },
+        {
+          "name": "Banguluru"
+        },
+        {
+          "name": "Jammu"
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "tittle": "THE ARTHI VILLAS",
+      "area": "MANAWARM MAIN ROAD",
+      "price": "4820",
+      "image": "banguluru4.jpg",
+      "email": "",
+      "location": "Banguluru",
+      "locations": [
+        {
+          "name": ""
+        },
+        {
+          "name": "Chennai"
+        },
+        {
+          "name": "goa"
+        },
+        {
+          "name": "Banguluru"
+        },
+        {
+          "name": "Jammu"
+        }
+      ]
+    }
+  ],
+  "royapuram": [
+    {
+      "tittle": "HOTEL CLASSIC GRANDE",
+      "location": "CAMP ROAD",
+      "price": "4000",
+      "image": "goa5.jpg",
+      "id": 2
+    },
+    {
+      "tittle": "HOTEL SAHRA",
+      "location": "SHIVAJI NAGAR",
+      "price": "4200",
+      "image": "goa6.jpg",
+      "id": 3
+    },
+    {
+      "tittle": "LIV INN ROOM HOTELS",
+      "location": "TIGRI GOL CHAKKAR",
+      "price": "3920",
+      "image": "goa7.jpg",
+      "id": 4
+    },
+    {
+      "tittle": "HERA NANADANI HOTEL",
+      "location": "ECOTECH",
+      "price": "3790",
+      "image": "goa8.jpg",
+      "id": 5
+    },
+    {
+      "tittle": "OM RESIDENCY",
+      "location": "RAZA JALAPUR",
+      "price": "4790",
+      "image": "goa9.jpg",
+      "id": 6
+    },
+    {
+      "tittle": "ACE ICONIC HOTEL",
+      "location": "ANSAL GOLF LINE ROAD",
+      "price": "2990",
+      "image": "goa10.jpg",
+      "id": 7
+    },
+    {
+      "tittle": "CHANDRAN HYLINE",
+      "location": "tambaram",
+      "price": "1000",
+      "image": "goa9.jpg",
+      "id": 8
+    },
+    {
+      "id": 9,
+      "tittle": "Hotel Prism",
+      "area": "chennai",
+      "price": "3000",
+      "image": "chennai5.jpg",
+      "email": "",
+      "location": "goa"
+    },
+    {
+      "id": 10,
+      "tittle": "testing",
+      "area": "royapuram",
+      "price": "4800",
+      "image": "goa9.jpg",
+      "email": "",
+      "location": "goa"
+    },
+    {
+      "id": 11,
+      "tittle": "HOTELKILLICK ",
+      "area": "PANAGANJ",
+      "price": "2370",
+      "image": "goa8.jpg",
+      "email": "",
+      "location": "goa"
+    },
+    {
+      "id": 12,
+      "tittle": "HOTEL MANKANDALI",
+      "area": "KAUL NAGAR",
+      "price": "2370",
+      "image": "goa6.jpg",
+      "email": "",
+      "location": "goa"
+    },
+    {
+      "id": 13,
+      "tittle": "Hotel white saffron",
+      "area": "palampur",
+      "price": "2300",
+      "image": "goa7.jpg",
+      "email": "",
+      "location": "goa"
+    },
+    {
+      "id": 14,
+      "tittle": "Hotel napper",
+      "area": "MAMODIA",
+      "price": "2300",
+      "image": "kash1.jpg",
+      "email": "",
+      "location": "goa"
+    },
+    {
+      "id": 15,
+      "tittle": "the villa hotel",
+      "area": "MANALI STREET",
+      "price": "2500",
+      "image": "hotelbang.jpg",
+      "email": "",
+      "location": "goa"
+    },
+    {
+      "id": 16,
+      "tittle": "THE MANAVAQ HOTEL",
+      "area": "PERIYAR NAGAR",
+      "price": "2900",
+      "image": "goa7.jpg",
+      "email": "",
+      "location": "goa",
+      "locations": [
+        {
+          "name": ""
+        },
+        {
+          "name": "Chennai"
+        },
+        {
+          "name": "goa"
+        },
+        {
+          "name": "Banguluru"
+        },
+        {
+          "name": "Jammu"
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "tittle": "SKY HOTEL",
+      "area": "PERIYAR SALAI",
+      "price": "4900",
+      "image": "goa9.jpg",
+      "email": "",
+      "location": "goa",
+      "locations": [
+        {
+          "name": ""
+        },
+        {
+          "name": "Chennai"
+        },
+        {
+          "name": "goa"
+        },
+        {
+          "name": "Banguluru"
+        },
+        {
+          "name": "Jammu"
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "tittle": "THE PILOT HOTEL",
+      "area": "ANNA NAGAR",
+      "price": "1900",
+      "image": "hoom3.jpeg",
+      "email": "",
+      "location": "goa",
+      "locations": [
+        {
+          "name": ""
+        },
+        {
+          "name": "Chennai"
+        },
+        {
+          "name": "goa"
+        },
+        {
+          "name": "Banguluru"
+        },
+        {
+          "name": "Jammu"
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "tittle": "THE SUN HOTEL",
+      "area": "TOLAGE VILLA ROAD",
+      "price": "4800",
+      "image": "jammu4.jpg",
+      "email": "",
+      "location": "goa"
+    }
+  ],
+  "jammu": [
+    {
+      "tittle": "SHELDON INTERNATIONAL",
+      "location": "VIP NAGAR",
+      "price": "4600",
+      "image": "kash1.jpg",
+      "id": 2
+    },
+    {
+      "tittle": "ROYAL CROWN",
+      "location": "DUM DUM ",
+      "price": "4900",
+      "image": "kash2.jpg",
+      "id": 3
+    },
+    {
+      "tittle": "HOTEL DIAMOND NEW",
+      "location": "PARK CIRCUS NEAR",
+      "price": "4300",
+      "image": "kash3.jpg",
+      "id": 4
+    },
+    {
+      "tittle": "GLASSOTEL  HOTEL",
+      "location": "PARK CIRCUS",
+      "price": "4500",
+      "image": "kash4.jpg",
+      "id": 5
+    },
+    {
+      "tittle": "GOKUL REGENCY",
+      "location": "HUSSAINPUR",
+      "price": "4800",
+      "image": "kash5.jpg",
+      "id": 6
+    },
+    {
+      "tittle": "MAYFAIR TOWER",
+      "location": "HUSSAINPUR",
+      "price": "4560",
+      "image": "kash6.jpg",
+      "id": 7
+    },
+    {
+      "tittle": "CHANDRAN HYLINE",
+      "location": "tambaram",
+      "price": "1000",
+      "image": "goa9.jpg",
+      "id": 8
+    },
+    {
+      "id": 9,
+      "tittle": "fghjk",
+      "location": "ghjkl",
+      "price": "yuio",
+      "image": "kash6.jpg",
+      "email": ""
+    },
+    {
+      "id": 10,
+      "tittle": "radha krishna hotel",
+      "area": "shimla nagar",
+      "price": "3900",
+      "image": "kash4.jpg",
+      "email": "",
+      "location": "Jammu"
+    },
+    {
+      "id": 11,
+      "tittle": "The byke deloite",
+      "area": "ANDHERI",
+      "price": "3964",
+      "image": "kash1.jpg",
+      "email": "",
+      "location": "Jammu"
+    },
+    {
+      "id": 12,
+      "tittle": "HOTEL PRUPEL WORLD",
+      "area": "WEST ANDHERI",
+      "price": "2964",
+      "image": "kash3.jpg",
+      "email": "",
+      "location": "Jammu"
+    },
+    {
+      "id": 13,
+      "tittle": "THE UBE RESIDENCY",
+      "area": "MUNNAI NAGAI",
+      "price": "2900",
+      "image": "kash3.jpg",
+      "email": "",
+      "location": "Jammu"
+    },
+    {
+      "id": 14,
+      "tittle": "TUNGA HOTEL",
+      "area": "MANALI STREET",
+      "price": "2909",
+      "image": "kash5.jpg",
+      "email": "",
+      "location": "Jammu"
+    },
+    {
+      "id": 15,
+      "tittle": "MARINA HOTEL",
+      "area": "SIRUSERI",
+      "price": "2800",
+      "image": "kash2.jpg",
+      "email": "",
+      "location": "Jammu"
+    },
+    {
+      "id": 16,
+      "tittle": "THE SALAI HOTEL",
+      "area": "ANNA SALAI",
+      "price": "3800",
+      "image": "banguluru4.jpg",
+      "email": "",
+      "location": "Jammu",
+      "locations": [
+        {
+          "name": ""
+        },
+        {
+          "name": "Chennai"
+        },
+        {
+          "name": "goa"
+        },
+        {
+          "name": "Banguluru"
+        },
+        {
+          "name": "Jammu"
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "tittle": "THE MANWARA LODGE",
+      "area": "THE EROAD",
+      "price": "3800",
+      "image": "bang8.jpg",
+      "email": "",
+      "location": "Jammu",
+      "locations": [
+        {
+          "name": ""
+        },
+        {
+          "name": "Chennai"
+        },
+        {
+          "name": "goa"
+        },
+        {
+          "name": "Banguluru"
+        },
+        {
+          "name": "Jammu"
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "tittle": "THE MOZALLA HOTEL",
+      "area": "SABRINA ROAD",
+      "price": "3800",
+      "image": "chennai4.jpg",
+      "email": "",
+      "location": "Jammu",
+      "locations": [
+        {
+          "name": ""
+        },
+        {
+          "name": "Chennai"
+        },
+        {
+          "name": "goa"
+        },
+        {
+          "name": "Banguluru"
+        },
+        {
+          "name": "Jammu"
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "tittle": "MAHARAJA HOTEL",
+      "area": "KALADIPET",
+      "price": "1899",
+      "image": "chennai3.jpg",
+      "email": "",
+      "location": "Jammu",
+      "locations": [
+        {
+          "name": ""
+        },
+        {
+          "name": "Chennai"
+        },
+        {
+          "name": "goa"
+        },
+        {
+          "name": "Banguluru"
+        },
+        {
+          "name": "Jammu"
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "tittle": "MAHLAKSHMI VILLA",
+      "area": "ROYAPETTA ROAD",
+      "price": "3299",
+      "image": "banguluru5.jpg",
+      "email": "",
+      "location": "Jammu",
+      "locations": [
+        {
+          "name": ""
+        },
+        {
+          "name": "Chennai"
+        },
+        {
+          "name": "goa"
+        },
+        {
+          "name": "Banguluru"
+        },
+        {
+          "name": "Jammu"
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "tittle": "Radha hometel sarovar hotel",
+      "area": "gdhgf",
+      "price": "3000",
+      "image": "kash5.jpg",
+      "email": "",
+      "location": "Jammu"
+    }
+  ],
+  "userbookeddetails": [
+    {
+      "tittle": "HERA NANADANI HOTEL",
+      "location": "ECOTECH",
+      "price": "3790",
+      "image": "goa8.jpg",
+      "id": 5,
+      "email": "arthi@123"
+    },
+    {
+      "tittle": "HOTEL CLASSIC GRANDE",
+      "location": "CAMP ROAD",
+      "price": "4000",
+      "image": "goa5.jpg",
+      "id": 2,
+      "email": "arthi@123"
+    },
+    {
+      "tittle": "J2 SERVICE",
+      "location": "SIRISUERI",
+      "price": "3000",
+      "image": "chennai2.jpg",
+      "id": 6,
+      "email": "arthi@123"
+    },
+    {
+      "tittle": "LIV INN ROOM HOTELS",
+      "location": "TIGRI GOL CHAKKAR",
+      "price": "3920",
+      "image": "goa7.jpg",
+      "id": 7,
+      "email": "arthi@123"
+    },
+    {
+      "tittle": "HOTEL CLASSIC GRANDE",
+      "location": "CAMP ROAD",
+      "price": "4000",
+      "image": "goa5.jpg",
+      "id": 8,
+      "email": "arthi@123"
+    },
+    {
+      "tittle": "ACE ICONIC HOTEL",
+      "location": "ANSAL GOLF LINE ROAD",
+      "price": "2990",
+      "image": "goa10.jpg",
+      "id": 9,
+      "email": "arthi@123"
+    },
+    {
+      "tittle": "HOTEL CLASSIC GRANDE",
+      "location": "CAMP ROAD",
+      "price": "4000",
+      "image": "goa5.jpg",
+      "id": 10,
+      "email": "arthi@123"
+    },
+    {
+      "tittle": "HOTEL SAHRA",
+      "location": "SHIVAJI NAGAR",
+      "price": "4200",
+      "image": "goa6.jpg",
+      "id": 11,
+      "email": "arthi@123"
+    },
+    {
+      "tittle": "ACE ICONIC HOTEL",
+      "location": "ANSAL GOLF LINE ROAD",
+      "price": "2990",
+      "image": "goa10.jpg",
+      "id": 12,
+      "email": "arthi@123"
+    },
+    {
+      "id": 13,
+      "tittle": "the diamond glass hotel",
+      "location": "triplicane",
+      "price": "3222",
+      "image": "bang7.jpg",
+      "email": "arthi@123"
+    },
+    {
+      "tittle": "OM RESIDENCY",
+      "location": "RAZA JALAPUR",
+      "price": "4790",
+      "image": "goa9.jpg",
+      "id": 14,
+      "email": "habic@123gmail.com"
+    },
+    {
+      "tittle": "HOTEL SAHRA",
+      "location": "SHIVAJI NAGAR",
+      "price": "4200",
+      "image": "goa6.jpg",
+      "id": 15,
+      "email": "habic@123gmail.com"
+    },
+    {
+      "tittle": "OM RESIDENCY",
+      "location": "RAZA JALAPUR",
+      "price": "4790",
+      "image": "goa9.jpg",
+      "id": 16,
+      "email": "habic@123gmail.com"
+    },
+    {
+      "tittle": "MAYFAIR TOWER",
+      "location": "HUSSAINPUR",
+      "price": "4560",
+      "image": "kash6.jpg",
+      "id": 17,
+      "email": "habic@123gmail.com"
+    },
+    {
+      "tittle": "HOTEL DIAMOND NEW",
+      "location": "PARK CIRCUS NEAR",
+      "price": "4300",
+      "image": "kash3.jpg",
+      "id": 18,
+      "email": "habic@123gmail.com"
+    },
+    {
+      "tittle": "HOTEL DIAMOND NEW",
+      "location": "PARK CIRCUS NEAR",
+      "price": "4300",
+      "image": "kash3.jpg",
+      "id": 19,
+      "email": "habic@123gmail.com"
+    },
+    {
+      "tittle": "MAYFAIR TOWER",
+      "location": "HUSSAINPUR",
+      "price": "4560",
+      "image": "kash6.jpg",
+      "id": 20,
+      "email": "habic@123gmail.com"
+    },
+    {
+      "tittle": "HOTEL SAHRA",
+      "location": "SHIVAJI NAGAR",
+      "price": "4200",
+      "image": "goa6.jpg",
+      "id": 21,
+      "email": "habic@123gmail.com"
+    },
+    {
+      "tittle": "HOTEL CLASSIC GRANDE",
+      "location": "CAMP ROAD",
+      "price": "4000",
+      "image": "goa5.jpg",
+      "id": 22,
+      "email": "habic@123gmail.com"
+    },
+    {
+      "tittle": "HOTEL CLASSIC GRANDE",
+      "location": "CAMP ROAD",
+      "price": "4000",
+      "image": "goa5.jpg",
+      "id": 23
+    },
+    {
+      "tittle": "HOTEL ROYCE EXECUTIVE",
+      "location": "MAHALAXMI ROAD NEAR",
+      "price": "2799",
+      "image": "bang7.jpg",
+      "id": 24,
+      "email": "arthi@123"
+    },
+    {
+      "tittle": "OM RESIDENCY",
+      "location": "RAZA JALAPUR",
+      "price": "4790",
+      "image": "goa9.jpg",
+      "id": 25,
+      "email": "habic@123gmail.com"
+    },
+    {
+      "tittle": "HOTEL ORIENTER ASTER",
+      "location": "CHAKALA GALI",
+      "price": "3999",
+      "image": "bang5.jpg",
+      "email": "habic@123gmail.com",
+      "id": 26
+    },
+    {
+      "tittle": "CHANDRAN HYLINE",
+      "location": "PERUMBAKKAM",
+      "price": "3600",
+      "image": "chennai3.jpg",
+      "email": "nisha.afroz@aspiresys.com",
+      "id": 27
+    },
+    {
+      "tittle": "HOTEL SAHRA",
+      "location": "SHIVAJI NAGAR",
+      "price": "4200",
+      "image": "goa6.jpg",
+      "email": "nisha.afroz@aspiresys.com",
+      "id": 28
+    },
+    {
+      "tittle": "Radha hometel sarovar hotel",
+      "location": "goa",
+      "price": "3000",
+      "image": "chennai7.jpg",
+      "email": "habicute111@gmail.com",
+      "id": 29
+    },
+    {
+      "tittle": "kasmiri hotels",
+      "location": "Jammu",
+      "price": "2400",
+      "image": "goa7.jpg",
+      "email": "habicute111@gmail.com",
+      "id": 30
+    },
+    {
+      "tittle": "SAROVAR MAGIC HOTEL",
+      "location": "goa",
+      "price": "4800",
+      "image": "goa6.jpg",
+      "email": "habicute111@gmail.com",
+      "id": 31
+    },
+    {
+      "tittle": "testing",
+      "area": "royapuram",
+      "price": "4800",
+      "image": "goa9.jpg",
+      "email": "habicute111@gmail.com",
+      "location": "goa",
+      "id": 32
+    },
+    {
+      "id": 36,
+      "tittle": "radha krishna hotel",
+      "area": "shimla nagar",
+      "price": "3900",
+      "image": "kash4.jpg",
+      "email": "habicute111@gmail.com",
+      "location": "Jammu"
+    },
+    {
+      "id": 37,
+      "tittle": "manohar oyo hotel",
+      "area": "kaswadi street",
+      "price": "3807",
+      "image": "bang3.jpg",
+      "email": "habicute111@gmail.com",
+      "location": "Banguluru"
+    },
+    {
+      "id": 34,
+      "tittle": "new",
+      "area": "kavalam",
+      "price": "2800",
+      "image": "chennai3.jpg",
+      "email": "habicute111@gmail.com",
+      "location": "Chennai"
+    },
+    {
+      "id": 38,
+      "tittle": "Radha hometel sarovar hotel",
+      "area": "tamabaram road",
+      "price": "3600",
+      "image": "chennai2.jpg",
+      "email": "habicute111@gmail.com",
+      "location": "Chennai"
+    },
+    {
+      "id": 39,
+      "tittle": "zidan saorvar hotel",
+      "area": "central ",
+      "price": "3000",
+      "image": "chennai6.jpg",
+      "email": "habicute111@gmail.com",
+      "location": "Chennai"
+    },
+    {
+      "id": 1,
+      "tittle": "HOTEL PERAL",
+      "area": "MUGHALPUR",
+      "price": "1400",
+      "image": "chennai7.jpg",
+      "email": "habicute111@gmail.com",
+      "location": "Chennai"
+    }
+  ],
+  "cartstoreddatas": [
+    {
+      "id": 34,
+      "tittle": "THE PATHAN HOTEL",
+      "area": "KOILAMBAKKAL",
+      "price": "2830",
+      "image": "chennai2.1.jpg",
+      "email": "",
+      "location": "Chennai",
+      "locations": [
+        {
+          "name": ""
+        },
+        {
+          "name": "Chennai"
+        },
+        {
+          "name": "goa"
+        },
+        {
+          "name": "Banguluru"
+        },
+        {
+          "name": "Jammu"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "tittle": "HOTEL MANKANDALI",
+      "area": "KAUL NAGAR",
+      "price": "2370",
+      "image": "goa6.jpg",
+      "email": "",
+      "location": "goa"
+    },
+    {
+      "id": 17,
+      "tittle": "TUNGA HOTEL",
+      "area": "MANALI STREET",
+      "price": "2909",
+      "image": "kash5.jpg",
+      "email": "",
+      "location": "Jammu"
+    },
+    {
+      "id": 25,
+      "tittle": " HOTEL NEWWAR",
+      "area": "SABRINA ROAD",
+      "price": "4800",
+      "image": "banguluru4.jpg",
+      "email": "",
+      "location": "Banguluru",
+      "locations": [
+        {
+          "name": ""
+        },
+        {
+          "name": "Chennai"
+        },
+        {
+          "name": "goa"
+        },
+        {
+          "name": "Banguluru"
+        },
+        {
+          "name": "Jammu"
+        }
+      ]
+    },
+    {
+      "id": 35,
+      "tittle": "THE RAESE HOTEL",
+      "area": "PATHAN ROAD",
+      "price": "2230",
+      "image": "banguluru2.1.jpg",
+      "email": "",
+      "location": "Banguluru",
+      "locations": [
+        {
+          "name": ""
+        },
+        {
+          "name": "Chennai"
+        },
+        {
+          "name": "goa"
+        },
+        {
+          "name": "Banguluru"
+        },
+        {
+          "name": "Jammu"
+        }
+      ]
+    },
+    {
+      "id": 28,
+      "tittle": "THE MANAVAQ HOTEL",
+      "area": "PERIYAR NAGAR",
+      "price": "2900",
+      "image": "goa7.jpg",
+      "email": "",
+      "location": "goa",
+      "locations": [
+        {
+          "name": ""
+        },
+        {
+          "name": "Chennai"
+        },
+        {
+          "name": "goa"
+        },
+        {
+          "name": "Banguluru"
+        },
+        {
+          "name": "Jammu"
+        }
+      ]
+    }
+  ],
+  "mainpageChennai": [
+    {
+      "id": 1,
+      "title": "Chennai",
+      "image": "bang3.jpg",
+      "para": "This is chennai Taj Hotel room"
+    },
+    {
+      "id": 2,
+      "title": "Chennai",
+      "image": "bang2.jpg",
+      "para": "This is chennai Taj Hotel room"
+    },
+    {
+      "id": 3,
+      "title": "Chennai",
+      "image": "goa2.jpg",
+      "para": "This is chennai Taj Hotel room"
+    },
+    {
+      "id": 4,
+      "title": "Chennai",
+      "image": "jammu2.jpg",
+      "para": "This is chennai Taj Hotel room"
+    }
+  ],
+  "mainpagegoa": [
+    {
+      "id": 1,
+      "title": "goa",
+      "image": "goa2.jpg",
+      "para": "This is Goa  Hotel Room"
+    },
+    {
+      "id": 2,
+      "title": "goa",
+      "image": "jammu2.jpg",
+      "para": "This is Goa  Hotel Room"
+    },
+    {
+      "id": 3,
+      "title": "goa",
+      "image": "bang3.jpg",
+      "para": "This is Goa  Hotel Room"
+    },
+    {
+      "id": 4,
+      "title": "goa",
+      "image": "bang1.jpg",
+      "para": "This is Goa  Hotel Room"
+    }
+  ],
+  "mainpagebangluru": [
+    {
+      "id": 1,
+      "title": "Banguluru",
+      "image": "goa7.jpg",
+      "para": "This is Bangaluru  Hotel Room"
+    },
+    {
+      "id": 2,
+      "title": "Banguluru",
+      "image": "goa2.jpg",
+      "para": "This is Bangaluru  Hotel Room"
+    },
+    {
+      "id": 3,
+      "title": "Banguluru",
+      "image": "bang7.jpg",
+      "para": "This is Bangaluru   Hotel Room"
+    },
+    {
+      "id": 4,
+      "title": "Banguluru",
+      "image": "bang7.jpg",
+      "para": "This is Bangaluru   Hotel Room"
+    }
+  ],
+  "mainpageJammu": [
+    {
+      "id": 1,
+      "title": "Jammu",
+      "image": "bang7.jpg",
+      "para": "This is JAMMU  Hotel Room"
+    },
+    {
+      "id": 2,
+      "title": "Jammu",
+      "image": "goa2.jpg",
+      "para": "This is  JAMMU  Hotel Room"
+    },
+    {
+      "id": 3,
+      "title": "Jammu",
+      "image": "jammu2.jpg",
+      "para": "This is  JAMMU  Hotel Room"
+    },
+    {
+      "id": 4,
+      "title": "Jammu",
+      "image": "goa6.jpg",
+      "para": "This is  JAMMU Hotel Room"
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+GET http://localhost:8080
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2ODA2MDEzNzMsImV4cCI6MTY4MDYxOTM3MywiYXVkIjoiNjQyYmYwY2Q5M2ViMDA1ZDMzNWI3NTg5IiwiaXNzIjoibXkgd2Vic2l0ZS5jb20ifQ.bawSJSLsDbdxSWlUyPbqnndKBVdZ7JUFf77z8uGosx0
+
+
+###
+
+POST  http://localhost:8080/auth/login
+Content-Type: application/json
+
+{
+    "email":"shakir1114@gmail.com",
+    "password":"12345678"
+}
+
+
+###
+
+POST  http://localhost:8080/auth/register
+Content-Type: application/json 
+
+{
+    "email":"dhoni123456@gmail.com",
+    "password":"1234567",
+    "firstname":"singh kartar",
+    "lastname":"m",
+    "state":"punjabi",
+    "city":"haryanavi",
+    "street":"dholkpura",
+    "zipcode":"600019"
+
+}
+
+###
+
+POST  http://localhost:8080/auth/refresh-token
+Content-Type: application/json
+
+{
+    "refreshToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2ODA1ODk4OTksImV4cCI6MTcxMjE0NzQ5OSwiYXVkIjoiNjQyYmMzMTUyMWM5N2ZiOGYwOTg5OWNiIiwiaXNzIjoibXkgd2Vic2l0ZS5jb20ifQ.tjQNGqbVb_NNZ8aMIilS9QxJHsoefM1kr9zJ1qJLs1U"
+}
+
+
+###
+
+DELETE url HTTP/1.1 http://localhost:8080/auth/logout

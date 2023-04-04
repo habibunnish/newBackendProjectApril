@@ -1,0 +1,29 @@
+<button class="btn btn-primary" (click)="goback()">back to page</button>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">id</th>
+     <th scope="col">PRODUCTTITTLE</th>
+      <th scope="col">LOCATION</th>
+      <th scope="col">PRICE</th>
+      <th scope="col">IMAGE</th>
+      <th scope="col">FILE</th>
+      <!-- <th class="addproduct"><button class="btn btn-primary" (click)="add()">ADD-PRODUCT</button></th> -->
+    </tr>
+  </thead>
+  <tbody>
+    <TR *ngFor="let item of items; let i = index">
+      <td>{{ i + 1 }}</td>
+      <TD>{{ item.tittle }}</TD>
+      <TD>{{ item.location }}</TD>
+      <TD>{{ item.price }}</TD>
+      <td>{{ item.image }}</td>
+      <TD
+        ><img
+          style="width: 200px"
+          src="/assets/IMAGES/{{ item.image }}"
+          alt="IMAGE"
+      /></TD>
+    </TR>
+  </tbody>
+</table>

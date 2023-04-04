@@ -1,0 +1,108 @@
+<p (childMessage)="$event"></p>
+
+
+<div class="container">
+  <div  class="registration-form"></div>
+   <form [formGroup]="profileForm" (ngSubmit)="submit()">
+    <pre></pre>
+
+    <label for="firstname">First Name: </label><br />
+    <input
+      id="firstname"
+      type="text" class="form-control"
+    [(ngModel)]="firstname" formControlName="firstname" />
+    <br /> 
+
+    <label for="lastname">Last Name: </label><br />
+    <input
+      id="lastname" class="form-control"
+      type="text" [(ngModel)]="lastname" formControlName="lastname"
+     /><br />
+
+      <label for="street">Street: </label><br />
+      <input
+        id="street" class="form-control"
+        type="textarea" [(ngModel)]="street"
+       formControlName="street"
+        required />
+       <br />
+
+      <label for="city">City: </label><br />
+      <input id="city" class="form-control"
+        type="text" [(ngModel)]="city" formControlName="city"
+       required/><br />
+
+      <label for="state">State: </label><br />
+      <input
+        id="state" class="form-control"
+        type="text" [(ngModel)]="state" formControlName="state"
+        required/><br />
+
+      <label for="zipcode">Zip Code: </label><br />
+      <input
+        id="zipcode" class="form-control"
+        type="tel" [(ngModel)]="zipcode"formControlName="zipcode"
+        required  />
+        <br>
+        <label for="password">Password</label>
+         <input type="text" class="form-control" id="password" formControlName="password"  [(ngModel)]="password"  placeholder="Enter Password" required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{4,}$"   />
+
+         <br>
+         <label for="email">email: </label><br />
+         <input
+        id="email" class="form-control"
+        type="email" [(ngModel)]="email"  formControlName="email"
+        pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,5})+$" required /><br />
+    
+    <!-- <p *ngIf="profileForm.touched && profileForm.invalid" class="alert alert-danger">invalid email use small case, uppercase,special characters</p>
+    <br /> -->
+   <p>Complete the form to enable button.</p>
+    <button
+      type="submit"
+      class="btn btn-primary btn-ghost"
+      (click)="submit()" >
+      Submit
+    </button>
+
+  </form>
+</div>
+
+<div class="colorss">
+  <h1>
+    What Ever You Try To Do Make Sure It Makes You Happy Explore Yourself 😌️
+  </h1>
+</div>
+
+<h2><b>BENEFIT YOU WILL GET HERE </b></h2>
+<div class="facility">
+  <div class="cdonechild">
+    <img src="assets/IMAGES/location.jpeg" />
+    <div>
+      <b>Good location view</b>
+    </div>
+  </div>
+
+  <div class="cdtwochild">
+    <img src="assets/IMAGES/party.jpeg" />
+    <div>
+      <b>Party Hall</b>
+    </div>
+  </div>
+</div>
+<div class="facility2">
+  <div class="cdthirdchild">
+    <img src="assets/IMAGES/hourly.jpeg" />
+    <div>
+      <b> Hourly Basis roome</b>
+    </div>
+  </div>
+
+  <div class="cdfourchild">
+    <img src="assets/IMAGES/support.jpeg" />
+    <div>
+      <b>Best Five Star service</b>
+    </div>
+  </div>
+</div>
+
+

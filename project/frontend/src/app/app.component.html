@@ -1,0 +1,28 @@
+<ul class="navigation">
+
+  <div style="flex-grow: 1">
+    <img src="assets/IMAGES/logo.jpeg" />
+  </div>
+  <li class="one" *ngIf="loggedin()" >
+    <a routerLink="home-page">HOMEPAGE</a>
+  </li>
+  <li class="one" >
+    <a routerLink="how-it-work">QUERY</a>
+  </li>
+  <li class="one" *ngIf="loggedin()"  (click)="BookDetailsNew()">HOTELS</li>
+  <li class="one" *ngIf="adminloggedin()"><a routerLink="get-product">DATABASE</a></li>
+  <LI class="one" *ngIf="!loggedin()"><A routerLink="login-form">LOGIN</A></LI>
+  <li class="one" *ngIf="loggedin()||onadminlogout()" id="logout"  (click)="onlogout()">
+    <a routerLink="how-it-work">LOGOUT</a>
+  </li>
+  <li class="two" *ngIf="loggedin()">
+    <div >
+      <img
+        routerLink="add-to-cart"
+        src="assets/IMAGES/cartlogo.png"
+        class="number"  />
+    </div>
+ </li>
+</ul>
+<router-outlet></router-outlet>
+

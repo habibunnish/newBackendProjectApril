@@ -1,0 +1,66 @@
+
+<div class="walpaper">
+  <h1>{{title}}</h1>
+ <div class="flex-container">
+   <div class="second">
+    <ngb-carousel >
+      <ng-template ngbSlide  *ngFor="let item of List">
+        <img src="assets/IMAGES/{{item.image}}"/>
+        <div class="carousel-caption">
+          <p>{{item.para}}</p>
+          <h5>{{item.title}}</h5>
+        </div>
+       </ng-template>
+    </ngb-carousel>
+    <div>
+      <button class="btn btn-primary" (click)="location('Chennai')" >EXPLORE MORE</button>
+    </div>
+   </div>
+ 
+   <div class="second">
+     <ngb-carousel >
+       <ng-template ngbSlide  *ngFor="let item of List2">
+         <img src="assets/IMAGES/{{item.image}}"/>
+         <div class="carousel-caption">
+           <p>{{item.para}}</p>
+           <h5>{{item.title}}</h5>
+         </div>
+        </ng-template>
+     </ngb-carousel>
+     <div>
+       <button class="btn btn-primary" (click)="location('goa')" >EXPLORE MORE</button>
+     </div>
+    </div>
+  
+  <div class="second">
+     <ngb-carousel >
+       <ng-template ngbSlide  *ngFor="let item of List3">
+         <img src="assets/IMAGES/{{item.image}}"/>
+         <div class="carousel-caption">
+           <p>{{item.para}}</p>
+           <h5>{{item.title}}</h5>
+         </div>
+        </ng-template>
+     </ngb-carousel>
+     <div>
+       <button class="btn btn-primary" (click)="location('Banguluru')" >EXPLORE MORE</button>
+     </div>
+    </div>
+ 
+  <div class="second">
+     <ngb-carousel >
+       <ng-template ngbSlide  *ngFor="let item of List4">
+         <img src="assets/IMAGES/{{item.image}}"/>
+         <div class="carousel-caption">
+           <p>{{item.para}}</p>
+           <h5>{{item.title}}</h5>
+         </div>
+        </ng-template>
+     </ngb-carousel>
+     <div>
+       <button class="btn btn-primary" (click)="location('Jammu')" >EXPLORE MORE</button>
+     </div>
+    </div>
+   </div>
+   </div>
+

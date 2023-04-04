@@ -1,0 +1,28 @@
+<div class="class1">
+    <div class="loginform">
+        <h1>Login</h1>
+  
+      <div align="left" class="container mb-3">
+              <form [formGroup]="loginForm" (ngSubmit)="login2()" >
+                <pre></pre>
+                  <div class="form-group">
+                    <label for="email">Email address</label>
+                    <input name="email" type="email"  [(ngModel)]="email" formControlName="email" class="form-control" id="email" required  placeholder="Enter Email"/>
+                  </div>
+                  <pre></pre>
+                  <pre></pre>
+                  <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password"  [(ngModel)]="password" formControlName="password" class="form-control" id="password" placeholder="Enter Password" required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{4,}$"  />    
+                </div>
+                <pre></pre>
+                <pre></pre>
+               
+                <button [disabled]="loginForm.invalid" (click)="login2()" class="btn btn-primary btn-ghost" type="submit" id="button"> LOG IN</button>
+                <span style="display: inline-block;width:270px"></span>
+                <button class="btn btn-primary btn-ghost"  id="buttononsubmit" (click)="onsubmit()">SIGN UP</button>
+                </form>
+           </div>
+      </div>
+  </div>
+    

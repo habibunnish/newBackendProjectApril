@@ -1,0 +1,37 @@
+.background{
+    background-image: linear-gradient(to bottom right, rgb(233, 160, 240), rgb(247, 247, 126));
+    height: 120vh;
+     margin-top: auto;
+     padding: 100px;
+     text-align: center;
+}
+.image{
+   
+    display: flex;
+    position: absolute;
+    right: 10px;
+    padding: 30px;
+    font-size: 20px;
+    width: 500px;
+    top: 250px;
+    float: right;
+    margin-right: 150px;
+}
+.btn{
+    background-color: blue;
+    color: white;
+    margin-left: 10px;
+    padding: 10px;
+    transition: 0.3s ease-in-out;
+}
+.btn:hover{
+   
+    transition: 0.3s ease-in-out;
+    transform: scale(1.1);
+
+}
+h1{
+    margin-left:-10px;
+    padding:50px;
+
+}
