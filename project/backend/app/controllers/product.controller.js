@@ -73,23 +73,22 @@ exports.putProduct=(req,res)=>{
 };
 exports.deleteproductchennai=(req,res)=>{
     const id=req.params.id;
-    Product.findByIdAndRemove(id)
+    Product.findByIdAndRemove(id,req.body,{useFindAndModify:false})
         .then((data)=>{
             if(!data){
                 res.status(404).send({
                     message:`cannot delte product with id=${id} product not found`
                 });
-            }else{
-                res.send({
-                    message:"product was delted successfully"
+            }else res.send({
+                message: "product was deleted successfully"
+            })
+            .catch((err)=>{
+                res.status(500).send({
+                    message:"error deleting product with id="+id
                 });
-            }
-        }).catch((err)=>{
-            res.status(500).send({
-                message:"could not delete product with id="+id
             });
-        });
-};
+        })
+    };
 exports.deleteProduct=(req,res)=>{
     const id=req.params.id;
     Product.findByIdAndRemove(id)

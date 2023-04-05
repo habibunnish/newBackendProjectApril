@@ -1,3 +1,4 @@
+import { LoginDetailsService } from './../../service/login-details.service';
 import { HttpClient } from '@angular/common/http';
 import { UserDetailsService } from './../../service/user-details.service';
 import { Component,EventEmitter,OnInit, Output } from '@angular/core';
@@ -49,6 +50,7 @@ this.changetype=!this.changetype;
   email: any;
  
   constructor(
+    private login:LoginDetailsService,
     private userdata: UserDetailsService,
     private fb: FormBuilder,
     private router: Router,
@@ -61,8 +63,9 @@ this.changetype=!this.changetype;
       password: this.password,
       email: this.email,
     };
-   this.http.post("http://localhost:8080/auth/login",newFormData).subscribe((resultData:any)=>{
+   this.login.login(newFormData).subscribe((resultData:any)=>{
     console.log(resultData);
+    this.router.navigate(['main-page']);
       })
   };
 

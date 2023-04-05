@@ -1,4 +1,4 @@
-const dbConfig=require("../../../back/helpers/init_mongodb");
+const dbConfig=require("../config/db.config");
 const mongoose=require("mongoose");
 mongoose.Promise=global.Promise;
 

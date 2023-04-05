@@ -1,5 +1,5 @@
 module.exports=app=>{
-    const main=require("../controllers/mainPage.controller.js");
+    const main=require("../../../backend/app/controllers/mainPage.controller.js");
     var router=require("express").Router();
 
     router.post("/",main.main);

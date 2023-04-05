@@ -9,7 +9,7 @@ import { HowItWorkComponent } from './how-it-work/how-it-work.component';
 
 const routes: Routes = [
   {
-    path: 'login-details',
+    path: 'login-form',
     component: LoginDetailsComponent,
     
    

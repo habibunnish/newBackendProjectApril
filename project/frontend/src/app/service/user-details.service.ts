@@ -18,7 +18,7 @@ export class UserDetailsService {
   }
 
   userRegisterDetails() {
-    return this.httpClient.get(`${this.url}/api/user` )
+    return this.httpClient.get(`${this.url}/auth/register/get` )
      
   }
 

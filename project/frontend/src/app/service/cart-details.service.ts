@@ -13,7 +13,7 @@ export class CartDetailsService {
   filterarray:any;
   constructor(private httpClient: HttpClient) {}
 
-  url="http://localhost:8080";
+  url="http://localhost:8082";
   getProducts() {
     return this.productList.asObservable();
   }

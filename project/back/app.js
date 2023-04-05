@@ -9,9 +9,10 @@ const morgan = require("morgan");
 app.use(morgan("dev"))
 require("./helpers/init_mongodb");
 
+
 app.use(cors({
     origin:"http://localhost:4200"
-}))
+}));
 
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
@@ -22,7 +23,14 @@ app.get("/", verifyAccessToken, async(req,res,next)=>{
     console.log(req.headers["authorization"]);
     res.send("hello express");
 });
+app.get("/auth/register",(req,res)=>{
+    res.send("registered")
+})
+app.get("/auth/login",(req,res)=>{
+    res.send("login ");
+})
 app.use("/auth",AuthRoute);
+
 
 app.use(async(req,res,next)=>{
     next(createError.NotFound("ROUTE NOT FOUND"));
@@ -38,7 +46,7 @@ app.use((err,req,res,next)=>{
     })
 })
 
-// require("../backend/app")
+
 
 
 const PORT=process.env.PORT || 8080

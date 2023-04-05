@@ -8,7 +8,7 @@ export class MainPageDetailsService {
 
   constructor(private httpClient: HttpClient) {}
 
-  url="http://localhost:8080";
+  url="http://localhost:8082";
   
   main(data:any){
     const httpHeaders = new HttpHeaders();

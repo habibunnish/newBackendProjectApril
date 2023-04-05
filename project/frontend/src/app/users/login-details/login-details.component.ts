@@ -81,10 +81,7 @@ constructor(
               localStorage.setItem('userData',JSON.stringify(bodyData));
               this.router.navigate(['home-page']);
             }
-            // else {
-            //   console.log("not found user");
-             
-            // }
+  
            };
          });
           this.login1()

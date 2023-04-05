@@ -8,13 +8,13 @@ export class CityDetailsService {
 
   constructor(private httpClient: HttpClient) {}
 
-  url="http://localhost:8080";
+  url="http://localhost:8082";
 
    //post
   addProductsDetails(createResource: any) {
     const httpHeaders = new HttpHeaders();
     httpHeaders.append('content-type', 'application/json');
-    return this.httpClient.post(`${this.url}/api/city`,
+    return this.httpClient.post(`${this.url}/api/city/chennai`,
       createResource,
       { headers: httpHeaders }
     );
@@ -25,7 +25,7 @@ export class CityDetailsService {
     const httpHeaders = new HttpHeaders();
     httpHeaders.append('content-type', 'application/json');
     return this.httpClient.post(
-      `${this.url}/api/city`,
+      `${this.url}/api/city/bangluru`,
       createResource,
       { headers: httpHeaders }
     );
@@ -37,7 +37,7 @@ export class CityDetailsService {
     const httpHeaders = new HttpHeaders();
     httpHeaders.append('content-type', 'application/json');
     return this.httpClient.post(
-      `${this.url}/api/city`,
+      `${this.url}/api/city/jammu`,
       createResource,
       { headers: httpHeaders }
     );
@@ -48,7 +48,7 @@ export class CityDetailsService {
   addProductsDetailsjammu(createResource: any) {
     const httpHeaders = new HttpHeaders();
     httpHeaders.append('content-type', 'application/json');
-    return this.httpClient.post(`${this.url}/api/city`, createResource, {
+    return this.httpClient.post(`${this.url}/api/city/goa`, createResource, {
       headers: httpHeaders,
     });
   }

@@ -8,8 +8,8 @@ POST  http://localhost:8080/auth/login
 Content-Type: application/json
 
 {
-    "email":"shakir1114@gmail.com",
-    "password":"12345678"
+    "email":"dhoni1234569@gmail.com",
+    "password":"1234567"
 }
 
 
@@ -19,7 +19,7 @@ POST  http://localhost:8080/auth/register
 Content-Type: application/json 
 
 {
-    "email":"dhoni123456@gmail.com",
+    "email":"dhoni1234569@gmail.com",
     "password":"1234567",
     "firstname":"singh kartar",
     "lastname":"m",
@@ -29,6 +29,24 @@ Content-Type: application/json
     "zipcode":"600019"
 
 }
+###
+POST http://localhost:8080/auth/adminregister
+Content-Type: application/json
+
+{
+    "email":"nishaafroz123@gmail.com",
+    "password":"nisha@123"
+}
+
+###
+POST http://localhost:8080/auth/adminlogin
+Content-Type: application/json
+
+{
+    "email":"nishaafroz123@gmail.com",
+    "password":"nisha@123"
+}
+
 
 ###
 
@@ -42,4 +60,15 @@ Content-Type: application/json
 
 ###
 
+POST  http://localhost:8080/main/mainpost
+Content-Type: application/json
+
+{
+    "para":"chennai hotel its",
+    "image":"chennai2.2.jpg",
+    "title":"new hotel"
+}
+
+
+###
 DELETE url HTTP/1.1 http://localhost:8080/auth/logout

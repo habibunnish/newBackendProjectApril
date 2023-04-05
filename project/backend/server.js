@@ -1,5 +1,6 @@
 const express=require("express");
 const cors=require("cors");
+const createError=require("http-errors");
 
 require("dotenv").config();
 const app=express();
@@ -19,32 +20,33 @@ app.get("/",(req,res)=>{
 });
 
 
+
+
+
 const db=require("./app/models");
-db.mongoose
-    .connect(db.url,{
-        useNewUrlParser:true,
-        useUnifiedTopology:true
-    })
+db.mongoose.connect(db.url,{
+    useNewUrlParser:true,
+    useUnifiedTopology:true
+}).then(()=>{
+    console.log("connected to the databse");
+})
+.catch(err=>{
+    console.log("cannot connect to databse");
+    process.exit();
+})
 
-    .then(()=>{
-        console.log("connected to databse!");
-    })
-    .catch(err=>{
-        console.log("cannot connect to databse",err);
-        process.exit()
-    });
 
-require("./app/routes/user.routes")(app);
+// require("./app/routes/user.routes")(app);
 require("./app/routes/product.routes")(app);
 require("./app/routes/cart.routes")(app);
 require("./app/routes/userBookedDetails")(app);
-require("./app/routes/login.routes")(app);
+// require("./app/routes/login.routes")(app);
 require("./app/routes/main.routes")(app);
 require("./app/routes/city.routes")(app);
 
 
 
-const PORT=process.env.PORT || 8081;
+const PORT=process.env.PORT || 8082;
 app.listen(PORT,()=>{
     
     console.log(`server is running on http://localhost:${PORT}`);

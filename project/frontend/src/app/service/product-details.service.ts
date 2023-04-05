@@ -9,7 +9,7 @@ export class ProductDetailsService {
 
   constructor(private httpClient: HttpClient) {}
 
-  url="http://localhost:8080";
+  url="http://localhost:8082";
 
   getProduct() {
     console.log('getProduct method');

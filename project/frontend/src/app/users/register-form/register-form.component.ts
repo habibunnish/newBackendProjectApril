@@ -69,7 +69,7 @@ password: any;
         alert(
           'you have successfully registered 🏨️🛌️'
         );
-        this.router.navigate(['login-details']);
+        this.router.navigate(['login-form']);
         this.profileForm.reset();
       });
   }

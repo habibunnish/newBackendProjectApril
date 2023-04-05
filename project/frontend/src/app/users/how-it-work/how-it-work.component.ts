@@ -12,6 +12,6 @@ export class HowItWorkComponent {
   //@ts-check
   
   book() {
-    this.router.navigate(['login-details']);
+    this.router.navigate(['login-form']);
   }
 }
