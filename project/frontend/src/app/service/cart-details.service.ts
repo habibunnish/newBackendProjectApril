@@ -36,7 +36,7 @@ export class CartDetailsService {
   };
 
   deleteAllCartLocation(id: number) {
-    return this.httpClient.delete(`${this.url}/api/cart` + id).pipe(
+    return this.httpClient.delete(`${this.url}/api/cart/` + id).pipe(
       map((res: any) => {
         return res;
       })

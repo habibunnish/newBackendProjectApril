@@ -12,5 +12,6 @@ db.userbookeddata=require("./userBookedDetails.models.js")(mongoose);
 db.login=require("./login.models.js")(mongoose);
 db.main=require("./main.models.js")(mongoose);
 db.city=require("./city.models.js")(mongoose);
+db.admin=require("./admin.models.js")(mongoose);
 
 module.exports=db;

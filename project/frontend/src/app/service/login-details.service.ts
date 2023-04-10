@@ -25,7 +25,7 @@ export class LoginDetailsService {
 
   //admin login
   adminLoginDetailsGet(){
-    return this.httpClient.get(`${this.url}/auth/login`)
+    return this.httpClient.get(`${this.url}/auth/adminlogin`)
   };
 
 }

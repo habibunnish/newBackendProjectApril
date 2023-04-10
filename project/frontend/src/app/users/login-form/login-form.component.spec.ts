@@ -47,12 +47,12 @@ describe('LoginFormComponent ', () => {
    
   });
 
-  beforeEach(()=>{
-    component.users=[{email:'dsfghjk@1234',password:'password1'},{email: 'user2@example.com', password: 'password2'}];
-    component.loginForm=new FormGroup({
-      email:new FormControl('')
-    });
-  });
+  // beforeEach(()=>{
+  //   component.users=[{email:'dsfghjk@1234',password:'password1'},{email: 'user2@example.com', password: 'password2'}];
+  //   component.loginForm=new FormGroup({
+  //     email:new FormControl('')
+  //   });
+  // });
 
   
   it('should save data and navigate to homepage when email is found in users',()=>{

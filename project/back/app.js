@@ -3,9 +3,11 @@ const createError=require("http-errors");
 const cors=require("cors");
 require("dotenv").config();
 const app=express();
+const cookie=require("cookie-parser");
 const AuthRoute=require("./Routes/Auth.route");
 const {verifyAccessToken}=require("./helpers/jwt_hepler");
 const morgan = require("morgan");
+const { adminVerifyAccessToken } = require("./helpers/adminJwt_helper");
 app.use(morgan("dev"))
 require("./helpers/init_mongodb");
 
@@ -17,17 +19,30 @@ app.use(cors({
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 
+app.get("/",(req,res)=>{
+    res.send("hi welcome");
+})
 
-app.get("/", verifyAccessToken, async(req,res,next)=>{
-
+app.get("/main-page", verifyAccessToken, async(req,res,next)=>{
+    // console.log(`this is the cookie awesome ${req.cookies.jwt}`);
     console.log(req.headers["authorization"]);
-    res.send("hello express");
+    res.send("user hello");
 });
+
+app.get("/get-product", adminVerifyAccessToken,async(req,res,next)=>{
+    console.log(req.headers["authorization"]);
+    res.send("admin hello");
+});
+
 app.get("/auth/register",(req,res)=>{
     res.send("registered")
-})
+});
+
 app.get("/auth/login",(req,res)=>{
     res.send("login ");
+});
+app.get("/auth/logout",(req,res)=>{
+    res.send("logout");
 })
 app.use("/auth",AuthRoute);
 

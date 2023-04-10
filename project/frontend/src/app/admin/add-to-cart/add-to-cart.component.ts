@@ -53,9 +53,7 @@ export class AddToCartComponent implements OnInit {
     this.router.navigate(['home-page']);
     
   }
-  // gotobooking(){
-  //   this.router.navigate(['home-page']);
-  // }
+ 
 
   ngOnInit() {
    this.getalldetailsOfLocation();
@@ -74,7 +72,7 @@ export class AddToCartComponent implements OnInit {
   delete(item: any) {
     //  delete item.id ;
     console.log('deleteitems', item.id);
-    this.cart.deleteAllCartLocation(item.id).subscribe(data=>{
+    this.cart.deleteAllCartLocation(item._id).subscribe(data=>{
       this.getalldetailsOfLocation();
       console.log(data);
     })

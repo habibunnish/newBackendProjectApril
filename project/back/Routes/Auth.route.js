@@ -6,7 +6,8 @@ const Admin=require("../Models/Admin.model");
 const {authSchema}=require("../helpers/validation_schema");
 const {adminLoginSchema}=require("../helpers/adminValidation_schema")
 const {signAccessToken,signRefreshToken,verifyRefreshToken}=require("../helpers/jwt_hepler");
-
+const { adminSignAccessToken, AdminSignRefreshToken } = require("../helpers/adminJwt_helper");
+const cookie=require("cookie-parser")
 
 router.post("/register",async(req,res,next)=>{
     console.log(req.body);
@@ -18,9 +19,14 @@ router.post("/register",async(req,res,next)=>{
         throw createError.Conflict(`${result.email} already this email exist`)
         const user=new User(result)
         const savedUser=await user.save()
-        //  const accessToken=await signAccessToken(savedUser.id);
-        //  const refreshToken=await signRefreshToken(savedUser.id);
-        //  res.send({accessToken,refreshToken});
+         const accessToken=await signAccessToken(savedUser.id);
+         const refreshToken=await signRefreshToken(savedUser.id);
+         res.send({accessToken,refreshToken});
+        //  res.cookie("jwt",accessToken,{
+        //     expires:new Date(Date.now() +80000),
+        //     httpOnly:true
+        //  });
+        // console.log(cookie);
         res.send(savedUser);
     }
     catch(error){
@@ -41,7 +47,6 @@ router.post("/login",async(req,res,next)=>{
         const refreshToken= await signRefreshToken(user.id);
         res.send({accessToken,refreshToken});
         console.log({accessToken,refreshToken})
-
 
      }
     catch(error){
@@ -67,9 +72,18 @@ router.post("/refresh-token",async(req,res,next)=>{
     }
 });
 
-router.delete("/logout",async(req,res,next)=>{
-    res.send("register route");
-})
+// router.delete("/logout",async(req,res,next)=>{
+//    try{
+//     const {refreshToken}=req.body
+//     if(!refreshToken) throw createError.BadRequest()
+//     const userId=await verifyRefreshToken(refreshToken)
+   
+    
+//    }
+//    catch(error){
+//         next(error)
+//    }
+// })
 
 
 router.post("/adminregister",async(req,res,next)=>{
@@ -82,6 +96,7 @@ router.post("/adminregister",async(req,res,next)=>{
             throw createError.Conflict(`${result.email} this email address of admin already exist `)
             const admin=new Admin(result);
             const adminsavedUser=await admin.save();
+            
             res.send(adminsavedUser)
         }
         catch(error){
@@ -96,7 +111,10 @@ router.post("/adminlogin",async(req,res,next)=>{
         if(!admin) throw createError.NotFound("admin not registered");
         const isMatch=await admin.isValidPassword(result.password)
         if(!isMatch) throw createError.Unauthorized("adminEmail/password not valid try again");
-
+        const accessToken=await adminSignAccessToken(admin.id);
+        const refreshToken= await AdminSignRefreshToken(admin.id);
+        res.send({accessToken,refreshToken});
+        console.log({accessToken,refreshToken});
     }
     catch(error){
         if(error.isjoi===true) return next(createError.BadRequest("invalid email or password"))

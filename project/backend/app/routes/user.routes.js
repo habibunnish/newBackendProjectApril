@@ -6,6 +6,7 @@ module.exports=app=>{
 
     router.post("/",user.register);
     router.get("/",user.userRegisterDetails);
+    router.get("/",user.adminLoginDetailsGet);
     
 
     app.use('/api/user',router);

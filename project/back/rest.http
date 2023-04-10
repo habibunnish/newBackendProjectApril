@@ -19,7 +19,7 @@ POST  http://localhost:8080/auth/register
 Content-Type: application/json 
 
 {
-    "email":"dhoni1234569@gmail.com",
+    "email":"dhoni11@gmail.com",
     "password":"1234567",
     "firstname":"singh kartar",
     "lastname":"m",
@@ -34,8 +34,8 @@ POST http://localhost:8080/auth/adminregister
 Content-Type: application/json
 
 {
-    "email":"nishaafroz123@gmail.com",
-    "password":"nisha@123"
+    "email":"nishaafroz@gmail.com",
+    "password":"Nisha@123"
 }
 
 ###
@@ -43,8 +43,8 @@ POST http://localhost:8080/auth/adminlogin
 Content-Type: application/json
 
 {
-    "email":"nishaafroz123@gmail.com",
-    "password":"nisha@123"
+    "email":"nishaafroz@gmail.com",
+    "password":"Nisha@123"
 }
 
 
@@ -71,4 +71,10 @@ Content-Type: application/json
 
 
 ###
-DELETE url HTTP/1.1 http://localhost:8080/auth/logout
+DELETE  http://localhost:8080/auth/logout
+Content-Type: application/json
+
+{
+    "refreshToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2ODA3NjQwMDUsImV4cCI6MTcxMjMyMTYwNSwiYXVkIjoiNjQyY2VjNjFlZWU0MmVlOTQ4MmQ2YWZmIiwiaXNzIjoibXkgd2Vic2l0ZS5jb20ifQ.UcoEi4hvy9YaZ3ZoMmTvChrlzN_Io3m8rTAzMyZQy9g"
+
+}

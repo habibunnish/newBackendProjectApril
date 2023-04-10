@@ -4,7 +4,6 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 
-import { AddNewDataService } from '../../services/guards/add-new-data.service';
 
 @Component({
   selector: 'app-add-new-data',
@@ -48,7 +47,7 @@ export class AddNewDataComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.id = this.activatedRoute.snapshot.params['id'];
+    this.id = this.activatedRoute.snapshot.params['id']; 
     if (this.id != 0) this.GetEdits();
   }
   GetEdits() {
@@ -122,9 +121,7 @@ export class AddNewDataComponent implements OnInit {
   UpdateputProduct() {
     console.log(this.roomdetails, this.roomdetails.id);
     console.log(this.roomdetails);
-    this.product
-      .putproduct(this.roomdetails.id, this.roomdetails)
-      .subscribe((data: any) => {
+    this.product.putproduct(this.roomdetails.id, this.roomdetails).subscribe((data: any) => {
         console.log(data);
         alert('product edited successfully');
       });

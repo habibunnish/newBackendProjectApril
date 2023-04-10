@@ -1,6 +1,6 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { map } from 'rxjs';
+import { catchError, map, throwError } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -40,16 +40,14 @@ export class ProductDetailsService {
   };
    //delete
    deleteproductchennai(id: number) {
-    return this.httpClient
-      .delete(`${this.url}/api/product` + id)
-      .pipe(
-        map((response: any) => {
-          return response;
-        })
+    return this.httpClient.delete(`${this.url}/api/product/${id}`).pipe(
+        map((response:any) => {
+          return response
+        }),
       );
   };
   deleteProduct(id: number) {
-    return this.httpClient.delete(`${this.url}/api/product` + id).pipe(
+    return this.httpClient.delete(`${this.url}/api/product/${id}`).pipe(
       map((res: any) => {
         return res;
       })
@@ -60,7 +58,7 @@ export class ProductDetailsService {
     const httpHeaders = new HttpHeaders();
     httpHeaders.append('content-type', 'application/json');
     return this.httpClient.put(
-      `${this.url}/api/product` + id,
+      `${this.url}/api/product/${id}`,
       UpdatedBody,
       { headers: httpHeaders }
     );

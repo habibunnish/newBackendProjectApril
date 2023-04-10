@@ -1,8 +1,7 @@
 import { CartDetailsService } from './service/cart-details.service';
-import { ThisReceiver } from '@angular/compiler';
-import { Component, OnInit } from '@angular/core';
+import { Component} from '@angular/core';
 import { Router } from '@angular/router';
-import { CartService } from './services/guards/cart.service';
+
 
 @Component({
   selector: 'app-root',
@@ -31,40 +30,36 @@ export class AppComponent {
    console.log('helppage');
    this.router.navigate(['booking-page']);
  }
+
  loggedin(){
- 
-   return localStorage.getItem('userData');
+  return localStorage.getItem('userData');
  }
  
  onlogout(){
    localStorage.removeItem('userData');
-   localStorage.removeItem('adminData');
  };
+
  BookDetailsNew(){
    console.log('mainpage')
    this.router.navigate(['main-page'])
  };
 
- onadminlogout(){
-   localStorage.removeItem('adminData');
- };
+ 
 
  home(){
   this.router.navigate(['home-page']);
  };
+
  query(){
   this.router.navigate(['how-it-work']);
  };
 
-  // logedIn(){
-  //   return localStorage.getItem('adminData');
-  // }
-  // logout(){
-  //   return localStorage.removeItem('adminData');
-  // }
-
   adminloggedin(){
     return localStorage.getItem('adminData');
   }
+  onadminlogout(){
+    localStorage.removeItem('adminData');
+  };
   
+
 }
