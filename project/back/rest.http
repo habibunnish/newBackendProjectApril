@@ -8,7 +8,7 @@ POST  http://localhost:8080/auth/login
 Content-Type: application/json
 
 {
-    "email":"dhoni1234569@gmail.com",
+    "email":"dhoni11@gmail.com",
     "password":"1234567"
 }
 
@@ -34,7 +34,7 @@ POST http://localhost:8080/auth/adminregister
 Content-Type: application/json
 
 {
-    "email":"nisha111@gmail.com",
+    "email":"nisha1111@gmail.com",
     "password":"Nisha@111"
 }
 
@@ -43,7 +43,7 @@ POST http://localhost:8080/auth/adminlogin
 Content-Type: application/json
 
 {
-    "email":"nisha111@gmail.com",
+    "email":"nisha1111@gmail.com",
     "password":"Nisha@111"
 }
 

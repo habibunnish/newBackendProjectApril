@@ -21,13 +21,18 @@ exports.adminRegister=asyncHandler(async(req,res)=>{
 
 
 exports.adminLoginDetailsGet=(req,res)=>{
-    Admin.find()
-    .then((data)=>{
+    const admins=new Admin({
+        email: req.body.email,
+        password:req.body.password,
+    });
+    admins.save(admins).then((data)=>{
+        console.log(data);
         res.send(data);
+        console.log("data added to databse");
     })
     .catch((err)=>{
-        res.status(500).sent({
-            message:err.message ||"some error occured while retriving admin Details"
+        res.status(500).send({
+            message:err.message||"some eror occured while creating adminDetails",
         })
     })
 }

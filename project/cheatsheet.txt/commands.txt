@@ -1,0 +1,111 @@
+//mongodb databse commands:-
+1 -view all databses
+show dbs
+
+2- create new or switch database
+use databsename
+
+3-if u want to know or view current database
+db
+
+4-delate a database
+db.dropDatabase()
+
+
+//mongodb commands for collections:-
+1-to c all  collections
+show collections
+
+2-create one new collections
+db.createCollection('collectionname')
+
+3-delte a collection
+db.collectionname.drop()
+
+//mongodb commands for rows
+1-to show all rows in a collection
+db.collectionname.find()
+
+
+2-insert one rows
+db.comment.insert({
+    'name':'habi',
+    'lang':'mongo',
+     'member_since':3,
+    'date':new Date()
+})
+
+3-insert many rows
+db.comment.insert([{
+    'name':'habi',
+    'lang':'mongo'
+},
+{
+     'name':'abi',
+    'lang':'mgo'
+},
+{
+     'name':'bubi',
+    'lang':'ngo'
+},
+{
+    'name':'arthi',
+    'member_since':3,
+    'lang':'python'
+}])
+
+4- to see all rows in collection (prettified)
+db.collectionname.find().pretty()
+
+
+//search in mongodb databse
+1-search operation
+db.collectionname.find({lang:"ngo",name:"bubi"})
+
+2-to c only few rows limited rows
+db.collectionname.find().limit(2)
+
+3-count the no of rows in the output
+db.collectionname.find().count()
+
+4-sort assending and descending order
+db.collectionname.find().sort({member_since:1});     // ascending order
+db.collectionname.find().sort({member_since:-1});   //descending order
+
+5-find the first row matching the object
+db.collectionname.findOne({name:'habi'})
+
+
+6-update specific row in fields
+db.collectionname.update({name:'singh'},
+    {
+        'name':'habi',
+        'lang':'mongo',
+        'member_since':1,
+        'date':new Date()
+    },{upsert:true}   //update and insert perform
+    )
+
+7-mongodb increment operator
+db.collectionname.update({name:'habi'},
+{$inc:{
+    'member_since':2
+}})
+
+8-rename operator
+db.collectionname.update({'name':'bubi'},
+{$rename:{
+    'member_since':'member_id'
+}})
+
+9-rename alldb.collectionname.update({
+    $rename:{
+        'member_since':'member_id'
+    }
+});
+
+10-delate row 
+db.collectionname.remove({"name":"habi"})
+
+11-less than/greater than /less than or equal/greater than or equal
+db.collectionname.find({member_since:{$lt:90}})

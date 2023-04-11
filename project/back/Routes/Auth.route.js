@@ -39,6 +39,7 @@ router.post("/login",async(req,res,next)=>{
     try{
         
         const result=await authSchema.validateAsync(req.body)
+        console.log("hee",req.body)
          const user=await User.findOne({email:result.email});
         if(!user) throw createError.NotFound("user not register");
         const isMatch=await user.isValidPassword(result.password)
@@ -114,6 +115,7 @@ router.post("/adminlogin",async(req,res,next)=>{
         const accessToken=await adminSignAccessToken(admin.id);
         const refreshToken= await AdminSignRefreshToken(admin.id);
         res.send({accessToken,refreshToken});
+
         console.log({accessToken,refreshToken});
     }
     catch(error){

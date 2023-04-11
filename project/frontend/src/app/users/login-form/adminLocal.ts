@@ -1,4 +1,4 @@
-export interface Local {
+export interface ADMINLOCAL {
     email:any,
     password:any,
     accessToken:any,
