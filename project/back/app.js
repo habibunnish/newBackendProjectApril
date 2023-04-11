@@ -23,7 +23,7 @@ app.get("/",(req,res)=>{
     res.send("hi welcome");
 })
 
-app.get("/main-page", verifyAccessToken, async(req,res,next)=>{
+app.get("/", verifyAccessToken, async(req,res,next)=>{
     // console.log(`this is the cookie awesome ${req.cookies.jwt}`);
     console.log(req.headers["authorization"]);
     res.send("user hello");

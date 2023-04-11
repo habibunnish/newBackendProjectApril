@@ -1,6 +1,8 @@
+import { AdminDetailsService } from './../../service/admin-details.service';
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, FormControl } from '@angular/forms';
 import { Router } from '@angular/router';
+import { concat } from 'rxjs';
 import { UserDetailsService } from 'src/app/service/user-details.service';
 
 @Component({
@@ -48,7 +50,8 @@ password: any;
   constructor(
     private fb: FormBuilder,
     private userData: UserDetailsService,
-    private router: Router
+    private router: Router,
+    private admin:AdminDetailsService
   ) {}
   
   //post
@@ -72,5 +75,20 @@ password: any;
         this.router.navigate(['login-form']);
         this.profileForm.reset();
       });
+      // this.adminRegisterData();
   }
+
+  adminRegisterData(){
+    const adminDatas={
+      email: this.email,
+      password:this.password
+    }
+    console.log("admin register");
+    this.admin.adminRegisterDetail(adminDatas).subscribe((data)=>{
+      console.log(data);
+      this.router.navigate(['login-form']);
+    })
+
+  }
+
 }

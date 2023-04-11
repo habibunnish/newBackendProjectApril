@@ -32,11 +32,11 @@ export class AppComponent {
  }
 
  loggedin(){
-  return localStorage.getItem('userData');
+  return localStorage.getItem('UsertToken');
  }
  
  onlogout(){
-   localStorage.removeItem('userData');
+   localStorage.removeItem('UsertToken');
  };
 
  BookDetailsNew(){

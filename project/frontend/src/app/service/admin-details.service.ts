@@ -17,13 +17,23 @@ URLS='http://localhost:8082'
     );
   }
 
+  adminRegisterDetail(data:any){
+    const httpHeaders = new HttpHeaders();
+    httpHeaders.append('content-type', 'application/json');
+    return this.httpClient.post(`${this.url}/auth/adminregister`,data,{ headers: httpHeaders }
+    );
+  }
+
   //admin register post
-  adminregister(data:any){
+  adminlogin(data:any){
     const httpHeaders = new HttpHeaders();
     httpHeaders.append('content-type', 'application/json');
     return this.httpClient.post(`${this.url}/auth/adminlogin`,data,{ headers: httpHeaders }
     );
     }
+
+
+
 
   adminLoginDetailsGet(data:any) {
     const httpHeaders = new HttpHeaders();

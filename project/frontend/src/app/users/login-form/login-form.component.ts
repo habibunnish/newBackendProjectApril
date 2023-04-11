@@ -82,10 +82,7 @@ this.changetype=!this.changetype;
     
       })
   };
-
-  
-
-  submit() {
+ submit() {
     this.userdata.userRegisterDetails().subscribe((res:any)=>{
       console.log(res);
       this.user=res;
@@ -104,11 +101,7 @@ this.changetype=!this.changetype;
      
   };
   adminlogin(){
-    // const newFormData = {
-    //   password: this.password,
-    //   email: this.email,
-    // };
-    this.adminData.adminregister(this.loginForm).subscribe((data)=>{
+    this.adminData.adminlogin(this.loginForm).subscribe((data)=>{
       console.log(data);
       this.admins=data;
       for(let admindetails of this.admins){

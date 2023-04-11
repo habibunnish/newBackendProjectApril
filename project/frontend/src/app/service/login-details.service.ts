@@ -23,7 +23,7 @@ export class LoginDetailsService {
   return this.httpClient.get(`${this.url}/auth/login`)
  };
 
-  //admin login
+  //admin login dummy
   adminLoginDetailsGet(){
     return this.httpClient.get(`${this.url}/auth/adminlogin`)
   };
