@@ -5,3 +5,10 @@ export interface Local {
     refreshToken:any
 }
 
+
+export interface isAdmin{
+    email:any,
+    password:any,
+    accessToken:any,
+    refreshToken:any
+}

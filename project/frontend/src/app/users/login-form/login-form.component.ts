@@ -51,7 +51,7 @@ export class LoginFormComponent implements OnInit {
   email: any;
 
   localInterface: Local | null = null;
-  adminlocalInterface:ADMINLOCAL|null=null
+  
   
   constructor(
     private login: LoginDetailsService,
@@ -101,6 +101,45 @@ export class LoginFormComponent implements OnInit {
       });
     };
   
+// addNewContacts() {
+//   const newFormData = {
+//     password: this.password,
+//     email: this.email,
+//   };
+
+//   console.log(newFormData);
+
+//   this.login.login(newFormData).subscribe(
+//     (resultData: any) => {
+//       console.log(resultData);
+
+//       if (resultData) {
+//         this.localInterface = resultData;
+//         console.log(
+//           this.localInterface?.accessToken,
+//           this.localInterface?.refreshToken
+//         );
+
+//         this.saveData();
+
+//         if (this.localInterface!==null) {
+//           this.router.navigate(['get-product']);
+//         } else {
+//           this.router.navigate(['main-page']);
+//         }
+
+//       } else {
+//         console.log(newFormData);
+//         console.log('Login failed');
+//       }
+//     },
+//     (error: any) => {
+//       console.error('Error in addNewContact():', error);
+//     }
+//   );
+// }
+
+     
 
   store() {
     this.router.navigate(['register-form']);

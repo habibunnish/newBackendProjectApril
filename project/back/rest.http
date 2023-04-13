@@ -8,8 +8,8 @@ POST  http://localhost:8080/auth/login
 Content-Type: application/json
 
 {
-    "email":"dhoni11@gmail.com",
-    "password":"1234567"
+    "email":"dhoni@gmail.com",
+    "password":"Dhoni@111"
 }
 
 
@@ -19,8 +19,8 @@ POST  http://localhost:8080/auth/register
 Content-Type: application/json 
 
 {
-    "email":"dhoni11@gmail.com",
-    "password":"1234567",
+    "email":"dhoni@gmail.com",
+    "password":"Dhoni@111",
     "firstname":"singh kartar",
     "lastname":"m",
     "state":"punjabi",

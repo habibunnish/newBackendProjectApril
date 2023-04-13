@@ -7,7 +7,7 @@ const {authSchema}=require("../helpers/validation_schema");
 const {adminLoginSchema}=require("../helpers/adminValidation_schema")
 const {signAccessToken,signRefreshToken,verifyRefreshToken}=require("../helpers/jwt_hepler");
 const { adminSignAccessToken, AdminSignRefreshToken } = require("../helpers/adminJwt_helper");
-const cookie=require("cookie-parser")
+
 
 router.post("/register",async(req,res,next)=>{
     console.log(req.body);
@@ -22,11 +22,6 @@ router.post("/register",async(req,res,next)=>{
          const accessToken=await signAccessToken(savedUser.id);
          const refreshToken=await signRefreshToken(savedUser.id);
          res.send({accessToken,refreshToken});
-        //  res.cookie("jwt",accessToken,{
-        //     expires:new Date(Date.now() +80000),
-        //     httpOnly:true
-        //  });
-        // console.log(cookie);
         res.send(savedUser);
     }
     catch(error){
@@ -44,7 +39,7 @@ router.post("/login",async(req,res,next)=>{
         if(!user) throw createError.NotFound("user not register");
         const isMatch=await user.isValidPassword(result.password)
         if(!isMatch) throw createError.Unauthorized("useremail/password not valid")
-        const accessToken=await signAccessToken(user.id);
+        const accessToken=await signAccessToken(user.id,user.role);
         const refreshToken= await signRefreshToken(user.id);
         res.send({accessToken,refreshToken});
         console.log({accessToken,refreshToken})

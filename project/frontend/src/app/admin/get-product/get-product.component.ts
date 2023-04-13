@@ -1,7 +1,7 @@
 import { ProductDetailsService } from './../../service/product-details.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { AdminService } from '../../services/guards/admin.service';
+
 
 @Component({
   selector: 'app-get-product',
@@ -9,6 +9,7 @@ import { AdminService } from '../../services/guards/admin.service';
   styleUrls: ['./get-product.component.scss'],
 })
 export class GetProductComponent implements OnInit {
+
   constructor(private product: ProductDetailsService, private router: Router) {}
   public ProductList: any;
 
@@ -28,7 +29,7 @@ export class GetProductComponent implements OnInit {
   //delete product
   deletedata(data: any) {
     console.log('delete data() calling ', data.id);
-    this.product.deleteProduct(data.id).subscribe((res) => {
+    this.product.deleteProduct(data._id).subscribe((res) => {
       this.getallproduct();
     });
     alert('deleted this details');

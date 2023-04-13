@@ -8,7 +8,7 @@ exports.addProductDetails=(req,res)=>{
         price: req.body.price,
         image:req.body.image ,
         location: req.body.location,
-        locations:req.body.locations,
+        
     });
     product
         .save(product)
@@ -91,7 +91,7 @@ exports.deleteproductchennai=(req,res)=>{
     };
 exports.deleteProduct=(req,res)=>{
     const id=req.params.id;
-    Product.findByIdAndRemove(id)
+    Product.findByIdAndRemove(id,req.body,{useFindAndModify:false})
         .then((data)=>{
             if(!data){
                 res.status(404).send({

@@ -129,7 +129,7 @@ export class AddNewDataComponent implements OnInit {
 
   deletedata(data: any) {
     console.log('delete data() calling ', data.id);
-    this.product.deleteproductchennai(data.id).subscribe((res) => {
+    this.product.deleteproductchennai(data._id).subscribe((res) => {
       console.log(res);
     });
     alert('deleted this details');

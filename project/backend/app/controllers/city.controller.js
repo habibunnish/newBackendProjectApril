@@ -7,6 +7,7 @@ exports.addProductsDetails=(req,res)=>{
         area:req.body.area,
         price:req.body.price,
         location:req.body.location,
+        locations:req.body.locations,
         image:req.body.image
     });
     city1
@@ -29,6 +30,7 @@ exports.addProductsDetails=(req,res)=>{
             area:req.body.area,
             price:req.body.price,
             location:req.body.location,
+            locations:req.body.locations,
             image:req.body.image
         });
         city2
@@ -51,6 +53,7 @@ exports.addProductsDetails=(req,res)=>{
             area:req.body.area,
             price:req.body.price,
             location:req.body.location,
+            locations:req.body.locations,
             image:req.body.image
         });
         city3
@@ -73,6 +76,7 @@ exports.addProductsDetails=(req,res)=>{
             area:req.body.area,
             price:req.body.price,
             location:req.body.location,
+            locations:req.body.locations,
             image:req.body.image
         });
         city4

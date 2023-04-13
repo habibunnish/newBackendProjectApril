@@ -1,13 +1,16 @@
 const express=require("express");
 const createError=require("http-errors");
+const cookieParser=require("cookie-parser");
 const cors=require("cors");
 require("dotenv").config();
 const app=express();
-const cookie=require("cookie-parser");
 const AuthRoute=require("./Routes/Auth.route");
 const {verifyAccessToken}=require("./helpers/jwt_hepler");
 const morgan = require("morgan");
 const { adminVerifyAccessToken } = require("./helpers/adminJwt_helper");
+
+app.use(cookieParser());
+
 app.use(morgan("dev"))
 require("./helpers/init_mongodb");
 
@@ -23,13 +26,27 @@ app.get("/",(req,res)=>{
     res.send("hi welcome");
 })
 
+// Route to set the cookie
+app.get('/set-cookie', (req, res) => {
+  res.cookie('accesstoken', 'ACCESS_TOKEN_SECRET', { httpOnly: true });
+  res.send('Cookie set successfully');
+});
+
+// Route to get the cookie
+app.get('/get-cookie', (req, res) => {
+  const token = req.cookies.accesstoken;
+  res.send(`Token value is ${accesstoken}`);
+});
+
+
+
 app.get("/", verifyAccessToken, async(req,res,next)=>{
     // console.log(`this is the cookie awesome ${req.cookies.jwt}`);
     console.log(req.headers["authorization"]);
     res.send("user hello");
 });
 
-app.get("/get-product", adminVerifyAccessToken,async(req,res,next)=>{
+app.get("/", adminVerifyAccessToken,async(req,res,next)=>{
     console.log(req.headers["authorization"]);
     res.send("admin hello");
 });
@@ -41,9 +58,14 @@ app.get("/auth/register",(req,res)=>{
 app.get("/auth/login",(req,res)=>{
     res.send("login ");
 });
-app.get("/auth/logout",(req,res)=>{
-    res.send("logout");
-})
+
+app.get("/auth/adminlogin",(req,res)=>{
+    res.send("login ");
+});
+app.get("/auth/adminregister",(req,res)=>{
+    res.send("registered")
+});
+
 app.use("/auth",AuthRoute);
 
 

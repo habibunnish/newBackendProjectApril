@@ -32,6 +32,7 @@ export class AppComponent {
  }
 
  loggedin(){
+  
   return localStorage.getItem('UsertToken');
  }
  
@@ -55,10 +56,10 @@ export class AppComponent {
  };
 
   adminloggedin(){
-    return localStorage.getItem('adminData');
+    return localStorage.getItem('AdminToken');
   }
   onadminlogout(){
-    localStorage.removeItem('adminData');
+    localStorage.removeItem('AdminToken');
   };
   
 

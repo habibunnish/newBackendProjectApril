@@ -5,9 +5,10 @@ module.exports=mongoose=>{
             {
                 tittle:String,
                 area:String,
-                price:String,
+                price:Number,
                 location:String,
                 image:String,
+                locations:String,
             },
             {timestamps:true}
         )
