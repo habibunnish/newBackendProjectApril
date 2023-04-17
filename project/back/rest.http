@@ -34,7 +34,7 @@ POST http://localhost:8080/auth/adminregister
 Content-Type: application/json
 
 {
-    "email":"nisha1111@gmail.com",
+    "email":"nisha1@gmail.com",
     "password":"Nisha@111"
 }
 
@@ -43,7 +43,7 @@ POST http://localhost:8080/auth/adminlogin
 Content-Type: application/json
 
 {
-    "email":"nisha1111@gmail.com",
+    "email":"nisha1@gmail.com",
     "password":"Nisha@111"
 }
 

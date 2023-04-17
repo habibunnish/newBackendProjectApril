@@ -1,7 +1,6 @@
 import { CartDetailsService } from './service/cart-details.service';
-import { Component} from '@angular/core';
+import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-
 
 @Component({
   selector: 'app-root',
@@ -9,58 +8,49 @@ import { Router } from '@angular/router';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  constructor(
-    private router: Router,
-     private cart:CartDetailsService
+  constructor(private router: Router, private cart: CartDetailsService) {}
 
- ) {  }
+  totalitem: any;
 
- totalitem: any;  
+  ngOnInit() {
+    this.cart.getProducts().subscribe((res) => {
+      this.totalitem = res;
+      console.log(res);
+    });
+  }
 
- ngOnInit() {
-   this.cart.getProducts().subscribe((res) => {
-     this.totalitem=res ;
-     console.log(res);
-   });
-  //  this.cart.count()
- }
- 
+  hotel() {
+    console.log('helppage');
+    this.router.navigate(['booking-page']);
+  }
 
- hotel() {
-   console.log('helppage');
-   this.router.navigate(['booking-page']);
- }
+  get loggedin() {
+    return localStorage.getItem('UsertToken');
+  }
 
- loggedin(){
-  
-  return localStorage.getItem('UsertToken');
- }
- 
- onlogout(){
-   localStorage.removeItem('UsertToken');
- };
+  onlogout() {
+    localStorage.removeItem('UsertToken');
+  }
 
- BookDetailsNew(){
-   console.log('mainpage')
-   this.router.navigate(['main-page'])
- };
+  BookDetailsNew() {
+    console.log('mainpage');
+    this.router.navigate(['main-page']);
+  }
 
- 
+  home() {
+    this.router.navigate(['home-page']);
+  }
 
- home(){
-  this.router.navigate(['home-page']);
- };
+  query() {
+    this.router.navigate(['how-it-work']);
+  }
 
- query(){
-  this.router.navigate(['how-it-work']);
- };
+  adminloggedin() {
+    console.log(localStorage.getItem('AdminToken'));
 
-  adminloggedin(){
     return localStorage.getItem('AdminToken');
   }
-  onadminlogout(){
+  onadminlogout() {
     localStorage.removeItem('AdminToken');
-  };
-  
-
+  }
 }

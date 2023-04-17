@@ -1,6 +1,6 @@
 import { LoginDetailsService } from './../../service/login-details.service';
 import { Component, OnInit } from '@angular/core';
-import { LoginService } from '../../services/guards/login.service';
+
 
 @Component({
   selector: 'app-get-login-data',

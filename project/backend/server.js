@@ -36,11 +36,10 @@ db.mongoose.connect(db.url,{
 })
 
 
-// require("./app/routes/user.routes")(app);
+
 require("./app/routes/product.routes")(app);
 require("./app/routes/cart.routes")(app);
 require("./app/routes/userBookedDetails")(app);
-// require("./app/routes/login.routes")(app);
 require("./app/routes/main.routes")(app);
 require("./app/routes/city.routes")(app);
 

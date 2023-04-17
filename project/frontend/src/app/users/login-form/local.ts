@@ -6,9 +6,4 @@ export interface Local {
 }
 
 
-export interface isAdmin{
-    email:any,
-    password:any,
-    accessToken:any,
-    refreshToken:any
-}
+

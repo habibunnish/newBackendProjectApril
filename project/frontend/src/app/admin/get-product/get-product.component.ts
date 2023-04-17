@@ -27,10 +27,11 @@ export class GetProductComponent implements OnInit {
   }
 
   //delete product
-  deletedata(data: any) {
-    console.log('delete data() calling ', data.id);
-    this.product.deleteProduct(data._id).subscribe((res) => {
+  deletedata(product: any) {
+    console.log('delete data() calling ', product.id);
+    this.product.deleteProduct(product._id).subscribe(data => {
       this.getallproduct();
+      console.log(data);
     });
     alert('deleted this details');
   }

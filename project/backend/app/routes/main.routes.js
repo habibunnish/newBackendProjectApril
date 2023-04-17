@@ -1,4 +1,4 @@
-const { route } = require("../../../back/Routes/Auth.route.js");
+
 
 module.exports=app=>{
     const main=require("../../../backend/app/controllers/mainPage.controller.js");

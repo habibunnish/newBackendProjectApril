@@ -98,7 +98,8 @@ db.collectionname.update({'name':'bubi'},
     'member_since':'member_id'
 }})
 
-9-rename alldb.collectionname.update({
+9-rename all
+db.collectionname.update({
     $rename:{
         'member_since':'member_id'
     }

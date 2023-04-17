@@ -47,7 +47,7 @@ export class ProductDetailsService {
       );
   };
   deleteProduct(id: number) {
-    return this.httpClient.delete(`${this.url}/api/product/${id}`).pipe(
+    return this.httpClient.delete(`${this.url}/api/product/` + id).pipe(
       map((res: any) => {
         return res;
       })

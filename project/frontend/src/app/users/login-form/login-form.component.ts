@@ -24,6 +24,7 @@ export class LoginFormComponent implements OnInit {
   emails: any;
   passwords: any;
   static loginForm: any;
+  adminForm!: FormGroup;
 
   //@ts-check
 
@@ -46,12 +47,18 @@ export class LoginFormComponent implements OnInit {
       password: ['', Validators.required],
       email: ['', Validators.required],
     });
+
+    this.adminForm = this.fb.group({
+      password: ['', Validators.required],
+      email: ['', Validators.required],
+    });
+
   }
   password: any;
   email: any;
 
   localInterface: Local | null = null;
-  
+  adminlocalInterface: ADMINLOCAL | null = null;
   
   constructor(
     private login: LoginDetailsService,

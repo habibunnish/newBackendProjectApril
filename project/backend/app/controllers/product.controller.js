@@ -106,5 +106,5 @@ exports.deleteProduct=(req,res)=>{
             res.status(500).send({
                 message:"could not delete product with id="+id
             });
-        });
+        });``
 }

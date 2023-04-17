@@ -16,7 +16,10 @@ List3:any=[];
 List4:any=[];
 
 title='CHECK  THE BEST HOTEL IN INDIA'
-
+new="This is Chennai Hotel"
+goa="This is Goa Hotel"
+bangluru="This is Bangluru hotels"
+jammu="This is a jammu hotels"
   constructor(config: NgbCarouselConfig, private router: Router,private main:MainPageDetailsService) {
     config.interval = 4000;
     config.wrap = true;

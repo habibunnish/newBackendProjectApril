@@ -49,6 +49,7 @@ export class AddNewDataComponent implements OnInit {
   ngOnInit() {
     this.id = this.activatedRoute.snapshot.params['id']; 
     if (this.id != 0) this.GetEdits();
+    
   }
   GetEdits() {
     this.product.getedit(this.id).subscribe((data) => {
