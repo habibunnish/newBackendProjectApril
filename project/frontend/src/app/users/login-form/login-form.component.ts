@@ -38,7 +38,6 @@ export class LoginFormComponent implements OnInit {
   }
 
   user: any;
-  // adminlocalInterface : any[]=[];
   type: string = 'password';
   loginForm!: FormGroup;
 
@@ -101,50 +100,19 @@ export class LoginFormComponent implements OnInit {
     };
     console.log(newFormData);
     this.adminData.adminlogin(newFormData).subscribe((data:any) => {
-      console.log(data);
-      if(data!==null){
-        this.router.navigate(['get-product']);
-      }
+      if(data!=null){
+        this.adminlocalInterface=data;
+        console.log(
+          this.adminlocalInterface?.accessToken,
+          this.adminlocalInterface?.refreshToken
+        )
+        this. admniData()
+        this.router.navigate(['get-product'])
+        }
       });
     };
   
-// addNewContacts() {
-//   const newFormData = {
-//     password: this.password,
-//     email: this.email,
-//   };
 
-//   console.log(newFormData);
-
-//   this.login.login(newFormData).subscribe(
-//     (resultData: any) => {
-//       console.log(resultData);
-
-//       if (resultData) {
-//         this.localInterface = resultData;
-//         console.log(
-//           this.localInterface?.accessToken,
-//           this.localInterface?.refreshToken
-//         );
-
-//         this.saveData();
-
-//         if (this.localInterface!==null) {
-//           this.router.navigate(['get-product']);
-//         } else {
-//           this.router.navigate(['main-page']);
-//         }
-
-//       } else {
-//         console.log(newFormData);
-//         console.log('Login failed');
-//       }
-//     },
-//     (error: any) => {
-//       console.error('Error in addNewContact():', error);
-//     }
-//   );
-// }
 
      
 
@@ -157,5 +125,11 @@ export class LoginFormComponent implements OnInit {
     const accessToken = this.localInterface?.accessToken;
 
     localStorage.setItem('UsertToken', JSON.stringify(accessToken));
+  }
+
+  admniData(){
+    console.log("admin localstorage");
+    const accessToken=this.adminlocalInterface?.accessToken;
+    localStorage.setItem('adminToken',JSON.stringify(accessToken))
   }
 }

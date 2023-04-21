@@ -92,7 +92,8 @@ router.post("/adminregister",async(req,res,next)=>{
             throw createError.Conflict(`${result.email} this email address of admin already exist `)
             const admin=new Admin(result);
             const adminsavedUser=await admin.save();
-            
+           
+        
             res.send(adminsavedUser)
         }
         catch(error){

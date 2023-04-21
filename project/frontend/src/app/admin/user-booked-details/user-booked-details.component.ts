@@ -10,6 +10,7 @@ import { CartService } from 'src/app/services/guards/cart.service';
   styleUrls: ['./user-booked-details.component.scss'],
 })
 export class UserBookedDetailsComponent implements OnInit {
+
   Productuser: any;
   items:any;
   constructor(
@@ -31,4 +32,14 @@ export class UserBookedDetailsComponent implements OnInit {
   goback(){
     this.router.navigate(['get-product'])
   }
+
+  delete(item: any) {
+    //  delete item.id ;
+    console.log('deleteitems', item.id);
+    this.cart.deleteAllCartLocation(item._id).subscribe(data=>{
+      this.getalldetailsOfLocation();
+      console.log(data);
+    })
+   }
+ 
 }

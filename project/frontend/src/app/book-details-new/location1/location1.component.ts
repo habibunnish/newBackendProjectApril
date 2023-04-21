@@ -14,9 +14,14 @@ import { CartService } from 'src/app/services/guards/cart.service';
 export class Location1Component implements OnInit  {
  
   duplicateLocationList :any=[]
-getalldetails:any;
-  bookingList: any;
+  getalldetails:any;
+  bookingList: any=[];
   state: any;
+  productArray=[
+    {
+      qnt:1
+    }
+  ]
 
   constructor(
     private router:Router, 
@@ -77,12 +82,25 @@ getalldetails:any;
     })
 
   }
+
+  inc( prod :any){
+    console.log( prod.qnt)
+    if(prod.qnt !=5)
+    prod.qnt+=1 ;
+  }
+
+  dec( prod :any){
+    console.log( prod.qnt)
+    if(prod.qnt !=5){
+    prod.qnt-=1 ;
+    }
+  }
+
+
   addingindatabase(item:any){
     this.cart.postaddcartDetailsOfAllLocation(item).subscribe(data=>{
       console.log(data);
     })
   }
-  // GoBack(){
-  //   this.router.navigate(['main-page']);
-  // }
+ 
 }

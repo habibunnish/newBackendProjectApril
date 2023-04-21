@@ -20,9 +20,15 @@ export class AddToCartComponent implements OnInit {
   Location: any;
   Price: any;
   Image: any;
+  ProductQuantity:any=[
+    {
+      qnt:1,
+    }
+  ];
   file: any;
   item: any;
   counts:any;
+
   
   constructor(
     private cart:CartDetailsService,
@@ -49,8 +55,8 @@ export class AddToCartComponent implements OnInit {
   }
   book(item: any) {
     this.addProduct(item);
-    alert('product has been booked successfully redirecting to home page');
-    this.router.navigate(['home-page']);
+    alert('product has been booked successfully ');
+    this.router.navigate(['user-booked-details']);
     
   }
  
@@ -82,5 +88,27 @@ export class AddToCartComponent implements OnInit {
     this.router.navigate(['home-page']);
   }
 
+incQnt(id:any,qnt:any){
+  console.log(id,qnt)
+  for(let i=0;i<this.ProductQuantity.length;i++)
+  if(this.ProductQuantity[i].id===id){
+    if(qnt!=5)
+    this.ProductQuantity[i].qnt=parseInt(qnt)+1
+  }
+  // this.cart.updateDelivery(this.id,data)
   
+}
+  
+
+decQnt(id:any,qnt:any){
+  console.log(id,qnt)
+  for(let i=0;i<this.ProductQuantity.length;i++)
+  if(this.ProductQuantity[i].id===id){
+    if(qnt!=1)
+    this.ProductQuantity[i].qnt=parseInt(qnt)-1
+  }
+ 
+}
+
+
 }

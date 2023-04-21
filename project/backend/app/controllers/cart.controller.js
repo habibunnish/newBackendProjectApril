@@ -8,7 +8,9 @@ exports.postaddcartDetailsOfAllLocations=(req,res)=>{
         price: req.body.price,
         image:req.body.image,
         location: req.body.location,
-        locations:req.body.locations
+        locations:req.body.locations,
+        qnt:req.body.qnt,
+
     });
     cart
     .save(cart)

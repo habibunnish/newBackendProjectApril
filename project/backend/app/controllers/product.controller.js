@@ -8,6 +8,8 @@ exports.addProductDetails=(req,res)=>{
         price: req.body.price,
         image:req.body.image ,
         location: req.body.location,
+        locations:req.body.locations,
+        qnt:req.body.qnt
         
     });
     product

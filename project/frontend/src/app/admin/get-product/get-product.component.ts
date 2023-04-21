@@ -39,16 +39,8 @@ export class GetProductComponent implements OnInit {
   edit(id: any) {
     this.router.navigate(['add-new-data/' + id]);
   }
-  userbooked() {
-    this.router.navigate(['user-booked-details']);
-  }
-  gotoaddnewpage() {
-    console.log('addnew data page');
-    this.router.navigate(['add-new-data/' + 0]);
-  }
-  gotobooking(){
-    this.router.navigate(['main-page']);
-  }
+ 
+ 
   logout(){
     this.router.navigate(['how-it-work']);
   }

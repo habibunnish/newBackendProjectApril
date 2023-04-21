@@ -6,6 +6,9 @@ import { BehaviorSubject, map } from 'rxjs';
   providedIn: 'root'
 })
 export class CartDetailsService {
+  map(arg0: (element: any) => any) {
+    throw new Error('Method not implemented.');
+  }
 
   public cartItemList: any = [];
   public productList = new BehaviorSubject<any>([]);
@@ -42,6 +45,14 @@ export class CartDetailsService {
       })
     );
   };
+
+  updateDelivery(id:number,data:any){
+    const httpHeaders = new HttpHeaders();
+    httpHeaders.append('content-type', 'application/json');
+    return this.httpClient.put(`${this.url}/api/cart/${id}`,data,{ headers: httpHeaders });
+
+  }
+
   // count(){
   //    this.getaddcartDetailsOfAllLocation().subscribe(res=>{
   //     console.log(res,Array.isArray(res));

@@ -30,6 +30,7 @@ export class AppComponent {
 
   onlogout() {
     localStorage.removeItem('UsertToken');
+    localStorage.removeItem('adminToken');
   }
 
   BookDetailsNew() {
@@ -44,13 +45,20 @@ export class AppComponent {
   query() {
     this.router.navigate(['how-it-work']);
   }
+  gotoaddnewpage() {
+    console.log('addnew data page');
+    this.router.navigate(['add-new-data/' + 0]);
+  }
+  userbooked() {
+    this.router.navigate(['user-booked-details']);
+  }
 
-  adminloggedin() {
-    console.log(localStorage.getItem('AdminToken'));
+  get adminloggedin() {
+    console.log(localStorage.getItem('adminToken'));
 
-    return localStorage.getItem('AdminToken');
+    return localStorage.getItem('adminToken');
   }
   onadminlogout() {
-    localStorage.removeItem('AdminToken');
+    localStorage.removeItem('adminToken');
   }
 }
