@@ -2,12 +2,16 @@
   <div class="loginform">
     <form  >
       <label>CHOOSE LOCATION</label>
-      <div >
+      <!-- <div >
         <select (click)="modo($event)" >
           <option  *ngFor="let c of locations" [value]="c.name">{{c.name}}  </option>
           
         </select>
-      </div>
+      </div> -->
+      <div> <select (click)="modo($event)"  [(ngModel)]="selectedLocation" [ngModelOptions]="{standalone: true}"> 
+        <option *ngFor="let location of locations" [value]="location.name">{{ location.name }}</option> 
+      </select> </div>
+
 
       <pre></pre>
       <label for="ProductTitle">Tittle</label><br />
@@ -37,6 +41,7 @@
         [(ngModel)]="roomdetails.price"/>
       <PRE></PRE>
 
+      <label>{{this.selectedImage}}</label><br>
       <input type="file" (change)="getFile($event)" /><br />
       <pre></pre>
 

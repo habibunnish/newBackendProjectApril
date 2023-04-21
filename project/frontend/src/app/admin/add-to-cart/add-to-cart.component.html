@@ -35,9 +35,9 @@
               <td>
                
                 <div class="content"  *ngFor="let prod of ProductQuantity">
-                  <button type="button" class="btn" (click)="incQnt(prod,prod.qnt)"><i class="fa fa-plus"></i></button>
+                  <button type="button" class="btn" (click)="incQnt(prod.prodId,prod.qnt)"><i class="fa fa-plus"></i></button>
                   <span>{{prod.qnt}}</span>
-                  <button type="button" class="btn"  (click)="decQnt(prod,prod.qnt)" ><i class="fa fa-minus"></i></button>
+                  <button type="button" class="btn"  (click)="decQnt(prod.prodId,prod.qnt)" ><i class="fa fa-minus"></i></button>
                   
                   <div style="display:inline-block; position: absolute; right: 500px;  width: 200px;">
                     <TD>{{prod.qnt*item.price }}</TD>

@@ -10,6 +10,7 @@ exports.postaddcartDetailsOfAllLocations=(req,res)=>{
         location: req.body.location,
         locations:req.body.locations,
         qnt:req.body.qnt,
+        total:req.body.total
 
     });
     cart
@@ -37,6 +38,31 @@ exports.getaddcartdetailsofAllLocation=(req,res)=>{
         });
     });
 };
+
+exports.updateDelivery=(req,res)=>{
+    if(!req.body){
+        return res.status(400).send({
+            message: "data to update cannot be empty"
+        });
+    }
+    const id=req.params.id;
+    Product.findByIdAndUpdate(id,req.body,{useFindAndModify:false})
+    .then((data)=>{
+        if(!data){
+            res.status(404).send({
+                message:`cannot update product with id=${id}.Maybe product was not found`
+            });
+          
+        }else res.send({
+            message: "product was updated successfully"
+        })
+        .catch((err)=>{
+            res.status(500).send({
+                message:"error updating product with id="+id
+            });
+        });
+    })
+}
 
 exports.deleteAllCartLocation=(req,res)=>{
     const id=req.params.id;

@@ -83,18 +83,7 @@ export class Location1Component implements OnInit  {
 
   }
 
-  inc( prod :any){
-    console.log( prod.qnt)
-    if(prod.qnt !=5)
-    prod.qnt+=1 ;
-  }
 
-  dec( prod :any){
-    console.log( prod.qnt)
-    if(prod.qnt !=5){
-    prod.qnt-=1 ;
-    }
-  }
 
 
   addingindatabase(item:any){

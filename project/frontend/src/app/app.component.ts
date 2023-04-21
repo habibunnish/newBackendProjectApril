@@ -34,7 +34,7 @@ export class AppComponent {
   }
 
   BookDetailsNew() {
-    console.log('mainpage');
+    // console.log('mainpage');
     this.router.navigate(['main-page']);
   }
 
@@ -46,7 +46,7 @@ export class AppComponent {
     this.router.navigate(['how-it-work']);
   }
   gotoaddnewpage() {
-    console.log('addnew data page');
+    // console.log('addnew data page');
     this.router.navigate(['add-new-data/' + 0]);
   }
   userbooked() {
@@ -54,7 +54,7 @@ export class AppComponent {
   }
 
   get adminloggedin() {
-    console.log(localStorage.getItem('adminToken'));
+    // console.log(localStorage.getItem('adminToken'));
 
     return localStorage.getItem('adminToken');
   }

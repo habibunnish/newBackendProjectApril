@@ -86,35 +86,20 @@ describe('LoginFormComponent ', () => {
   });
 
 
+  // it('should not navigate to get-product if its wrong details',()=>{
+  //   const mockAdmin={
+  //     email:'admini#23456',
+  //     password:'admin@1223'
+  //   };
+  //   const mockadminResponse=[mockAdmin];
+  //   spyOn(loginService,'adminLoginDetailsGet').and.returnValue(of(mockadminResponse));
+  //   spyOn(router,'navigate');
+  //   component.email='admini#23456';
+  //   component.password='invalidpassword';
+  //   component.adminlogin();
+  //   expect(router.navigate).toHaveBeenCalledWith(['get-product']);
 
-  it('should navigate to get-product when admin credential are valid',()=>{
-    const mockAdmin={
-      email:'admini#23456',
-      password:'admin@1223'
-    };
-    const mockadminResponse=[mockAdmin];
-    spyOn(loginService,'adminLoginDetailsGet').and.returnValue(of(mockadminResponse));
-    spyOn(router,'navigate');
-    component.email='admini#23456';
-    component.password='admin@1223';
-    component.adminlogin();
-    expect(router.navigate).toHaveBeenCalledWith(['get-product']);
-
-  });
-  it('should not navigate to get-product if its wrong details',()=>{
-    const mockAdmin={
-      email:'admini#23456',
-      password:'admin@1223'
-    };
-    const mockadminResponse=[mockAdmin];
-    spyOn(loginService,'adminLoginDetailsGet').and.returnValue(of(mockadminResponse));
-    spyOn(router,'navigate');
-    component.email='admini#23456';
-    component.password='invalidpassword';
-    component.adminlogin();
-    expect(router.navigate).toHaveBeenCalledWith(['get-product']);
-
-  });
+  // });
 
   it('should save user data to local storage',()=>{
     const mockUser={

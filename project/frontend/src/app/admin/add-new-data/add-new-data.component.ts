@@ -30,13 +30,16 @@ export class AddNewDataComponent implements OnInit {
 
   roomdetails = {
     id: 0,
+    _id:0,
     tittle: '',
     area: '',
     price: '',
     image: '',
-    email: '',
     location: '',
+    locations:'',
   };
+  selectedLocation: string=""
+  selectedImage: string=""
 
   constructor(
     private http: HttpClient,
@@ -55,6 +58,11 @@ export class AddNewDataComponent implements OnInit {
     this.product.getedit(this.id).subscribe((data) => {
       console.log(data);
       this.roomdetails = data;
+      console.log(this.roomdetails.location)
+      this.selectedLocation = this.roomdetails.location;
+      console.log( this.selectedImage)
+      this.selectedImage=this.roomdetails.image
+      // console.log(this.roomdetails.locations,)
     });
   }
 
@@ -120,9 +128,9 @@ export class AddNewDataComponent implements OnInit {
   }
   /*put:to edit details */
   UpdateputProduct() {
-    console.log(this.roomdetails, this.roomdetails.id);
+    console.log(this.roomdetails, this.roomdetails._id);
     console.log(this.roomdetails);
-    this.product.putproduct(this.roomdetails.id, this.roomdetails).subscribe((data: any) => {
+    this.product.putproduct(this.roomdetails._id, this.roomdetails).subscribe((data: any) => {
         console.log(data);
         alert('product edited successfully');
       });
@@ -139,7 +147,9 @@ export class AddNewDataComponent implements OnInit {
   getFile(event: any) {
     this.file = event.target.files[0];
     console.log('file', this.file.name);
+    
     this.roomdetails.image = this.file.name;
+    this.selectedImage=this.roomdetails.image
     console.log('getfile');
   }
   submitData() {

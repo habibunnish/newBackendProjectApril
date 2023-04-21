@@ -76,13 +76,13 @@ export class LoginFormComponent implements OnInit {
     };
     console.log(newFormData);
     this.login.login(newFormData).subscribe((resultData: any) => {
-     console.log(resultData);
+    //  console.log(resultData);
       if(resultData){
         this.localInterface = resultData;
-        console.log(
-        this.localInterface?.accessToken,
-        this.localInterface?.refreshToken
-      );
+      //   console.log(
+      //   this.localInterface?.accessToken,
+      //   this.localInterface?.refreshToken
+      // );
       this.saveData();
       this.router.navigate(['main-page']);
       }
@@ -102,10 +102,10 @@ export class LoginFormComponent implements OnInit {
     this.adminData.adminlogin(newFormData).subscribe((data:any) => {
       if(data!=null){
         this.adminlocalInterface=data;
-        console.log(
-          this.adminlocalInterface?.accessToken,
-          this.adminlocalInterface?.refreshToken
-        )
+        // console.log(
+        //   this.adminlocalInterface?.accessToken,
+        //   this.adminlocalInterface?.refreshToken
+        // )
         this. admniData()
         this.router.navigate(['get-product'])
         }
