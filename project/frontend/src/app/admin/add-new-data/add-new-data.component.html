@@ -41,6 +41,10 @@
         [(ngModel)]="roomdetails.price"/>
       <PRE></PRE>
 
+      <label for="qnt">Quantity</label><br>
+      <input class="form-control" type="number" name="qnt" placeholder="quantity" [(ngModel)]="roomdetails.quantity">
+      <pre></pre>
+
       <label>{{this.selectedImage}}</label><br>
       <input type="file" (change)="getFile($event)" /><br />
       <pre></pre>

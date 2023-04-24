@@ -3,7 +3,7 @@ import { MainPageComponent } from './main-page.component';
 import { ComponentFixture, TestBed} from '@angular/core/testing';
 import { HttpClient, HttpHandler } from '@angular/common/http';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-import { By } from '@angular/platform-browser';
+
 
 
 describe('MainPageComponent ', () => {

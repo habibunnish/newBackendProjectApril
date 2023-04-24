@@ -6,6 +6,7 @@ import { CartService } from 'src/app/services/guards/cart.service';
 import { UserBookedHistoryService } from 'src/app/services/guards/user-booked-history.service';
 
 
+
 @Component({
   selector: 'app-add-to-cart',
   templateUrl: './add-to-cart.component.html',
@@ -13,6 +14,7 @@ import { UserBookedHistoryService } from 'src/app/services/guards/user-booked-hi
 })
 export class AddToCartComponent implements OnInit {
  
+  
   product: any;
   items:any=[];
   ProductTitle: any;
@@ -20,11 +22,16 @@ export class AddToCartComponent implements OnInit {
   Location: any;
   Price: any;
   Image: any;
-  ProductQuantity:any=[
-    {
-      qnt:1,
-    }
-  ];
+  quantity:any;
+  prodId:any;
+  // prodId:any;
+  // ProductQuantity:any=[
+  //   {
+  //     qnt:1,
+  //     prodId:1
+
+  //   }
+  // ];
   file: any;
   item: any;
   counts:any;
@@ -56,7 +63,7 @@ export class AddToCartComponent implements OnInit {
   book(item: any) {
     this.addProduct(item);
     alert('product has been booked successfully ');
-    this.router.navigate(['user-booked-details']);
+    this.router.navigate(['home-page']);
     
   }
  
@@ -88,24 +95,23 @@ export class AddToCartComponent implements OnInit {
     this.router.navigate(['home-page']);
   }
 
-incQnt(id:any,qnt:any){
-  console.log(id,qnt)
-  for(let i=0;i<this.ProductQuantity.length;i++)
-  if(this.ProductQuantity[i].id===id){
-    if(qnt!=5)
-    this.ProductQuantity[i].qnt=parseInt(qnt)+1
+incQnt(prodId:any,quantity:any){
+
+  console.log(prodId);
+  console.log(quantity);
+  for(let i=0;i<this.items.length;i++)
+  if(this.items[i].prodId===prodId){
+    if(quantity!=5)
+    this.items[i].qnt=parseInt(quantity)+1
+     }
   }
-  // this.cart.updateDelivery(this.id,data)
-  
-}
-  
 
 decQnt(id:any,qnt:any){
   console.log(id,qnt)
-  for(let i=0;i<this.ProductQuantity.length;i++)
-  if(this.ProductQuantity[i].id===id){
+  for(let i=0;i<this.item.length;i++)
+  if(this.item[i].id===id){
     if(qnt!=1)
-    this.ProductQuantity[i].qnt=parseInt(qnt)-1
+    this.item[i].qnt=parseInt(qnt)-1
   }
  
 }

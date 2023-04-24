@@ -9,6 +9,7 @@ module.exports=mongoose=>{
                 location:String,
                 image:String,
                 locations:String,
+                quantity:Number
             },
             {timestamps:true}
         )

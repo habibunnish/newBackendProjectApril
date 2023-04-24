@@ -2,6 +2,7 @@ const db=require("../models");
 const Cart=db.cart;
 
 exports.postaddcartDetailsOfAllLocations=(req,res)=>{
+    console.log(req.body);
     const cart=new Cart({
         tittle:req.body.tittle,
         area: req.body.area,
@@ -9,8 +10,8 @@ exports.postaddcartDetailsOfAllLocations=(req,res)=>{
         image:req.body.image,
         location: req.body.location,
         locations:req.body.locations,
-        qnt:req.body.qnt,
-        total:req.body.total
+        quantity:req.body.quantity,
+        
 
     });
     cart

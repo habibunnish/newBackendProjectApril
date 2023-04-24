@@ -4,11 +4,13 @@ module.exports={
     //middleware
     signAccessToken: (userId)=>{
         return new Promise((resolve,reject)=>{
-            const payload={ }
+            const payload={
+                name:'booking website' ,
+                iss:"my website.com",
+            }
             const secret=process.env.ACCESS_TOKEN_SECRET
             const options={
-                expiresIn:"4h",
-                issuer:"my website.com",
+                expiresIn:"8h",
                 audience:userId
             }
             jwt.sign(payload,secret,options,(err,token)=>{

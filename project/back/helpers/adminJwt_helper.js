@@ -4,11 +4,12 @@ module.exports={
 
     adminSignAccessToken:(adminId)=>{
         return new Promise((resolve,reject)=>{
-            const payload={}
+            const payload={
+                iss:"admin site",
+            }
             const secret=process.env.ACCESS_TOKEN_SECRET
             const options={
-                expiresIn:"2h",
-                issuer:"admin site",
+                expiresIn:"8h",
                 audience:adminId
             }
             jwt.sign(payload,secret,options,(err,token)=>{

@@ -9,7 +9,8 @@ module.exports=mongoose=>{
                 price:Number,
                 location:String,
                 locations:String,
-                qnt:Number
+                quantity:Number,
+            
                
             },
             {timestamps:true}

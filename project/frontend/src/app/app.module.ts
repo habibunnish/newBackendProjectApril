@@ -1,3 +1,4 @@
+import { AddNewDataComponent } from './admin/add-new-data/add-new-data.component';
 import { AdminGuard } from './services/guards/admin.guard';
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 
@@ -15,10 +16,11 @@ import { AuthGuard } from './services/guards/auth.guard';
 import { BookDetailsNewModule } from './book-details-new/book-details-new.module';
 import { UsersModule } from './users/users.module';
 import { AdminModule } from './admin/admin.module';
+import { CommonModule } from '@angular/common';
 
 
 @NgModule({
-  declarations: [AppComponent, ],
+  declarations: [AppComponent,],
   providers: [AuthGuard,AdminGuard],
   bootstrap: [AppComponent],
   imports: [
@@ -26,6 +28,7 @@ import { AdminModule } from './admin/admin.module';
     AppRoutingModule,
     ReactiveFormsModule,
     FormsModule,
+   
     HttpClientModule,
     NgbModule,
     AdminModule,

@@ -18,13 +18,7 @@ export class MainPageDetailsService {
     });
   }
 
-  main2(data:any){
-    const httpHeaders = new HttpHeaders();
-    httpHeaders.append('content-type', 'application/json');
-    return this.httpClient.post(`${this.url}/api/main/main2`, data,{
-      headers: httpHeaders,
-    });
-  }
+
 
   mainPage(){
     const httpHeaders = new HttpHeaders();

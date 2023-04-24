@@ -3,6 +3,7 @@ import { CityDetailsService } from './../../service/city-details.service';
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { ThisReceiver } from '@angular/compiler';
 
 
 @Component({
@@ -29,7 +30,7 @@ export class AddNewDataComponent implements OnInit {
   ];
 
   roomdetails = {
-    id: 0,
+    // id: 0,
     _id:0,
     tittle: '',
     area: '',
@@ -37,6 +38,7 @@ export class AddNewDataComponent implements OnInit {
     image: '',
     location: '',
     locations:'',
+    quantity:'',
   };
   selectedLocation: string=""
   selectedImage: string=""
@@ -58,12 +60,9 @@ export class AddNewDataComponent implements OnInit {
     this.product.getedit(this.id).subscribe((data) => {
       console.log(data);
       this.roomdetails = data;
-      console.log(this.roomdetails.location)
       this.selectedLocation = this.roomdetails.location;
-      console.log( this.selectedImage)
-      this.selectedImage=this.roomdetails.image
-      // console.log(this.roomdetails.locations,)
-    });
+       this.selectedImage=this.roomdetails.image
+      });
   }
 
   adding(roomdetails: any) {
@@ -119,6 +118,7 @@ export class AddNewDataComponent implements OnInit {
     console.log(roomdetails);
     this.product.addProductDetails(roomdetails).subscribe((res) => {
       console.log(res);
+      roomdetails=res
       alert('product added successfully');
     });
   }

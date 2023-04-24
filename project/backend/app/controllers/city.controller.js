@@ -8,7 +8,8 @@ exports.addProductsDetails=(req,res)=>{
         price:req.body.price,
         location:req.body.location,
         locations:req.body.locations,
-        image:req.body.image
+        image:req.body.image,
+        quantity:req.body.quantity
     });
     city1
         .save(city1)

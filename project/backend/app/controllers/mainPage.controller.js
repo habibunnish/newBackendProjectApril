@@ -18,22 +18,7 @@ exports.main=(req,res)=>{
             });
         });
 };
-exports.main2=(req,res)=>{
-    const main=new mainPage({
-        tittle:req.body.tittle,
-        image:req.body.image,
-        para:req.body.para
-    });
-    main.save(main).then((data)=>{
-        res.send(data);
-        console.log("data added to database");
-    })
-    .catch((err)=>{
-        res.status(500).send({
-            message:err.message||"some error occured"
-        });
-    });
-};
+
 exports.mainPage=(req,res)=>{
     mainPage.find()
     .then((data)=>{
@@ -47,7 +32,7 @@ exports.mainPage=(req,res)=>{
     });
 };
 exports. mainpageGoa=(req,res)=>{
-    console.log("heeeeeeeeeeeeeeeeeee");
+    console.log("MAINPAGE GOA CONTROLLER");
     mainPage.find()
     .then((data)=>{
         res.send(data);
