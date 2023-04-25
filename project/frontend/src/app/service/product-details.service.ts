@@ -15,9 +15,8 @@ export class ProductDetailsService {
     console.log('getProduct method');
     const httpHeaders = new HttpHeaders();
     httpHeaders.append('content-type', 'application/json');
-    return this.httpClient.get(`${this.url}/api/product`, {
-      headers: httpHeaders,
-    });
+    return this.httpClient.get(`${this.url}/api/product`, { headers: httpHeaders,}
+    );
   }
 
   getedit(id: any) {
@@ -29,13 +28,11 @@ export class ProductDetailsService {
     );
   };
 
-  addProductDetails(createResource: any) {
+  addProductDetails(data: any) {
     const httpHeaders = new HttpHeaders();
     httpHeaders.append('content-type', 'application/json');
     return this.httpClient.post(
-      `${this.url}/api/product`,
-      createResource,
-      { headers: httpHeaders }
+      `${this.url}/api/product`,data,{ headers: httpHeaders }
     );
   };
    //delete

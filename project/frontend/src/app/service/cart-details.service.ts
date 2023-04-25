@@ -6,9 +6,6 @@ import { BehaviorSubject, map } from 'rxjs';
   providedIn: 'root'
 })
 export class CartDetailsService {
-  map(arg0: (element: any) => any) {
-    throw new Error('Method not implemented.');
-  }
 
   public cartItemList: any = [];
   public productList = new BehaviorSubject<any>([]);

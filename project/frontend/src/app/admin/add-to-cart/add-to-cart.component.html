@@ -32,7 +32,7 @@
               <TD>{{ item.tittle }}</TD>
               <TD>{{ item.location }}</TD>
               <TD>{{ item.price }}</TD>
-              <td>
+              <!-- <td>
                
                 <div class="content"  >
                   <button type="button" class="btn" (click)="incQnt(item.prodId,item.quantity)"><i class="fa fa-plus"></i></button>
@@ -45,7 +45,20 @@
                  
                 </div>
                
-                </td><BR>
+                </td><BR> -->
+                  <td>
+               
+                    <div class="content"  *ngFor="let prod of ProductQuantity">
+                      <button type="button" class="btn" (click)="incQnt(prod.prodId,prod.quantity)"><i class="fa fa-plus"></i></button>
+                      <span>{{prod.quantity}}</span>
+                      <button type="button" class="btn"  (click)="decQnt(prod.prodId,prod.quantity)" ><i class="fa fa-minus"></i></button>
+                      
+                      <div style="display:inline-block; position: absolute; right: 500px;  width: 200px;">
+                        <TD>{{prod.quantity*item.price }}</TD>
+                      </div>
+                     
+                    </div>
+                    </td><BR>
 
           
             <td>

@@ -31,7 +31,7 @@ export class AddNewDataComponent implements OnInit {
 
   roomdetails = {
     // id: 0,
-    _id:0,
+    _id:'',
     tittle: '',
     area: '',
     price: '',

@@ -22,16 +22,16 @@ export class AddToCartComponent implements OnInit {
   Location: any;
   Price: any;
   Image: any;
-  quantity:any;
+  // quantity:any;
   prodId:any;
-  // prodId:any;
-  // ProductQuantity:any=[
-  //   {
-  //     qnt:1,
-  //     prodId:1
+ 
+  ProductQuantity:any=[
+    {
+      quantity:1,
+      // prodId:1
 
-  //   }
-  // ];
+    }
+  ];
   file: any;
   item: any;
   counts:any;
@@ -95,23 +95,34 @@ export class AddToCartComponent implements OnInit {
     this.router.navigate(['home-page']);
   }
 
-incQnt(prodId:any,quantity:any){
+// incQnt(prodId:any,quantity:any){
 
-  console.log(prodId);
-  console.log(quantity);
-  for(let i=0;i<this.items.length;i++)
-  if(this.items[i].prodId===prodId){
-    if(quantity!=5)
-    this.items[i].qnt=parseInt(quantity)+1
-     }
+//   console.log(prodId);
+//   console.log(quantity);
+//   for(let i=0;i<this.items.length;i++)
+//   if(this.items[i].prodId===prodId){
+//     if(quantity!=5)
+//     this.items[i].qnt=parseInt(quantity)+1
+//      }
+//   }
+
+  incQnt(prodId:any,quantity:any){
+    console.log(prodId,quantity)
+    for(let i=0;i<this.ProductQuantity.length;i++)
+    if(this.ProductQuantity[i].id===prodId){
+      if(quantity!=5)
+      this.ProductQuantity[i].quantity=parseInt(quantity)+1
+    }
+    // this.cart.updateDelivery(this.id,data)
+    
   }
 
-decQnt(id:any,qnt:any){
-  console.log(id,qnt)
-  for(let i=0;i<this.item.length;i++)
-  if(this.item[i].id===id){
-    if(qnt!=1)
-    this.item[i].qnt=parseInt(qnt)-1
+decQnt(prodId:any,quantity:any){
+  console.log(prodId,quantity)
+  for(let i=0;i<this.ProductQuantity.length;i++)
+  if(this.ProductQuantity[i].id===prodId){
+    if(quantity!=1)
+    this.ProductQuantity[i].quantity=parseInt(quantity)-1
   }
  
 }
