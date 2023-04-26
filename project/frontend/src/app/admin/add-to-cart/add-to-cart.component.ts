@@ -16,22 +16,27 @@ export class AddToCartComponent implements OnInit {
  
   
   product: any;
-  items:any=[];
+  items:any=[
+    {
+    _id:'',
+  
+  }
+]
   ProductTitle: any;
   Email: any;
   Location: any;
   Price: any;
   Image: any;
   // quantity:any;
-  prodId:any;
  
+  prodId:any
   ProductQuantity:any=[
     {
       quantity:1,
       // prodId:1
 
     }
-  ];
+  ]
   file: any;
   item: any;
   counts:any;
@@ -76,6 +81,7 @@ export class AddToCartComponent implements OnInit {
   getalldetailsOfLocation(){
     this.cart.getaddcartDetailsOfAllLocation().subscribe(data=>{
       this.items=data;
+      this.prodId=data
       console.log(this.items);
       console.log(data);
     })
@@ -95,32 +101,39 @@ export class AddToCartComponent implements OnInit {
     this.router.navigate(['home-page']);
   }
 
-// incQnt(prodId:any,quantity:any){
+incQnt(prodId:any,quantity:any){
 
-//   console.log(prodId);
-//   console.log(quantity);
-//   for(let i=0;i<this.items.length;i++)
-//   if(this.items[i].prodId===prodId){
-//     if(quantity!=5)
-//     this.items[i].qnt=parseInt(quantity)+1
-//      }
-//   }
-
-  incQnt(prodId:any,quantity:any){
-    console.log(prodId,quantity)
-    for(let i=0;i<this.ProductQuantity.length;i++)
-    if(this.ProductQuantity[i].id===prodId){
-      if(quantity!=5)
-      this.ProductQuantity[i].quantity=parseInt(quantity)+1
+  console.log(prodId);
+  console.log(quantity);
+  console.log(this.prodId);
+  console.log(this.items);
+  console.log(this.items[0]._id);
+  for(let i=0;i<this.items.length;i++)
+  if(this.items[i]._id===this.prodId){
+    console.log(this.items[i]._id);
+    console.log(this.prodId._id);
+    // if(quantity!=5)
+    // this.ProductQuantity.quantity=parseInt(this.ProductQuantity.quantity)+1
+   console.log("enter into if")
+    // this.ProductQuantity.quantity=this.items[i].quantity;
     }
-    // this.cart.updateDelivery(this.id,data)
-    
   }
+
+  // incQnt(prodId:any,quantity:any){
+  //   console.log(prodId,quantity)
+  //   for(let i=0;i<this.ProductQuantity.length;i++)
+  //   if(this.ProductQuantity[i].prodId===prodId){
+  //     if(quantity!=5)
+  //     this.ProductQuantity[i].quantity=parseInt(quantity)+1
+  //   }
+  //   // this.cart.updateDelivery(this.id,data)
+    
+  // }
 
 decQnt(prodId:any,quantity:any){
   console.log(prodId,quantity)
   for(let i=0;i<this.ProductQuantity.length;i++)
-  if(this.ProductQuantity[i].id===prodId){
+  if(this.ProductQuantity[i].prodId===prodId){
     if(quantity!=1)
     this.ProductQuantity[i].quantity=parseInt(quantity)-1
   }

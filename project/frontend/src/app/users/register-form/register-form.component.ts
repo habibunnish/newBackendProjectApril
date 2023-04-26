@@ -1,8 +1,7 @@
 import { AdminDetailsService } from './../../service/admin-details.service';
 import { Component } from '@angular/core';
-import { FormBuilder, FormGroup, Validators, FormControl } from '@angular/forms';
+import { FormBuilder, FormGroup,  FormControl } from '@angular/forms';
 import { Router } from '@angular/router';
-import { concat } from 'rxjs';
 import { UserDetailsService } from 'src/app/service/user-details.service';
 
 @Component({
@@ -20,21 +19,7 @@ state: any;
 zipcode: any;
 email: any;
 password: any;
-// profileForm:any;
 
-// profileForm = this.fb.group({
-//   firstName: ['', Validators.required],
-//   lastName: [''],
-//   address: this.fb.group({
-//     street: [''],
-//     city: [''],
-//     state: [''],
-//     zip: ['',Validators.pattern('[0-9]{6}')],
-//     email: ['',Validators.required],
-//     password:['',Validators.required]
-    
-//   }),
-// });
   profileForm=new FormGroup({
     firstname:new FormControl(),
     lastname:new FormControl(),

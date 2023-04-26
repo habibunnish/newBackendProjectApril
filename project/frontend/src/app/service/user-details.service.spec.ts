@@ -14,6 +14,10 @@ describe('UserDetailsService', () => {
     service = TestBed.inject(UserDetailsService);
   });
 
+  it("addNewContactUser()",(done:DoneFn)=>{
+    // httpClientSpy.get.
+  })
+
   it('should be created', () => {
     expect(service).toBeTruthy();
   });
