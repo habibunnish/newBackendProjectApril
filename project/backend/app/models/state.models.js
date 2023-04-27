@@ -1,6 +1,6 @@
 module.exports=mongoose=>{
-    const Product=mongoose.model(
-        "product",
+    const State=mongoose.model(
+        "state",
         mongoose.Schema(
             {
                 tittle:String,
@@ -9,12 +9,9 @@ module.exports=mongoose=>{
                 price:Number,
                 location:String,
                 locations:String,
-                // quantity:Number
-               
-               
             },
             {timestamps:true}
         )
     )
-    return Product
-};
+    return State
+}

@@ -9,7 +9,7 @@ exports.addProductDetails=(req,res)=>{
         image:req.body.image ,
         location: req.body.location,
         locations:req.body.locations,
-        quantity:req.body.quantity,
+        // quantity:req.body.quantity,
         
     });
     product

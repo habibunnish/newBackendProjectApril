@@ -13,6 +13,7 @@ import { UserBookedHistoryService } from 'src/app/services/guards/user-booked-hi
   styleUrls: ['./add-to-cart.component.scss'],
 })
 export class AddToCartComponent implements OnInit {
+
  
   
   product: any;
@@ -33,7 +34,7 @@ export class AddToCartComponent implements OnInit {
   ProductQuantity:any=[
     {
       quantity:1,
-      // prodId:1
+      prodId:''
 
     }
   ]
@@ -101,23 +102,74 @@ export class AddToCartComponent implements OnInit {
     this.router.navigate(['home-page']);
   }
 
-incQnt(prodId:any,quantity:any){
+// incQnt(prodId:any,quantity:any){
+//   console.log(prodId);
+//   console.log(quantity);
+//   for(let i=0;i<this.items.length;i++){
+//     if (this.items[i]._id.includes(prodId)){
+//       // prodId===this.items[i]._id
+//       const index = this.ProductQuantity.findIndex((pq: { prodId: any; }) => pq.prodId === prodId);
 
-  console.log(prodId);
-  console.log(quantity);
-  console.log(this.prodId);
-  console.log(this.items);
-  console.log(this.items[0]._id);
-  for(let i=0;i<this.items.length;i++)
-  if(this.items[i]._id===this.prodId){
-    console.log(this.items[i]._id);
-    console.log(this.prodId._id);
-    // if(quantity!=5)
-    // this.ProductQuantity.quantity=parseInt(this.ProductQuantity.quantity)+1
-   console.log("enter into if")
-    // this.ProductQuantity.quantity=this.items[i].quantity;
+//       if (index !== -1) {
+      
+//       if(quantity != 5) {
+      
+//       this.ProductQuantity[index].quantity += 1;
+      
+//       }
+//       // console.log(prodId);
+//       // if(quantity != 5) 
+//       // { 
+//       //   this.ProductQuantity.prodId=prodId
+//       //   this.ProductQuantity[i].quantity += 1;
+//       //   console.log([i]);
+        
+//       //  }
+//        break; 
+//       }
+//     }
+//   }
+//   }
+incQnt(prodId: any, quantity: any) {
+   console.log(prodId);
+   console.log(quantity);
+  let matchingItem = this.items.find((items: { _id: any; }) => items._id === prodId);
+  let index = this.ProductQuantity.findIndex((obj: { prodId: string; }) => obj.prodId === prodId || obj.prodId === '');
+  console.log(index);
+  if (matchingItem && index !== -1) {
+   
+   this.ProductQuantity[index].prodId = prodId;
+  if (quantity != 5) {
+  this.ProductQuantity[index].quantity += 1;
+    }
+  console.log(index);
+   }
+    else 
+  {
+  console.log("Error: Matching item or ProductQuantity object not found.");
     }
   }
+
+  
+  // for(let i=0;i<this.items.length;i++){
+  // if (this.items[i]._id.includes(prodId)) {
+  //   console.log(this.items[i]._id);
+  //   if(quantity!=5)
+  //   quantity+=1
+  //   console.log(quantity);
+  //   this.ProductQuantity.quantity=quantity
+  //   console.log( this.ProductQuantity.quantity);
+  //   console.log("enter into if")
+  //    }
+  //  }
+  // for(let i=0;i<this.ProductQuantity.length;i++)
+  // { 
+  //   { if(quantity != 5) 
+  //     { this.ProductQuantity[i].quantity += 1; } break; }
+  //   }
+
+   
+
 
   // incQnt(prodId:any,quantity:any){
   //   console.log(prodId,quantity)
@@ -140,5 +192,12 @@ decQnt(prodId:any,quantity:any){
  
 }
 
+
+increment(data:any,name:string) {
+  
+  }
+  decrement(_t22: any,arg1: any) {
+
+  }
 
 }

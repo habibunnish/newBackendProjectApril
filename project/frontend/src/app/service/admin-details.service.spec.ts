@@ -3,7 +3,7 @@ import { HttpClientTestingModule, HttpTestingController } from '@angular/common/
 import { TestBed } from '@angular/core/testing';
 
 import { AdminDetailsService } from './admin-details.service';
-import { NO_ERRORS_SCHEMA } from '@angular/compiler';
+import { Expansion, NO_ERRORS_SCHEMA } from '@angular/compiler';
 import { HttpClient } from '@angular/common/http';
 
 describe('AdminDetailsService', () => {
@@ -57,6 +57,23 @@ describe('AdminDetailsService', () => {
     expect(httpClientSpy.post).toHaveBeenCalled();
   });
 
+
+  it("post method for  adminlogin()",(done:DoneFn)=>{
+    httpClientSpy.post;
+    service.adminlogin(value).subscribe({
+      next:(posts)=>{
+        expect(posts).toEqual(value);
+        done();
+      },
+      error:()=>{
+        done.fail
+      },
+    })
+    const req=httpMock.expectOne(`http://localhost:8082/`);
+    expect(req.request.method).toEqual('POST');
+    expect(req.request.body).toEqual(value);
+    expect(httpClientSpy.post).toHaveBeenCalled();
+  });
 
   it('should be created', () => {
     expect(service).toBeTruthy();

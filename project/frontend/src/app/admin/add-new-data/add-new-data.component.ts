@@ -30,7 +30,6 @@ export class AddNewDataComponent implements OnInit {
   ];
 
   roomdetails = {
-    id: 0,
     _id:'',
     tittle: '',
     area: '',
@@ -116,9 +115,9 @@ export class AddNewDataComponent implements OnInit {
     console.log('addproduct method calling');
     roomdetails.locations = this.locations;
     console.log(roomdetails);
-    this.product.addProductDetails(roomdetails).subscribe((res) => {
-      console.log(res);
-      roomdetails=res
+    this.product.addProductDetails(roomdetails).subscribe((data) => {
+      console.log(data);
+      // roomdetails=res
       alert('product added successfully');
     });
   }

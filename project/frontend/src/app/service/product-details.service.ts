@@ -32,7 +32,7 @@ export class ProductDetailsService {
     const httpHeaders = new HttpHeaders();
     httpHeaders.append('content-type', 'application/json');
     return this.httpClient.post(
-      `${this.url}/api/product`,data,{ headers: httpHeaders }
+      `${this.url}/api/state`,data
     );
   };
    //delete

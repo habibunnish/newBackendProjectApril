@@ -42,6 +42,7 @@ require("./app/routes/cart.routes")(app);
 require("./app/routes/userBookedDetails")(app);
 require("./app/routes/main.routes")(app);
 require("./app/routes/city.routes")(app);
+require("./app/routes/state.routes")(app);
 
 
 
