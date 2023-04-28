@@ -32,7 +32,7 @@
               <TD>{{ item.tittle }}</TD>
               <TD>{{ item.location }}</TD>
               <TD>{{ item.price }}</TD>
-              <td>
+              <!-- <td>
                
                 <div class="content"  *ngFor="let prod of ProductQuantity;" >
                  
@@ -46,12 +46,12 @@
                  
                 </div>
                
-                </td><BR>
+                </td><BR> -->
                   <td>
-                    <label>Quantity </label>
-                    <button (click)="decrement(item , item.tittle)"><i class="fa-solid fa-minus"></i></button>
-                    <b>  {{item.quantity}}  </b>
-                    <button (click)="increment(item , item.tittle)"><i class="fa-solid fa-plus"></i></button>
+                    <!-- <label>Quantity </label> -->
+                    <button  type="button" class="btn" (click)="decrement(item , item.tittle)"><i class="fa fa-minus"></i></button>
+                  <span>{{item.quantity}}</span>
+                    <button type="button" class="btn" (click)="increment(item , item.tittle)"><i class="fa fa-plus"></i></button>
                   </td>
 
 

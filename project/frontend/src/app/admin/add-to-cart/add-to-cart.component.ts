@@ -17,12 +17,13 @@ export class AddToCartComponent implements OnInit {
  
   
   product: any;
-  items:any=[
-    {
-    _id:'',
+//   items:any=[
+//     {
+//     _id:'',
   
-  }
-]
+//   }
+// ]
+items:any=[]
   ProductTitle: any;
   Email: any;
   Location: any;
@@ -194,10 +195,22 @@ decQnt(prodId:any,quantity:any){
 
 
 increment(data:any,name:string) {
-  
+  console.log("abc");
+  if (data.quantity >= 10) {
+   data.quantity = 10;
+   console.log(data.quantity)
+  } else if (data.quantity >= 1) {
+
+    data.quantity++;
+    data.total = data.price * data.quantity;
+    console.log(data.total)
   }
-  decrement(_t22: any,arg1: any) {
+}
+  decrement(data:any,name:string) {
+    if (data.quantity > 1) {
+      data.quantity--;
+      data.total = data.productPrice * data.quantity;
+  }
 
   }
-
 }
