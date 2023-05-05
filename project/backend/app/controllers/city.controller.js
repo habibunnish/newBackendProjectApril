@@ -25,7 +25,7 @@ exports.addProductsDetails=(req,res)=>{
         });
     };
 
-    exports.addProductsDetailsbangluru=(req,res)=>{
+    exports.addProductsDetailsBangluru=(req,res)=>{
         const city2=new City({
             tittle:req.body.tittle,
             area:req.body.area,
@@ -48,7 +48,7 @@ exports.addProductsDetails=(req,res)=>{
             });
         };
 
-    exports.addProductsDetailsroyapuram=(req,res)=>{
+    exports.addProductsDetailsRoyapuram=(req,res)=>{
         const city3=new City({
             tittle:req.body.tittle,
             area:req.body.area,
@@ -71,7 +71,7 @@ exports.addProductsDetails=(req,res)=>{
             });
         };
     
-    exports.addProductsDetailsjammu=(req,res)=>{
+    exports.addProductsDetailsJammu=(req,res)=>{
         const city4=new City({
             tittle:req.body.tittle,
             area:req.body.area,

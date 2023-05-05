@@ -37,7 +37,7 @@ exports.getProduct=(req,res)=>{
         });
     });
 };
-exports.getedit=(req,res)=>{
+exports.getEdit=(req,res)=>{
     const id=req.params.id;
     Product.findById(id)
         .then((data)=>{
@@ -73,7 +73,7 @@ exports.putProduct=(req,res)=>{
         });
     })
 };
-exports.deleteproductchennai=(req,res)=>{
+exports.deleteProductChennai=(req,res)=>{
     const id=req.params.id;
     Product.findByIdAndRemove(id,req.body,{useFindAndModify:false})
         .then((data)=>{

@@ -2,8 +2,6 @@ import { BookedDetailsService } from './../../service/booked-details.service';
 import { CartDetailsService } from './../../service/cart-details.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { CartService } from 'src/app/services/guards/cart.service';
-import { UserBookedHistoryService } from 'src/app/services/guards/user-booked-history.service';
 
 @Component({
   selector: 'app-add-to-cart',
@@ -13,15 +11,13 @@ import { UserBookedHistoryService } from 'src/app/services/guards/user-booked-hi
 export class AddToCartComponent implements OnInit {
   product: any;
   items: any = [];
-  ProductTitle: any;
   Email: any;
   Location: any;
   Price: any;
   Image: any;
   quantity: any;
-
   prodId: any;
-  ProductQuantity: any = [];
+  productQuantity: any = [];
   file: any;
   item: any;
   counts: any;
@@ -32,11 +28,10 @@ export class AddToCartComponent implements OnInit {
     private booked: BookedDetailsService
   ) {}
 
-  //post
   addProduct(item: any) {
    console.log('print', item);
    item.total= item.quantity*item.price 
-      this.booked.UserBookedData(item).subscribe((data) => {
+      this.booked.userBookedData(item).subscribe((data) => {
         console.log(data);
         alert('product added successfully');
       });
@@ -50,18 +45,18 @@ export class AddToCartComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.getalldetailsOfLocation();
+    this. getAllDetailsOfLocation();
     console.log('getalldetailsoflocation');
   }
 
-  getalldetailsOfLocation() {
-    this.cart.getaddcartDetailsOfAllLocation().subscribe((data) => {
+  getAllDetailsOfLocation() {
+    this.cart.getAddCartDetailsOfAllLocation().subscribe((data) => {
       this.items = data;
       this.prodId = data;
-      this.ProductQuantity = data;
+      this.productQuantity = data;
 
-      for (var i = 0; i < this.ProductQuantity.length; i++) {
-        this.ProductQuantity[i].quantity = 1;
+      for (var i = 0; i < this.productQuantity.length; i++) {
+        this.productQuantity[i].quantity = 1;
       }
 
       console.log(this.items);
@@ -70,10 +65,9 @@ export class AddToCartComponent implements OnInit {
   }
 
   delete(item: any) {
-    //  delete item.id ;
     console.log('deleteitems', item.id);
     this.cart.deleteAllCartLocation(item._id).subscribe((data) => {
-      this.getalldetailsOfLocation();
+      this. getAllDetailsOfLocation();
       console.log(data);
     });
   }
@@ -83,23 +77,21 @@ export class AddToCartComponent implements OnInit {
   }
 
   incQnt(index: any) {
-    console.log('Product qua ' + JSON.stringify(this.ProductQuantity));
-    if (this.ProductQuantity[index].quantity < 3) {
-      this.ProductQuantity[index].quantity =
-        this.ProductQuantity[index].quantity + 1;
+    console.log('Product qua ' + JSON.stringify(this.productQuantity));
+    if (this.productQuantity[index].quantity < 3) {
+      this.productQuantity[index].quantity =
+        this.productQuantity[index].quantity + 1;
     } else {
-      alert('sdjfskd');
+      alert('cannot book  room more than 3 times');
     }
   }
 
   decQnt(index: any) {
-    console.log('Product qua ' + JSON.stringify(this.ProductQuantity));
-    if (this.ProductQuantity[index].quantity > 0) {
-      this.ProductQuantity[index].quantity =
-        this.ProductQuantity[index].quantity - 1;
-    } else {
-      alert('sdfsdf');
-    }
+    console.log('Product quantity ' + JSON.stringify(this.productQuantity));
+    if (this.productQuantity[index].quantity > 0) {
+      this.productQuantity[index].quantity =
+        this.productQuantity[index].quantity - 1;
+    } 
   }
 
 

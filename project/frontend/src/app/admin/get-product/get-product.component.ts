@@ -11,26 +11,26 @@ import { Router } from '@angular/router';
 export class GetProductComponent implements OnInit {
 
   constructor(private product: ProductDetailsService, private router: Router) {}
-  public ProductList: any;
+  public productList: any;
 
   //get
   ngOnInit(){
-    this.ProductList = this.product.getProduct().subscribe((data) => {
-      console.log(data, this.ProductList);
-      this.ProductList = data;
+    this.productList = this.product.getProduct().subscribe((data) => {
+      console.log(data, this.productList);
+      this.productList = data;
     });
   }
-  getallproduct() {
+  getAllProduct() {
     this.product.getProduct().subscribe((res) => {
-      this.ProductList = res;
+      this.productList = res;
     });
   }
 
   //delete product
-  deletedata(product: any) {
+  deleteData(product: any) {
     console.log('delete data() calling ', product.id);
     this.product.deleteProduct(product._id).subscribe(data => {
-      this.getallproduct();
+      this.getAllProduct();
       console.log(data);
     });
     alert('deleted this details');

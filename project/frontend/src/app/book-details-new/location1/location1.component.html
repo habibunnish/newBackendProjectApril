@@ -1,5 +1,3 @@
-<!-- <button (click)="GoBack()" id="back"class="btn btn-primary">BACK-TO-BOOKINGPAGE</button> -->
-
 <div class="container">
     <div class="row" >
       <ng-container *ngFor="let item of bookingList">
@@ -9,7 +7,7 @@
         <p> {{item.area}},{{ item.location }} </p>
 
         <p><strong>PRICE : </strong>$ {{ item.price }}</p>
-        <button class="btn btn-primary" (click)="addto(item)"> ADD TO CART  </button>
+        <button class="btn btn-primary" (click)="addToCart(item)"> ADD TO CART  </button>
       </div>
     </ng-container>
   </div>

@@ -2,15 +2,11 @@
   <div class="loginform">
     <form  >
       <label>CHOOSE LOCATION</label>
-      <!-- <div >
-        <select (click)="modo($event)" >
-          <option  *ngFor="let c of locations" [value]="c.name">{{c.name}}  </option>
-          
-        </select>
-      </div> -->
-      <div> <select (click)="modo($event)"  [(ngModel)]="selectedLocation" [ngModelOptions]="{standalone: true}"> 
-        <option *ngFor="let location of locations" [value]="location.name">{{ location.name }}</option> 
-      </select> </div>
+      <div>
+         <select (click)="modo($event)"  [(ngModel)]="selectedLocation" [ngModelOptions]="{standalone: true}"> 
+         <option *ngFor="let location of locations" [value]="location.name">{{ location.name }}</option> 
+         </select>
+     </div>
 
 
       <pre></pre>
@@ -20,7 +16,7 @@
         type="text"
         name="productTitle"
         placeholder="ProductTittle"
-        [(ngModel)]="roomdetails.tittle" />
+        [(ngModel)]="roomDetails.tittle" />
       <pre></pre>
 
       <label for="area">area</label><br />
@@ -29,7 +25,7 @@
         type="text"
         name="area"
         placeholder="area"
-        [(ngModel)]="roomdetails.area" />
+        [(ngModel)]="roomDetails.area" />
       <pre></pre>
 
       <label for="Price">Price</label><br />
@@ -38,11 +34,11 @@
         type="text"
         name="price"
         placeholder="Price"
-        [(ngModel)]="roomdetails.price"/>
+        [(ngModel)]="roomDetails.price"/>
       <PRE></PRE>
 
       <label for="qnt">Quantity</label><br>
-      <input class="form-control" type="number" name="qnt" placeholder="quantity" [(ngModel)]="roomdetails.quantity">
+      <input class="form-control" type="number" name="qnt" placeholder="quantity" [(ngModel)]="roomDetails.quantity">
       <pre></pre>
 
       <label>{{this.selectedImage}}</label><br>
@@ -51,7 +47,7 @@
 
       <button
         class="btn btn-primary"
-        (click)="adding(roomdetails)"
+        (click)="adding(roomDetails)"
         type="button"
         >
         ADD-PRODUCT
@@ -61,7 +57,7 @@
         Updating Product
       </button>
       <span style="display: inline-block; width: 40px"></span><br /><br />
-      <button class="btn btn-primary" (click)="checkpage()">checkpage</button>
+      <button class="btn btn-primary" (click)="checkPage()">checkpage</button>
     </form>
   </div>
 </div>

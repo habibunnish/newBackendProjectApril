@@ -4,9 +4,9 @@ module.exports=app=>{
     var router=require("express").Router();
     router.post("/",product.addProductDetails);
     router.get("/",product.getProduct);
-    router.get("/:id",product.getedit);
+    router.get("/:id",product.getEdit);
     router.put("/:id",product.putProduct);
-    router.delete("/:id",product.deleteproductchennai);
+    router.delete("/:id",product.deleteProductChennai);
     router.delete("/:id",product.deleteProduct);
     app.use("/api/product",router);
 

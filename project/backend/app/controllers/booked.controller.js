@@ -2,7 +2,7 @@ const db=require("../models");
 const Booked=db.booked;
 
 
-exports.UserBookedData=(req,res)=>{
+exports.userBookedData=(req,res)=>{
     const booked=new Booked({
         tittle:req.body.tittle,
         area:req.body.area,

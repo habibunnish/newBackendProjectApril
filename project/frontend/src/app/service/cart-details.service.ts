@@ -9,16 +9,16 @@ export class CartDetailsService {
 
   public cartItemList: any = [];
   public productList = new BehaviorSubject<any>([]);
-  counts:any
   filterarray:any;
   constructor(private httpClient: HttpClient) {}
 
   url="http://localhost:8082";
+  
   getProducts() {
     return this.productList.asObservable();
   }
 
-  getaddcartDetailsOfAllLocation(){
+  getAddCartDetailsOfAllLocation(){
     const httpHeaders = new HttpHeaders();
     httpHeaders.append('content-type', 'application/json');
     return this.httpClient.get(`${this.url}/api/cart`,{
@@ -27,7 +27,7 @@ export class CartDetailsService {
     
   };
 
-  postaddcartDetailsOfAllLocation(createResource:any){
+  postAddCartDetailsOfAllLocation(createResource:any){
     const httpHeaders = new HttpHeaders();
     httpHeaders.append('content-type', 'application/json');
     return this.httpClient.post(`${this.url}/api/cart`, createResource,{
@@ -50,14 +50,5 @@ export class CartDetailsService {
 
   }
 
-  // count(){
-  //    this.getaddcartDetailsOfAllLocation().subscribe(res=>{
-  //     console.log(res,Array.isArray(res));
-  //     if(Array.isArray(res)){
-  //       this.counts=res.filter(s=>s.email==JSON.parse(localStorage.getItem('userData') || '{}').Email)
-  //         console.log(this.counts.length);
-  //     }
-  //   }) 
-  // }
 
 }

@@ -10,11 +10,11 @@ import { Router } from '@angular/router';
 export class AppComponent {
   constructor(private router: Router, private cart: CartDetailsService) {}
 
-  totalitem: any;
+  totalItem: any;
 
   ngOnInit() {
     this.cart.getProducts().subscribe((res) => {
-      this.totalitem = res;
+      this.totalItem = res;
       console.log(res);
     });
   }
@@ -24,16 +24,16 @@ export class AppComponent {
     this.router.navigate(['booking-page']);
   }
 
-  get loggedin() {
+  get loggedIn() {
     return localStorage.getItem('UsertToken');
   }
 
-  onlogout() {
+  onLogout() {
     localStorage.removeItem('UsertToken');
     localStorage.removeItem('adminToken');
   }
 
-  BookDetailsNew() {
+  bookDetailsNew() {
     // console.log('mainpage');
     this.router.navigate(['main-page']);
   }
@@ -45,15 +45,15 @@ export class AppComponent {
   query() {
     this.router.navigate(['how-it-work']);
   }
-  gotoaddnewpage() {
+  goToAddNewPage() {
     // console.log('addnew data page');
     this.router.navigate(['add-new-data/' + 0]);
   }
-  userbooked() {
+  userBooked() {
     this.router.navigate(['user-booked-details']);
   }
 
-  get adminloggedin() {
+  get adminLoggedIn() {
     // console.log(localStorage.getItem('adminToken'));
 
     return localStorage.getItem('adminToken');

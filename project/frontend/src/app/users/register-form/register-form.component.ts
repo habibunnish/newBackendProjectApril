@@ -39,7 +39,6 @@ password: any;
     private admin:AdminDetailsService
   ) {}
   
-  //post
   submit() {
     const registerFormData = {
       firstname: this.firstname,
@@ -60,7 +59,7 @@ password: any;
         this.router.navigate(['login-form']);
         this.profileForm.reset();
       });
-      // this.adminRegisterData();
+     
   }
 
   adminRegisterData(){

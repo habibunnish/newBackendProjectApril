@@ -1,5 +1,4 @@
 import { MainPageDetailsService } from './../../service/main-page-details.service';
-import { AddNewDataService } from './../../services/guards/add-new-data.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';

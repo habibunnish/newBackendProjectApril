@@ -9,7 +9,6 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HomePageComponent } from './home-page/home-page.component';
 import { HowItWorkComponent } from './how-it-work/how-it-work.component';
-// import { LoginDetailsComponent } from './login-details/login-details.component';
 
 
 @NgModule({
@@ -18,7 +17,7 @@ import { HowItWorkComponent } from './how-it-work/how-it-work.component';
     RegisterFormComponent,
     HomePageComponent,
     HowItWorkComponent,
-    // LoginDetailsComponent
+   
   ],
   imports: [
     CommonModule,

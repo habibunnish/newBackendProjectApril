@@ -1,4 +1,4 @@
-import { ADMINLOCAL } from './adminLocal';
+import { adminLocal} from './adminLocal';
 import { AdminDetailsService } from './../../service/admin-details.service';
 import { LoginDetailsService } from './../../service/login-details.service';
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
@@ -15,7 +15,7 @@ export class LoginFormComponent implements OnInit {
  
 
   visible: boolean = true;
-  changetype: boolean = true;
+  changeType: boolean = true;
 
   @Output()
   childMessage = new EventEmitter();
@@ -26,11 +26,11 @@ export class LoginFormComponent implements OnInit {
 
   //@ts-check
 
-  viewpass() {
+  viewPass() {
     this.visible = !this.visible;
-    this.changetype = !this.changetype;
+    this.changeType = !this.changeType;
   }
-  onsubmit() {
+  onSubmit() {
     console.log('on submit');
     this.childMessage.emit(this.store());
   }
@@ -45,17 +45,12 @@ export class LoginFormComponent implements OnInit {
       email: ['', Validators.required],
     });
 
-    // this.adminForm = this.fb.group({
-    //   password: ['', Validators.required],
-    //   email: ['', Validators.required],
-    // });
-
   }
   password: any;
   email: any;
 
   localInterface: Local | null = null;
-  adminlocalInterface: ADMINLOCAL | null = null;
+  adminlocalInterface: adminLocal | null = null;
   
   constructor(
     private login: LoginDetailsService,
@@ -64,7 +59,6 @@ export class LoginFormComponent implements OnInit {
     private adminData: AdminDetailsService
   ) {}
 
-  //doubt login values =addNewContactUser
   addNewContact() {
     const newFormData = {
       password: this.password,
@@ -72,7 +66,6 @@ export class LoginFormComponent implements OnInit {
     };
     console.log(newFormData);
     this.login.login(newFormData).subscribe((resultData: any) => {
-    //  console.log(resultData);
       if(resultData){
         this.localInterface = resultData;
         console.log(
@@ -84,18 +77,18 @@ export class LoginFormComponent implements OnInit {
       }
       else{
         console.log(newFormData);
-        this.adminlogin();
+        this.adminLogin();
       }
     });
    
   }
-  adminlogin() {
+  adminLogin() {
     const newFormData = {
       password: this.password,
       email: this.email,
     };
     console.log(newFormData);
-    this.adminData.adminlogin(newFormData).subscribe((data:any) => {
+    this.adminData.adminLogin(newFormData).subscribe((data:any) => {
       if(data!=null){
         this.adminlocalInterface=data;
         console.log(
@@ -108,10 +101,6 @@ export class LoginFormComponent implements OnInit {
       });
     };
   
-
-
-     
-
   store() {
     this.router.navigate(['register-form']);
   }

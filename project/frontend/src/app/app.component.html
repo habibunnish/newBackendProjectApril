@@ -2,26 +2,26 @@
   <div style="flex-grow: 1">
     <img src="assets/IMAGES/logo.jpeg" />
   </div>
-  <li class="one">
+  <li class="one" *ngIf="loggedIn">
     <a routerLink="home-page">HomePage</a>
   </li>
-  <li class="one">
+  <li class="one"  *ngIf="loggedIn">
     <a routerLink="how-it-work">Query</a>
   </li>
   
-  <li class="one" *ngIf="loggedin||adminloggedin" (click)="BookDetailsNew()">Hotels</li>
-  <li class="one" *ngIf="adminloggedin">
+  <li class="one" *ngIf="loggedIn" (click)="bookDetailsNew()">Hotels</li>
+  <li class="one" *ngIf="adminLoggedIn">
     <a routerLink="get-product">Check</a>
   </li>
-  <li class="one" *ngIf="adminloggedin" (click)="gotoaddnewpage()">AddHotels</li>
-  <li class="one"  *ngIf="loggedin" (click)="userbooked()" >History</li>
-  <LI class="one" *ngIf="!loggedin && !adminloggedin"
+  <li class="one" *ngIf="adminLoggedIn" (click)="goToAddNewPage()">AddHotels</li>
+  <li class="one"  *ngIf="loggedIn||adminLoggedIn" (click)="userBooked()" >History</li>
+  <LI class="one" *ngIf="!loggedIn && !adminLoggedIn"
     ><A routerLink="login-form">Login</A></LI
   >
-  <li class="one" *ngIf="loggedin || adminloggedin " id="logout" (click)="onlogout()">
+  <li class="one" *ngIf="loggedIn || adminLoggedIn " id="logout" (click)="onLogout()">
     <a routerLink="how-it-work">Logout</a>
   </li>
-  <li class="two" *ngIf="loggedin">
+  <li class="two" *ngIf="loggedIn">
     <div>
       <img
         routerLink="add-to-cart"

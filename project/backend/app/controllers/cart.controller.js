@@ -1,7 +1,7 @@
 const db=require("../models");
 const Cart=db.cart;
 
-exports.postaddcartDetailsOfAllLocations=(req,res)=>{
+exports.postAddCartDetailsOfAllLocations=(req,res)=>{
     console.log(req.body);
     const cart=new Cart({
         tittle:req.body.tittle,
@@ -28,7 +28,7 @@ exports.postaddcartDetailsOfAllLocations=(req,res)=>{
         });
     });
 };
-exports.getaddcartdetailsofAllLocation=(req,res)=>{
+exports.getAddCartDetailsOfAllLocation=(req,res)=>{
     Cart.find()
     .then((data)=>{
         res.send(data);

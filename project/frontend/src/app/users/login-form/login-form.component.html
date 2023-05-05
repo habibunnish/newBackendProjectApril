@@ -11,8 +11,8 @@
                 <pre></pre>
                 <pre></pre>
                 <div class="form-group">
-                    <label for="password">Password</label>  <span class="eyeicon" (click)="viewpass()"><i [ngClass]="visible?'fa fa-eye':'fa fa-eye-slash'" ></i></span>
-                    <input  id="password" [type]="changetype?'password':'text'" formControlName="password" name="password" class="form-control" [(ngModel)]="password" required
+                    <label for="password">Password</label>  <span class="eyeicon" (click)="viewPass()"><i [ngClass]="visible?'fa fa-eye':'fa fa-eye-slash'" ></i></span>
+                    <input  id="password" [type]="changeType?'password':'text'" formControlName="password" name="password" class="form-control" [(ngModel)]="password" required
                         pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{4,}$"  >
                       <div>
 
@@ -23,9 +23,9 @@
                 </div>
                 <pre></pre>
                 <pre></pre>
-                <button [disabled]="loginForm.invalid" (click)="addNewContact()"  class="btn btn-primary btn-ghost" type="submit" (click)="adminlogin()" id="button"> LOG IN</button>
+                <button [disabled]="loginForm.invalid" (click)="addNewContact()"  class="btn btn-primary btn-ghost" type="submit" (click)="adminLogin()" id="button"> LOG IN</button>
                  <span style="display: inline-block;width:200px;margin-right: 20px;"></span>
-                <button class="btn btn-primary btn-ghost"  id="buttononsubmit" (click)="onsubmit()">SIGN UP</button>
+                <button class="btn btn-primary btn-ghost"  id="buttononsubmit" (click)="onSubmit()">SIGN UP</button>
             </form>
         </div>
     </div>

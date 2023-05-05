@@ -3,7 +3,7 @@ import { CityDetailsService } from './../../service/city-details.service';
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { ThisReceiver } from '@angular/compiler';
+
 
 
 @Component({
@@ -22,14 +22,13 @@ export class AddNewDataComponent implements OnInit {
   change = new EventEmitter();
 
   locations = [
-    // { name: '' },
     { name: 'Chennai' },
     { name: 'goa' },
     { name: 'Banguluru' },
     { name: 'Jammu' },
   ];
 
-  roomdetails = {
+  roomDetails = {
     _id:'',
     tittle: '',
     area: '',
@@ -58,50 +57,50 @@ export class AddNewDataComponent implements OnInit {
     
   }
   GetEdits() {
-    this.product.getedit(this.id).subscribe((data) => {
+    this.product.getEdit(this.id).subscribe((data) => {
       console.log(data);
-      this.roomdetails = data;
-      this.selectedLocation = this.roomdetails.location;
-       this.selectedImage=this.roomdetails.image
+      this.roomDetails = data;
+      this.selectedLocation = this.roomDetails.location;
+       this.selectedImage=this.roomDetails.image
       });
   }
 
-  adding(roomdetails: any) {
-    roomdetails.image = this.file.name;
-    this.addnewproduct(roomdetails);
-    this.addProduct(roomdetails);
+  adding(roomDetails: any) {
+    roomDetails.image = this.file.name;
+    this.addNewProduct(roomDetails);
+    this.addProduct(roomDetails);
   }
 
   /*@post*/
-  addnewproduct(roomdetails: any) {
+  addNewProduct(roomDetails: any) {
     console.log(this.location);
-    roomdetails.location = this.location;
+    roomDetails.location = this.location;
     if (this.location == 'Chennai') {
-      this.city.addProductsDetails(roomdetails).subscribe((res) => {
+      this.city.addProductsDetails(roomDetails).subscribe((res) => {
         console.log(res);
       });
     } else if (this.location == 'Banguluru') {
       this.city
-        .addProductsDetailsbangluru(roomdetails)
+        .addProductsDetailsBangluru(roomDetails)
         .subscribe((res) => {
           console.log(res);
         });
     } else if (this.location == 'goa') {
       this.city
-        .addProductsDetailsroyapuram(roomdetails)
+        .addProductsDetailsRoyapuram(roomDetails)
         .subscribe((res) => {
           console.log(res);
         });
     } else if (this.location == 'Jammu') {
       this.city
-        .addProductsDetailsjammu(roomdetails)
+        .addProductsDetailsJammu(roomDetails)
         .subscribe((res) => {
           console.log(res);
         });
     }
   }
 
-  changedone(a: any) {
+  changeDone(a: any) {
     console.log('method is run');
     console.log(a);
     this.location = a;
@@ -109,15 +108,15 @@ export class AddNewDataComponent implements OnInit {
   }
   modo($event: any) {
     console.log('changing', $event.target.value);
-    this.changedone($event.target.value);
+    this.changeDone($event.target.value);
   }
 
   /*@post :for showing in page*/
-  addProduct(roomdetails: any) {
+  addProduct(roomDetails: any) {
     console.log('addproduct method calling');
-    roomdetails.locations = JSON.stringify(this.locations);
-    console.log(roomdetails.locations);
-    this.product.addProductDetails(roomdetails).subscribe((data) => {
+    roomDetails.locations = JSON.stringify(this.locations);
+    console.log(roomDetails.locations);
+    this.product.addProductDetails(roomDetails).subscribe((data) => {
       console.log(data);
       // roomdetails=res
       alert('product added successfully');
@@ -125,21 +124,21 @@ export class AddNewDataComponent implements OnInit {
   }
 
   putting() {
-    this.UpdateputProduct();
+    this.updatePutProduct();
   }
-  /*put:to edit details */
-  UpdateputProduct() {
-    console.log(this.roomdetails, this.roomdetails._id);
-    console.log(this.roomdetails);
-    this.product.putproduct(this.roomdetails._id, this.roomdetails).subscribe((data: any) => {
+
+  updatePutProduct() {
+    console.log(this.roomDetails, this.roomDetails._id);
+    console.log(this.roomDetails);
+    this.product.putProduct(this.roomDetails._id, this.roomDetails).subscribe((data: any) => {
         console.log(data);
         alert('product edited successfully');
       });
   }
 
-  deletedata(data: any) {
+  deleteData(data: any) {
     console.log('delete data() calling ', data.id);
-    this.product.deleteproductchennai(data._id).subscribe((res) => {
+    this.product.deleteProductChennai(data._id).subscribe((res) => {
       console.log(res);
     });
     alert('deleted this details');
@@ -149,8 +148,8 @@ export class AddNewDataComponent implements OnInit {
     this.file = event.target.files[0];
     console.log('file', this.file.name);
     
-    this.roomdetails.image = this.file.name;
-    this.selectedImage=this.roomdetails.image
+    this.roomDetails.image = this.file.name;
+    this.selectedImage=this.roomDetails.image
     console.log('getfile');
   }
   submitData() {
@@ -160,7 +159,7 @@ export class AddNewDataComponent implements OnInit {
       console.log(res);
     });
   }
-  checkpage() {
+  checkPage() {
     this.router.navigate(['get-product']);
   }
 }

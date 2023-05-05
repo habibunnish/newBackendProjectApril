@@ -2,8 +2,6 @@ import { ProductDetailsService } from './../../service/product-details.service';
 import { CartDetailsService } from './../../service/cart-details.service';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { AdminService } from 'src/app/services/guards/admin.service';
-import { CartService } from 'src/app/services/guards/cart.service';
 
 @Component({
   selector: 'app-location1',
@@ -12,7 +10,7 @@ import { CartService } from 'src/app/services/guards/cart.service';
 })
 export class Location1Component implements OnInit {
   duplicateLocationList: any = [];
-  getalldetails: any;
+  getAllDetails: any;
   bookingList: any = [];
   state: any;
 
@@ -26,7 +24,7 @@ export class Location1Component implements OnInit {
   ngOnInit() {
     this.state = this.activatedRoute.snapshot.params['state'];
     this.noDuplication();
-    this.getalldetailsOfLocation();
+    this.getAllDetailsOfLocation();
   }
 
   noDuplication() {
@@ -43,14 +41,14 @@ export class Location1Component implements OnInit {
     });
   }
 
-  addto(item: any) {
+  addToCart(item: any) {
     console.log(item);
     var abc = false;
     console.log('adding in');
 
-    console.log(this.getalldetails);
-    for (var i = 0; i < this.getalldetails.length; i++) {
-      if (this.getalldetails[i].tittle == item.tittle) {
+    console.log(this.getAllDetails);
+    for (var i = 0; i < this.getAllDetails.length; i++) {
+      if (this.getAllDetails[i].tittle == item.tittle) {
         abc = true;
       }
     }
@@ -58,21 +56,21 @@ export class Location1Component implements OnInit {
       alert('Product cannot be added twice');
     } else {
       alert('Product added successfully in the cart');
-      this.addingindatabase(item);
+      this.addingInDatabase(item);
       this.router.navigate(['add-to-cart']);
     }
   }
 
-  getalldetailsOfLocation() {
-    this.cart.getaddcartDetailsOfAllLocation().subscribe((data) => {
-      this.getalldetails = data;
-      console.log(this.getalldetails);
+  getAllDetailsOfLocation() {
+    this.cart.getAddCartDetailsOfAllLocation().subscribe((data) => {
+      this.getAllDetails = data;
+      console.log(this.getAllDetails);
       console.log(data);
     });
   }
 
-  addingindatabase(item: any) {
-    this.cart.postaddcartDetailsOfAllLocation(item).subscribe((data) => {
+  addingInDatabase(item: any) {
+    this.cart.postAddCartDetailsOfAllLocation(item).subscribe((data) => {
       console.log(data);
     });
   }

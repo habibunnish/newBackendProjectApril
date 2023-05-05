@@ -1,7 +1,7 @@
 const db=require("../models");
 const UserBookedData=db.userbookeddata;
 
-exports.UserBookedDetails=(req,res)=>{
+exports.userBookedDetails=(req,res)=>{
     const userbookeddata=new this.UserBookedData({
         tittle: req.body.tittle,
         area: req.body.area,

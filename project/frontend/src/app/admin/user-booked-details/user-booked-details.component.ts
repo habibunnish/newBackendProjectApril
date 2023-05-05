@@ -1,8 +1,6 @@
 import { BookedDetailsService } from './../../service/booked-details.service';
-import { CartDetailsService } from './../../service/cart-details.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { CartService } from 'src/app/services/guards/cart.service';
 
 
 @Component({
@@ -12,17 +10,17 @@ import { CartService } from 'src/app/services/guards/cart.service';
 })
 export class UserBookedDetailsComponent implements OnInit{
 
-  Productuser: any;
+
   items:any;
   constructor(
     private booked:BookedDetailsService,
     private router:Router
   ) {}
 ngOnInit(){
-  this.getalldetailsOfLocation()
+  this.getAllDetailsOfLocation()
 }
   
-  getalldetailsOfLocation(){
+  getAllDetailsOfLocation(){
     console.log("dfcgvhbn")
     this.booked.getBookedData().subscribe((data) => {
       console.log(data);
@@ -31,7 +29,7 @@ ngOnInit(){
   }
   
  
-  goback(){
+  goBack(){
     this.router.navigate(['get-product'])
   }
 

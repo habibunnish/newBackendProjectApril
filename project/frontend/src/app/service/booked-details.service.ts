@@ -10,7 +10,7 @@ export class BookedDetailsService {
 
   url='http://localhost:8082';
 
-  UserBookedData(createResource: any) {
+  userBookedData(createResource: any) {
     const httpHeaders = new HttpHeaders();
     httpHeaders.append('content-type ', 'applcation/json');
     return this.httpClient.post(`${this.url}/api/booked` ,

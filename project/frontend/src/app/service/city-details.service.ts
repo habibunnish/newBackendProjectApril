@@ -21,7 +21,7 @@ export class CityDetailsService {
   };
 
   //post
-  addProductsDetailsbangluru(createResource: any) {
+  addProductsDetailsBangluru(createResource: any) {
     const httpHeaders = new HttpHeaders();
     httpHeaders.append('content-type', 'application/json');
     return this.httpClient.post(
@@ -33,7 +33,7 @@ export class CityDetailsService {
 
 
   //post
-  addProductsDetailsroyapuram(createResource: any) {
+  addProductsDetailsRoyapuram(createResource: any) {
     const httpHeaders = new HttpHeaders();
     httpHeaders.append('content-type', 'application/json');
     return this.httpClient.post(
@@ -45,7 +45,7 @@ export class CityDetailsService {
 
 
   //post
-  addProductsDetailsjammu(createResource: any) {
+  addProductsDetailsJammu(createResource: any) {
     const httpHeaders = new HttpHeaders();
     httpHeaders.append('content-type', 'application/json');
     return this.httpClient.post(`${this.url}/api/city/Jammu`, createResource, {

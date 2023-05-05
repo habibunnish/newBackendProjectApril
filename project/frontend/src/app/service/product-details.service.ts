@@ -19,7 +19,7 @@ export class ProductDetailsService {
     );
   }
 
-  getedit(id: any) {
+  getEdit(id: any) {
     console.log(id);
     return this.httpClient.get(`${this.url}/api/product/${id}`).pipe(
       map((res: any) => {
@@ -34,7 +34,7 @@ export class ProductDetailsService {
     return this.httpClient.post( `${this.url}/api/product`,data);
   };
    //delete
-   deleteproductchennai(id: number) {
+   deleteProductChennai(id: number) {
     return this.httpClient.delete(`${this.url}/api/product/${id}`).pipe(
         map((response:any) => {
           return response
@@ -49,7 +49,7 @@ export class ProductDetailsService {
     );
   };
 
-  putproduct(id: any, UpdatedBody: any) {
+  putProduct(id: any, UpdatedBody: any) {
     const httpHeaders = new HttpHeaders();
     httpHeaders.append('content-type', 'application/json');
     return this.httpClient.put(
