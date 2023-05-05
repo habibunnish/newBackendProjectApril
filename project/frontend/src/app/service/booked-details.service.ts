@@ -13,9 +13,19 @@ export class BookedDetailsService {
   UserBookedData(createResource: any) {
     const httpHeaders = new HttpHeaders();
     httpHeaders.append('content-type ', 'applcation/json');
-    return this.httpClient.post(`${this.url}/api/userBookedDetails` ,
+    return this.httpClient.post(`${this.url}/api/booked` ,
       createResource,
       { headers: httpHeaders }
     )
   };
+
+  getBookedData(){
+    const httpHeaders = new HttpHeaders();
+    httpHeaders.append('content-type', 'application/json');
+    return this.httpClient.get(`${this.url}/api/booked`,{
+      headers: httpHeaders,
+    });
+    
+  };
+
 }

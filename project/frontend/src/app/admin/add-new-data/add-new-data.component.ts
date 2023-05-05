@@ -22,7 +22,7 @@ export class AddNewDataComponent implements OnInit {
   change = new EventEmitter();
 
   locations = [
-    { name: '' },
+    // { name: '' },
     { name: 'Chennai' },
     { name: 'goa' },
     { name: 'Banguluru' },
@@ -47,7 +47,9 @@ export class AddNewDataComponent implements OnInit {
     private router: Router,
     private city: CityDetailsService,
     private product:ProductDetailsService,
-    private activatedRoute: ActivatedRoute
+    private activatedRoute: ActivatedRoute,
+    
+    
   ) {}
 
   ngOnInit() {
@@ -113,8 +115,8 @@ export class AddNewDataComponent implements OnInit {
   /*@post :for showing in page*/
   addProduct(roomdetails: any) {
     console.log('addproduct method calling');
-    roomdetails.locations = this.locations;
-    console.log(roomdetails);
+    roomdetails.locations = JSON.stringify(this.locations);
+    console.log(roomdetails.locations);
     this.product.addProductDetails(roomdetails).subscribe((data) => {
       console.log(data);
       // roomdetails=res

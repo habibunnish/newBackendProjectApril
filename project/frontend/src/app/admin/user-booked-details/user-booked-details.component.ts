@@ -1,3 +1,4 @@
+import { BookedDetailsService } from './../../service/booked-details.service';
 import { CartDetailsService } from './../../service/cart-details.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
@@ -9,37 +10,32 @@ import { CartService } from 'src/app/services/guards/cart.service';
   templateUrl: './user-booked-details.component.html',
   styleUrls: ['./user-booked-details.component.scss'],
 })
-export class UserBookedDetailsComponent implements OnInit {
+export class UserBookedDetailsComponent implements OnInit{
 
   Productuser: any;
   items:any;
   constructor(
-    private cart:CartDetailsService,
+    private booked:BookedDetailsService,
     private router:Router
   ) {}
-  ngOnInit() {
-    this.getalldetailsOfLocation();
-  }
-  //get
+ngOnInit(){
+  this.getalldetailsOfLocation()
+}
+  
   getalldetailsOfLocation(){
-    this.cart.getaddcartDetailsOfAllLocation().subscribe(data=>{
-      this.items=data;
-      console.log(this.items);
+    console.log("dfcgvhbn")
+    this.booked.getBookedData().subscribe((data) => {
       console.log(data);
-    })
+      this.items=data
+    });
   }
+  
  
   goback(){
     this.router.navigate(['get-product'])
   }
 
-  delete(item: any) {
-    //  delete item.id ;
-    console.log('deleteitems', item.id);
-    this.cart.deleteAllCartLocation(item._id).subscribe(data=>{
-      this.getalldetailsOfLocation();
-      console.log(data);
-    })
-   }
- 
 }
+
+ 
+

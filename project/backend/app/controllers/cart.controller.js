@@ -11,7 +11,7 @@ exports.postaddcartDetailsOfAllLocations=(req,res)=>{
         location: req.body.location,
         locations:req.body.locations,
         quantity:req.body.quantity,
-        prodId:req.body.prodId
+      
         
 
     });

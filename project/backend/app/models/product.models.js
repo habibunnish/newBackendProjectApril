@@ -9,7 +9,7 @@ module.exports=mongoose=>{
                 price:Number,
                 location:String,
                 locations:String,
-                // quantity:Number
+                quantity:Number
                
                
             },

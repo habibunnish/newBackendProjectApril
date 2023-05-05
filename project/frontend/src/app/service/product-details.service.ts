@@ -31,9 +31,7 @@ export class ProductDetailsService {
   addProductDetails(data: any) {
     const httpHeaders = new HttpHeaders();
     httpHeaders.append('content-type', 'application/json');
-    return this.httpClient.post(
-      `${this.url}/api/state`,data
-    );
+    return this.httpClient.post( `${this.url}/api/product`,data);
   };
    //delete
    deleteproductchennai(id: number) {

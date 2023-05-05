@@ -13,6 +13,6 @@ db.login=require("./login.models.js")(mongoose);
 db.main=require("./main.models.js")(mongoose);
 db.city=require("./city.models.js")(mongoose);
 db.admin=require("./admin.models.js")(mongoose);
-db.state=require("./state.models.js")(mongoose);
+db.booked=require("./booked.models.js")(mongoose);
 
 module.exports=db;

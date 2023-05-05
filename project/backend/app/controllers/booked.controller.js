@@ -1,16 +1,18 @@
 const db=require("../models");
-const State=db.state;
+const Booked=db.booked;
 
-exports.addProductDetails=(req,res)=>{
-    const state=new State({
-        tittle: req.body.tittle,
-        area: req.body.area,
-        price: req.body.price,
-        image:req.body.image ,
-        location: req.body.location,
-        locations:req.body.locations,
+
+exports.UserBookedData=(req,res)=>{
+    const booked=new Booked({
+        tittle:req.body.tittle,
+        area:req.body.area,
+        image:req.body.image,
+        location:req.body.location,
+        quantity:req.body.quantity,
+        total:req.body.total
     });
-    state.save(state).then((data)=>{
+    console.log(booked)
+    booked.save(booked).then((data)=>{
         res.send(data);
         console.log("data added in databse sccessfully");
     })
@@ -20,8 +22,8 @@ exports.addProductDetails=(req,res)=>{
         });
     });
 };
-exports.getProduct=(req,res)=>{
-    State.find()
+exports.getBookedData=(req,res)=>{
+    Booked.find()
     .then((data)=>{
         res.send(data);
     })
@@ -31,4 +33,4 @@ exports.getProduct=(req,res)=>{
             err.message || "some error occured while retriving product"
         });
     });
-};
+}
