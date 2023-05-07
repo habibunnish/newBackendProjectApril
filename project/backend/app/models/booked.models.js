@@ -3,12 +3,12 @@ module.exports=mongoose=>{
         "booked",
         mongoose.Schema(
             {
-           tittle:String,
-           area:String,
-           image:String,
-           location:String,
-           quantity:Number,
-           total:Number
+           tittle:{type:String,required:true},
+           area:{type:String,required:true},
+           image:{type:String,required:true},
+           location:{type:String,required:true},
+           quantity:{type:Number},
+           total:{type:Number}
         },
         {timestamps:true}
         )
