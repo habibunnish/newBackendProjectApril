@@ -5,16 +5,16 @@
   <li class="one" *ngIf="loggedIn">
     <a routerLink="home-page">HomePage</a>
   </li>
-  <li class="one"  *ngIf="loggedIn">
+  <!-- <li class="one"  >
     <a routerLink="how-it-work">Query</a>
-  </li>
+  </li> -->
   
   <li class="one" *ngIf="loggedIn" (click)="bookDetailsNew()">Hotels</li>
   <li class="one" *ngIf="adminLoggedIn">
-    <a routerLink="get-product">Check</a>
+    <a routerLink="get-product">DashBoard</a>
   </li>
   <li class="one" *ngIf="adminLoggedIn" (click)="goToAddNewPage()">AddHotels</li>
-  <li class="one"  *ngIf="loggedIn||adminLoggedIn" (click)="userBooked()" >History</li>
+  <li class="one"  *ngIf="loggedIn" (click)="userBooked()" >History</li>
   <LI class="one" *ngIf="!loggedIn && !adminLoggedIn"
     ><A routerLink="login-form">Login</A></LI
   >

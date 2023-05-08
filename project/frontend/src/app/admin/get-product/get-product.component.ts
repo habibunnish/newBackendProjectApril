@@ -11,9 +11,10 @@ import { Router } from '@angular/router';
 export class GetProductComponent implements OnInit {
 
   constructor(private product: ProductDetailsService, private router: Router) {}
+  
   public productList: any;
 
-  //get
+ 
   ngOnInit(){
     this.productList = this.product.getProduct().subscribe((data) => {
       console.log(data, this.productList);
@@ -26,7 +27,7 @@ export class GetProductComponent implements OnInit {
     });
   }
 
-  //delete product
+
   deleteData(product: any) {
     console.log('delete data() calling ', product.id);
     this.product.deleteProduct(product._id).subscribe(data => {

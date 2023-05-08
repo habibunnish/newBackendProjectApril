@@ -10,7 +10,6 @@ export class CityDetailsService {
 
   url="http://localhost:8082";
 
-   //post
   addProductsDetails(createResource: any) {
     const httpHeaders = new HttpHeaders();
     httpHeaders.append('content-type', 'application/json');
@@ -20,7 +19,7 @@ export class CityDetailsService {
     );
   };
 
-  //post
+
   addProductsDetailsBangluru(createResource: any) {
     const httpHeaders = new HttpHeaders();
     httpHeaders.append('content-type', 'application/json');
@@ -32,7 +31,6 @@ export class CityDetailsService {
   };
 
 
-  //post
   addProductsDetailsRoyapuram(createResource: any) {
     const httpHeaders = new HttpHeaders();
     httpHeaders.append('content-type', 'application/json');
@@ -44,7 +42,7 @@ export class CityDetailsService {
   };
 
 
-  //post
+ 
   addProductsDetailsJammu(createResource: any) {
     const httpHeaders = new HttpHeaders();
     httpHeaders.append('content-type', 'application/json');

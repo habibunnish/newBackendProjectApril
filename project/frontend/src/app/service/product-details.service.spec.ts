@@ -58,7 +58,7 @@ describe('ProductDetailsService', () => {
       quantity:"1"
     }
     const id=1;
-    service.getedit(id).subscribe((product:any)=>{
+    service.getEdit(id).subscribe((product:any)=>{
       expect(product).toEqual(mockProduct);
     });
     const req=httpMock.expectOne(`http://localhost:8082/api/product/${id}`);
@@ -94,7 +94,7 @@ describe('ProductDetailsService', () => {
       location: "Banguluru"
     }
     const id=1;
-    service.deleteproductchennai(id).subscribe((res:any)=>{
+    service.deleteProductChennai(id).subscribe((res:any)=>{
       expect(res).toEqual(mockProduct);
     });
     const req=httpMock.expectOne(`http://localhost:8082/api/product/${id}`);
@@ -104,7 +104,7 @@ describe('ProductDetailsService', () => {
 
   
   it("putproduct()",(done:DoneFn)=>{
-    service.putproduct(id,PRODUCTSDETAILS).subscribe((data:any)=>{
+    service.putProduct(id,PRODUCTSDETAILS).subscribe((data:any)=>{
       expect(data).toEqual(PRODUCTSDETAILS);
       done();
     });

@@ -3,9 +3,9 @@ module.exports=mongoose=>{
         "main",
         mongoose.Schema(
             {
-                tittle:String,
-                image:String,
-                para:String
+                tittle:{type:String,required:true},
+                image:{type:String,required:true},
+                para:{type:String,required:true}
             },
             {timestamps:true}
         )

@@ -22,11 +22,9 @@ export class LoginFormComponent implements OnInit {
   emails: any;
   passwords: any;
   static loginForm: any;
-  // adminForm!: FormGroup;
-
+ 
   //@ts-check
-
-  viewPass() {
+   viewPass() {
     this.visible = !this.visible;
     this.changeType = !this.changeType;
   }

@@ -15,6 +15,12 @@ exports.register=asyncHandler(async(req,res)=>{
         password:req.body.password,
         user_id: req.user.id,
     });
+    const { error, value } =User.validate(req.body);
+    if (error) {
+      return res.status(400).send({
+        message: error.details[0].message
+      });
+    }
     user.save(user)
     .then((data)=>{
         console.log(data);

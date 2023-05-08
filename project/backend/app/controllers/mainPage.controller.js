@@ -7,6 +7,12 @@ exports.main=(req,res)=>{
         image:req.body.image,
         para:req.body.para
     });
+    const { error, value } = main.validate(req.body);
+    if (error) {
+      return res.status(400).send({
+        message: error.details[0].message
+      });
+    }
     main.save(main).then((data)=>{
             res.send(data);
             console.log("data added to databse successfull");

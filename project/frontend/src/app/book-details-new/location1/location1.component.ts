@@ -9,6 +9,7 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrls: ['./location1.component.scss'],
 })
 export class Location1Component implements OnInit {
+  
   duplicateLocationList: any = [];
   getAllDetails: any;
   bookingList: any = [];

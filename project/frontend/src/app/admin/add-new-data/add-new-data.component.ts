@@ -111,14 +111,14 @@ export class AddNewDataComponent implements OnInit {
     this.changeDone($event.target.value);
   }
 
-  /*@post :for showing in page*/
+
   addProduct(roomDetails: any) {
     console.log('addproduct method calling');
     roomDetails.locations = JSON.stringify(this.locations);
     console.log(roomDetails.locations);
     this.product.addProductDetails(roomDetails).subscribe((data) => {
       console.log(data);
-      // roomdetails=res
+      roomDetails=data
       alert('product added successfully');
     });
   }

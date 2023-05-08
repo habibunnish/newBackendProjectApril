@@ -36,7 +36,7 @@ describe('AddNewDataComponent ', () => {
     fixture = TestBed.createComponent(AddNewDataComponent);
     component = fixture.componentInstance;
     product=TestBed.inject(ProductDetailsService);
-    geteditspy=spyOn(product,'getedit').and.returnValue(of({roomdetails}));
+    geteditspy=spyOn(product,'getEdit').and.returnValue(of({roomdetails}));
     city=TestBed.inject(CityDetailsService);
     fixture.detectChanges();
   });
@@ -48,7 +48,7 @@ describe('AddNewDataComponent ', () => {
   });
 
   beforeEach(()=>{
-    spyOn(component,'changedone').and.callThrough();
+    spyOn(component,'changeDone').and.callThrough();
     spyOn(console,'log');
     httpMock=TestBed.inject(HttpTestingController);
   })
@@ -56,7 +56,7 @@ describe('AddNewDataComponent ', () => {
   it('should call changedone method with crct value',()=>{
     const event={target:{value:'Chennai'}};
     component.modo(event);
-    expect(component.changedone).toHaveBeenCalledWith('Chennai');
+    expect(component.changeDone).toHaveBeenCalledWith('Chennai');
     expect(console.log).toHaveBeenCalledWith('changing','Chennai');
     expect(console.log).toHaveBeenCalledWith();
   });
@@ -91,14 +91,14 @@ describe('AddNewDataComponent ', () => {
     component.id=id;
     component.GetEdits();
     expect(geteditspy).toHaveBeenCalledWith(id);
-    expect(component.roomdetails).toBeDefined();
+    expect(component.roomDetails).toBeDefined();
   });
  
 it('dhould delete data and display alert',()=>{
-  spyOn(product,'deleteproductchennai');
+  spyOn(product,'deleteProductChennai');
   const data=null;
-  component.deletedata(data);
-  expect(product.deleteproductchennai).not.toHaveBeenCalled();
+  component.deleteData(data);
+  expect(product.deleteProductChennai).not.toHaveBeenCalled();
  
 });
 
@@ -118,7 +118,7 @@ it('should call addproductdetails when location is chennai',()=>{
   
   component.location = 'invalid_location';
     spyOn(console, 'error');
-    component.addnewproduct(mockRoomdetails);
+    component.addNewProduct(mockRoomdetails);
     expect(console.error).toHaveBeenCalledWith('Invalid location:', 'invalid_location');
  
 

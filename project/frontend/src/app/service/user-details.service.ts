@@ -11,7 +11,6 @@ export class UserDetailsService {
   url='http://localhost:8080';
 
   
-  //login post
   addNewContactUser(data: any) {
     return this.httpClient.post(`${this.url}/api/user`,data
     );
@@ -22,7 +21,6 @@ export class UserDetailsService {
      
   }
 
-  //register post
   register(data: any) {
     const httpHeaders = new HttpHeaders();
     httpHeaders.append('content-type', 'application/json');

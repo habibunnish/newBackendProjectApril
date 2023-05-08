@@ -11,9 +11,8 @@ exports.addProductsDetails=(req,res)=>{
         image:req.body.image,
         quantity:req.body.quantity
     });
-    city1
-        .save(city1)
-        .then((data)=>{
+ 
+    city1.save(city1).then((data)=>{
             res.send(data);
             console.log("data added to databse successfull");
         })
@@ -34,9 +33,7 @@ exports.addProductsDetails=(req,res)=>{
             locations:req.body.locations,
             image:req.body.image
         });
-        city2
-            .save(city2)
-            .then((data)=>{
+        city2.save(city2).then((data)=>{
                 res.send(data);
                 console.log("data added to databse successfull");
             })

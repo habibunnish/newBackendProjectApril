@@ -33,7 +33,7 @@ export class ProductDetailsService {
     httpHeaders.append('content-type', 'application/json');
     return this.httpClient.post( `${this.url}/api/product`,data);
   };
-   //delete
+  
    deleteProductChennai(id: number) {
     return this.httpClient.delete(`${this.url}/api/product/${id}`).pipe(
         map((response:any) => {

@@ -3,13 +3,13 @@ module.exports=mongoose=>{
         "cart",
         mongoose.Schema(
             {
-                tittle:String,
-                area:String,
-                image:String,
-                price:Number,
-                location:String,
-                locations:String,
-                quantity:Number,
+                tittle:{type:String,required:true},
+                area:{type:String,required:true},
+                image:{type:String,required:true},
+                price:{type:Number,required:true},
+                location:{type:String,required:true},
+                locations:{type:String,required:true},
+                quantity:{type:Number,required:true},
              
             
                

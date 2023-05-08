@@ -7,6 +7,12 @@ exports.adminRegister=asyncHandler(async(req,res)=>{
         email: req.body.email,
         password:req.body.password,
     });
+    const { error, value } = Admin.validate(req.body);
+    if (error) {
+      return res.status(400).send({
+        message: error.details[0].message
+      });
+    }
     admin.save(admin).then((data)=>{
         console.log(data);
         res.send(data);

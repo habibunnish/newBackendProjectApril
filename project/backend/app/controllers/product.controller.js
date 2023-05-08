@@ -12,6 +12,13 @@ exports.addProductDetails=(req,res)=>{
         quantity:req.body.quantity,
         
     });
+    
+    // const { error, value } = Product.validate(req.body);
+    // if (error) {
+    //   return res.status(400).send({
+    //     message: error.details[0].message
+    //   });
+    // }
     product
         .save(product)
         .then((data)=>{

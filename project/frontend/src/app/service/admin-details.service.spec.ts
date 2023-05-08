@@ -60,7 +60,7 @@ describe('AdminDetailsService', () => {
 
   it("post method for  adminlogin()",(done:DoneFn)=>{
     httpClientSpy.post;
-    service.adminlogin(value).subscribe({
+    service.adminLogin(value).subscribe({
       next:(posts)=>{
         expect(posts).toEqual(value);
         done();
